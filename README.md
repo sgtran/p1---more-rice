@@ -9,7 +9,7 @@
 | Andrew Pu | |
 | Alex Hu | |
 
-| **Week Log** | **Git id** |
+| **Week** | **Log** |
 | :---:   | :-: |
-| **Week 0**|
- sadasdasdasdasdasdasdaasdasdasdsd|
+| *Week 0*| Set up repo|
+          | Update readme|
