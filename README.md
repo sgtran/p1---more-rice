@@ -1,4 +1,6 @@
 # p1---rice
 rice is love, rice is life
 
-tef
+| Attempt | #1  | #2  |
+| :---:   | :-: | :-: |
+| Seconds | 301 | 283 |
