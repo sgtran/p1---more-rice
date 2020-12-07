@@ -8,7 +8,7 @@
 | **Member** | **Git id** |
 | :---:   | :-: |
 | Sean Tran | [Link](https://github.com/sgtran) |
-| Kevin Hu |  |
+| Kevin Hu | [Link](https://github.com/AlexH04) |
 | Andrew Pu | |
 | Alex Hu | |
 
