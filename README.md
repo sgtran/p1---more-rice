@@ -8,3 +8,8 @@
 | Kevin Hu |  |
 | Andrew Pu | |
 | Alex Hu | |
+
+| **Week Log** | **Git id** |
+| :---:   | :-: |
+| **Week 0**|
+ sadasdasdasdasdasdasdaasdasdasdsd|
