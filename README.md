@@ -3,6 +3,7 @@ rice is love, rice is life
 
 | Member | Git id |
 | :---:   | :-: |
-| Seconds | 301 |
-| Seconds | 301 |
-| Seconds | 301 |
+| Sean Tran | [Link](https://github.com/sgtran) |
+| Kevin Hu |  |
+| Andrew Pu | |
+| Alex Hu | |
