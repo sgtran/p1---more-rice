@@ -1,8 +1,8 @@
 # p1---rice
 rice is love, rice is life
 
-| Attempt | #1  | #2  |
-| :---:   | :-: | :-: |
-| Seconds | 301 | 283 |
-| Seconds | 301 | 283 |
-| Seconds | 301 | 283 |
+| Member | Git id |
+| :---:   | :-: |
+| Seconds | 301 |
+| Seconds | 301 |
+| Seconds | 301 |
