@@ -1,5 +1,6 @@
 # p1---rice
-rice is love, rice is life
+
+**Link to scrum board: [Here](https://github.com/sgtran/p1---rice/projects/1)
 
 | Member | Git id |
 | :---:   | :-: |
