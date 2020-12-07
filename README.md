@@ -9,7 +9,7 @@
 | Andrew Pu | |
 | Alex Hu | |
 
-| **Week** | **Log** |
+| **Week** | **Member** | **Log** |           
 | :---:   | :-: |
-| *Week 0*| Set up repo dasdasdasdasdasdasdasdas|
+| *Week 0*| |
  
