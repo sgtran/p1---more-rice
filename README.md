@@ -11,5 +11,5 @@
 
 | **Week** | **Log** |         
 | :---:   | :-: |
-| *Week 0*| |
+| *Week 0*| Set up Repo and ReadMe |
  
