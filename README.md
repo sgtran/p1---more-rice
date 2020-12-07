@@ -11,5 +11,5 @@
 
 | **Week** | **Log** |
 | :---:   | :-: |
-| *Week 0*| Set up repo|
-          | Update readme|
+| *Week 0*| Set up repo dasdasdasdasdasdasdasdas|
+ 
