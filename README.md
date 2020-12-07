@@ -9,7 +9,7 @@
 | Andrew Pu | |
 | Alex Hu | |
 
-| **Week** | **Member** | **Log** |           
-| :---:   | :-: | | :-: |
-| *Week 0*| | |
+| **Week** | **Log** |         
+| :---:   | :-: |
+| *Week 0*| |
  
