@@ -12,7 +12,8 @@
 | Andrew Pu | |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-| **Week** | **Log** |         
+| **Week** | **Code Updates** |         
 | :---:   | :-: |
-| *Week 0*| Set up Repo and ReadMe |
+| *Week 0*| Sean -Set up Repo and ReadMe |
+          | Kevin -Move Uno in new repo  |
  
