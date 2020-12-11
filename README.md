@@ -15,5 +15,5 @@
 | **Week** | **Code Updates** |         
 | :---:   | :-: |
 | *Week 0*| Sean -Set up Repo and ReadMe |
-          | Kevin -Move Uno in new repo  |
+|         | Kevin -Move Uno in new repo  |
  
