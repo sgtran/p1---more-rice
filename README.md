@@ -8,12 +8,14 @@
 | **Member** | **Git id** |
 | :---:   | :-: |
 | Sean Tran | [Link](https://github.com/sgtran) |
-| Kevin Hu |  |
-| Andrew Pu | |
+| Kevin Hu |  [Link](https://github.com/keviin0)  |
+| Andrew Pu |  [Link](https://github.com/) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
 | **Week** | **Code Updates** |         
 | :---:   | :-: |
-| *Week 0*| Sean -Set up Repo and ReadMe |
-|         | Kevin -Move Uno in new repo  |
+| *Week 0*| Sean -Set up Repo and ReadMe 12/8 |
+|         | Kevin -Move Uno in new repo  12/9|
+|         | Andrew -Update User info  12/9|
+|         | Alex -Update User info 12/9|
  
