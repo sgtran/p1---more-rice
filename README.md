@@ -5,6 +5,8 @@
 
 **Link to scrum board:** [Here](https://github.com/sgtran/p1---rice/projects/1)
 
+**Link to project plan:** [Here](https://docs.google.com/document/d/1J7p0vuNPozwbu0-tjaQCutQNg-10E0QndgibnOdazJU/edit?usp=sharing)
+
 | **Member** | **Git id** |
 | :---:   | :-: |
 | Sean Tran | [Link](https://github.com/sgtran) |
