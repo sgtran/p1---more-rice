@@ -11,7 +11,7 @@
 | :---:   | :-: |
 | Sean Tran | [Link](https://github.com/sgtran) |
 | Kevin Hu |  [Link](https://github.com/keviin0)  |
-| Andrew Pu |  [Link](https://github.com/) |
+| Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
 | **Week** | **Code Updates** |         
