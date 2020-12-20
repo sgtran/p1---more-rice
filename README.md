@@ -16,14 +16,14 @@
 
 | **Pre-Holiday 5 hour Challenge** | **Justification and Scrum Master Eval** |         
 | :---:   | :-: |
-| *Week 1*| Sean - |
+| *Week 1*| Sean - Debug Uno to run properly on intellij. In order to do this I had to set the correct source file for this project. I also learned that sometimes when one file cannot see another file and everything seems correct, you just clear the cache and restart intellij. |
 |         | Kevin -|
 |         | Andrew -|
 |         | Alex -|
 
 | **Week** | **Code Updates** |         
 | :---:   | :-: |
-| *Week 1*| Sean - |
+| *Week 1*| Sean - Fixed Uno to run in Intellij properly. 12/16|
 |         | Kevin -|
 |         | Andrew -|
 |         | Alex -|
