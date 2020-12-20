@@ -16,6 +16,11 @@
 
 | **Week** | **Code Updates** |         
 | :---:   | :-: |
+| *Week 1*| Sean -Set up Repo and ReadMe 12/8 |
+|         | Kevin -Move Uno in new repo  12/9|
+|         | Andrew -Brainstormed project ideas & made journal  12/9|
+|         | Alex -Update User info 12/9|
+
 | *Week 0*| Sean -Set up Repo and ReadMe 12/8 |
 |         | Kevin -Move Uno in new repo  12/9|
 |         | Andrew -Brainstormed project ideas & made journal  12/9|
