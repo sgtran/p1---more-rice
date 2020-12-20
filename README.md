@@ -14,7 +14,7 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-| **Pre-Holiday 5 hour Challenge** | **Justification and Scrum Master Eval** |         
+| **5 hour Challenge** | **Justification and Scrum Master Eval** |         
 | :---:   | :-: |
 | *Week 1*| Sean - Debug Uno to run properly on intellij. In order to do this I had to set the correct source file for this project. I also learned that sometimes when one file cannot see another file and everything seems correct, you just clear the cache and restart intellij. |
 |         | Kevin -|
