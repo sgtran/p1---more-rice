@@ -16,7 +16,7 @@
 
 | **5 hour Challenge** | **Justification and Scrum Master Eval** |         
 | :---:   | :-: |
-| *Week 1*| Sean - Debug Uno to run properly on intellij. In order to do this I had to set the correct source file for this project. I also learned that sometimes when one file cannot see another file and everything seems correct, you just clear the cache and restart intellij. |
+| *Week 1*| Sean - Debug [Uno.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/Uno.java) to be able to see the [Playfield.java](https://github.com/sgtran/p1---rice/blob/main/src/util/Playfield.java) in util as well as [Card.java](https://github.com/sgtran/p1---rice/blob/main/src/util/Card.java). Did this by setting the correct source file setting in project and then clearing the cache and restarting intellij.  |
 |         | Kevin -|
 |         | Andrew -|
 |         | Alex -|
