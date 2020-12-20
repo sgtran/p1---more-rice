@@ -115,6 +115,17 @@
               <text value="GamePile"/>
             </properties>
           </component>
+          <component id="2d0c9" class="javax.swing.JButton" binding="mGameSettingsButton">
+            <constraints>
+              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16769304"/>
+              <enabled value="true"/>
+              <foreground color="-4499935"/>
+              <text value="Game Settings"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="5c527" binding="cardsPanel" layout-manager="GridLayoutManager" row-count="2" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">

@@ -31,6 +31,7 @@ public class UnoUI extends JFrame{
     private JLabel mCurrentPlayerLabel;
     private JButton mPileButton;
     private JLabel mGamePile;
+    private JButton mGameSettingsButton;
     private Player placeholder = new Player("placeholder");
 
     private ACTIONS action;
