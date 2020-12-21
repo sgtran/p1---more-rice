@@ -4,6 +4,7 @@ import ui.UnoUI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Playfield {
     public int round = 0;
@@ -11,14 +12,14 @@ public class Playfield {
     public ArrayList<Player> players = new ArrayList<Player>();
     public static boolean actionSuccess;
 
-    public Playfield(int playerNum, List<String> names){ //Initialize playfield
+    public Playfield(int playerNum, List<String> names, int botNum){ //Initialize playfield
 
         Deck deck = Actions.newDeck();
         Card topCard = Actions.pop(deck);
         System.out.println(topCard.getLabel());
-        addPlayers(playerNum, names);
+        addPlayers(playerNum, names, botNum);
 
-        for(int i = 0; i < playerNum; i++){ //Start each player with 7 cards
+        for(int i = 0; i < playerNum + botNum; i++){ //Start each player with 7 cards
             for(int j = 0; j < 7; j++){
                 players.get(i).addCard(Actions.pop(deck));
             }
@@ -31,9 +32,27 @@ public class Playfield {
 
     }
 
-    public void addPlayers(int numPlayers, List<String> args) { //Add players to players arraylist
+    public void addPlayers(int numPlayers, List<String> args, int botNum) { //Add players to players arraylist
+
+        Random random = new Random();
+
+        //location of bots
+        int[] botPositions = new int[botNum];
+        //chooses a random location for each bot
+        for(int i = 0; i < botNum; i++) {
+            botPositions[i] = random.nextInt(numPlayers);
+        }
+
         for(int i = 0; i < numPlayers; i++){
             players.add(new Player(args.get(i)));
+
+            //if there's a bot at position i, then a bot is added
+            for(int j = 0; j < botNum; j++) {
+                if(botPositions[j] == i) {
+                    String botName = "Bot" + Integer.toString(j+1);
+                    players.add(new Player(botName));
+                }
+            }
         }
     }
 
