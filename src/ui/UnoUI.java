@@ -1,14 +1,16 @@
 package ui;
 
-import util.*;
+import util.Actions.ACTIONS;
+import util.Card;
+import util.Deck;
+import util.Player;
+import util.SpecialActions;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
-import util.Actions.ACTIONS;
 
 public class UnoUI extends JFrame{
 
@@ -110,6 +112,18 @@ public class UnoUI extends JFrame{
                 specialAction(mTopOfDeckCard);
 
                 updateTopCard();
+
+            }
+        });
+
+        mGameSettingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                   GameSettings frame = new GameSettings();
+                   frame.setSize(300,300);
+                   frame.setVisible(true);
+
 
             }
         });
