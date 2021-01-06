@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import util.Actions.ACTIONS;
 
-public class UnoUI extends JFrame {
+public class UnoGUI extends JFrame {
 
     private JPanel mainPanel;
     private JPanel gamePanel;
@@ -85,7 +85,7 @@ public class UnoUI extends JFrame {
         }
     }
 
-    public UnoUI(Player currentPlayer, Card topCard, Deck deck, ArrayList<Player> players) {
+    public UnoGUI(Player currentPlayer, Card topCard, Deck deck, ArrayList<Player> players) {
         model = new SpecialActions(deck, players, topCard);
         System.out.println("test");
         createUIComponents();
