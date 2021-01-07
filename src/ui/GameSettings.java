@@ -48,11 +48,18 @@ public class GameSettings extends JFrame {
         panel.add( playerNumberReturnLabel);
 
         // label for changing skip settings
-        JLabel skipSettingLabel = new JLabel("Skip Settings");
+        JButton skipSettingButton = new JButton("Color Settings");
         //labelSize = skipSettingLabel.getPreferredSize();
-        skipSettingLabel.setBounds(10, 70, 200, 20);
-        skipSettingLabel.setVisible(true);
-        panel.add(skipSettingLabel);
+        skipSettingButton.setBounds(10, 70, 200, 20);
+        skipSettingButton.setVisible(true);
+        panel.add(skipSettingButton);
+
+        // label for changing skip settings
+        JButton removeSpecialCardsButton = new JButton("Remove all special cards");
+        //labelSize = skipSettingLabel.getPreferredSize();
+        removeSpecialCardsButton.setBounds(10, 100, 200, 20);
+        removeSpecialCardsButton.setVisible(true);
+        panel.add(removeSpecialCardsButton);
 
         this.add(panel);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
