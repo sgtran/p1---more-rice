@@ -57,6 +57,7 @@ public class Uno extends JFrame {
         p.add(playerNamesTextField); //Add text area for season to panel
         label3 = new JLabel();
         label3.setText("How many bots?");
+        p.add(label3);
         numBotsCombo = new JComboBox<String>(numBotsChoice); //Initial setting for # of players
         p.add(numBotsCombo); //Add text area for year to panel
         p.add(b); //Add button to panel
