@@ -3,6 +3,8 @@ package ui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GameSettings extends JFrame {
 
@@ -47,19 +49,31 @@ public class GameSettings extends JFrame {
         playerNumberReturnLabel.setVisible(true);
         panel.add( playerNumberReturnLabel);
 
-        // label for changing skip settings
+        // button for changing color settings
         JButton skipSettingButton = new JButton("Color Settings");
-        //labelSize = skipSettingLabel.getPreferredSize();
         skipSettingButton.setBounds(10, 70, 200, 20);
         skipSettingButton.setVisible(true);
         panel.add(skipSettingButton);
 
-        // label for changing skip settings
+        // button for removing special cards
         JButton removeSpecialCardsButton = new JButton("Remove all special cards");
-        //labelSize = skipSettingLabel.getPreferredSize();
         removeSpecialCardsButton.setBounds(10, 100, 200, 20);
         removeSpecialCardsButton.setVisible(true);
         panel.add(removeSpecialCardsButton);
+
+        // button for quit game
+        JButton quitGameButton = new JButton("Quit Game");
+        quitGameButton.setBounds(10, 130, 200, 20);
+        quitGameButton.setVisible(true);
+        panel.add(quitGameButton);
+
+        quitGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                unoui.dispose();
+                System.exit(0);
+            }
+        });
 
         this.add(panel);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
