@@ -1,14 +1,16 @@
 package ui;
 
-import util.*;
+import util.Actions.ACTIONS;
+import util.Card;
+import util.Deck;
+import util.Player;
+import util.SpecialActions;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
-import util.Actions.ACTIONS;
 
 public class UnoGUI extends JFrame {
 
@@ -43,7 +45,7 @@ public class UnoGUI extends JFrame {
     private ArrayList<Player> mPlayers = new ArrayList<Player>();
     private Card mTopOfDeckCard;
     private ArrayList<JButton> mCardButtons;
-    private SpecialActions model;
+    public SpecialActions model;
     private static final Color DEFAULT_COLOR = Color.white;
     private Card selectedCard;
     public Card mGamePileTopCard;

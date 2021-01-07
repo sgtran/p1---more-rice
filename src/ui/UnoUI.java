@@ -39,14 +39,11 @@ public class UnoUI extends JFrame {
     private ACTIONS action;
 
     private Player mActivePlayer = new Player("test");
-    // private Deck mActiveDeck;
-    //private Card mUselessCard = new Card(Color.BLUE, -1);
-    //private Card tempCard= new Card(Color.BLUE, -1);
     public int round = 0;
     private ArrayList<Player> mPlayers = new ArrayList<Player>();
     private Card mTopOfDeckCard;
     private ArrayList<JButton> mCardButtons;
-    private SpecialActions model;
+    public SpecialActions model;
     private static final Color DEFAULT_COLOR = Color.white;
     private Card selectedCard;
     public Card mGamePileTopCard;
@@ -115,11 +112,13 @@ public class UnoUI extends JFrame {
             }
         });
 
+        UnoUI me = this;
+
         mGameSettingsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                GameSettings frame = new GameSettings();
+                GameSettings frame = new GameSettings(me);
                 frame.setSize(300, 300);
                 frame.setVisible(true);
 

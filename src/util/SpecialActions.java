@@ -1,6 +1,5 @@
 package util;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,6 +28,14 @@ public class SpecialActions {
     public Card topCardReturn(){
         return Actions.peek(mActiveDeck);//mActiveDeck.cardDeck.get(0);
     }
+
+    public int deckNumberReturn(){
+        return mActiveDeck.returnSize();
+        }
+    public int playerNumberReturn(){
+        return mPlayers.size();
+    }
+
 
     public String execute(Card cardFromTop, Actions.ACTIONS action, Card gamePileTopCard){
         if( cardFromTop == null ) {

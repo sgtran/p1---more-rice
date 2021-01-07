@@ -14,33 +14,50 @@ public class GameSettings extends JFrame {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
-                GameSettings frame = new GameSettings();
-                frame.setSize(300,300);
-                frame.setVisible(true);
+                GameSettings frame = new GameSettings(null);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
     }
-    public GameSettings() {
+    public GameSettings(UnoUI unoui) {
         super("Game Settings");
         setBounds(100, 100, 418, 315);
         Container c = getContentPane();
-        JPanel p = new JPanel();
+        JPanel panel = new JPanel();
         JButton b = new JButton("Submit"); //Submit button
 
+        panel.setLayout(null);
+
         // label for changing number of cards
-        JLabel deckNumberChangeLabel = new JLabel("Number of Cards in Deck");
-        deckNumberChangeLabel.setBounds(30, 30, 100, 100);
+        int deckNumberReturn = (unoui == null ? 99 : unoui.model.deckNumberReturn());
+        JLabel deckNumberChangeLabel = new JLabel("Number of Cards in Deck: " + deckNumberReturn);
+
+        //Dimension labelSize = deckNumberChangeLabel.getPreferredSize();
+        deckNumberChangeLabel.setBounds(10, 10, 200, 20);
         deckNumberChangeLabel.setVisible(true);
-        add(deckNumberChangeLabel);
+        panel.add(deckNumberChangeLabel);
+
+        // label for number of players
+        int playerNumberReturn = (unoui == null ? 99 : unoui.model.playerNumberReturn());
+        JLabel playerNumberReturnLabel = new JLabel("Number of Players playing: " + playerNumberReturn);
+
+        //Dimension labelSize = deckNumberChangeLabel.getPreferredSize();
+        playerNumberReturnLabel.setBounds(10, 40, 200, 20);
+        playerNumberReturnLabel.setVisible(true);
+        panel.add( playerNumberReturnLabel);
 
         // label for changing skip settings
         JLabel skipSettingLabel = new JLabel("Skip Settings");
-        skipSettingLabel.setBounds(30, 20, 200, 100);
+        //labelSize = skipSettingLabel.getPreferredSize();
+        skipSettingLabel.setBounds(10, 70, 200, 20);
         skipSettingLabel.setVisible(true);
-        add(skipSettingLabel);
+        panel.add(skipSettingLabel);
 
+        this.add(panel);
+        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setSize(500, 500);
+        this.setVisible(true);
 
     }
 
