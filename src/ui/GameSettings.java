@@ -1,10 +1,14 @@
 package ui;
 
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
 
 public class GameSettings extends JFrame {
 
@@ -22,7 +26,16 @@ public class GameSettings extends JFrame {
             }
         });
     }
-    public GameSettings(UnoUI unoui) {
+
+    public void music() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("gameMusic.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+
+    }
+    public GameSettings(UnoUI unoui) throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         super("Game Settings");
         setBounds(100, 100, 418, 315);
         Container c = getContentPane();
@@ -72,6 +85,27 @@ public class GameSettings extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 unoui.dispose();
                 System.exit(0);
+            }
+        });
+
+        // button for music
+        JButton musicButton = new JButton("Cool Music");
+        musicButton.setBounds(10, 160, 200, 20);
+        musicButton.setVisible(true);
+        panel.add(musicButton);
+
+        musicButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    music();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
             }
         });
 

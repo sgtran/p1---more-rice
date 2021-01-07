@@ -6,10 +6,13 @@ import util.Deck;
 import util.Player;
 import util.SpecialActions;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class UnoUI extends JFrame {
@@ -118,7 +121,16 @@ public class UnoUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                GameSettings frame = new GameSettings(me);
+                GameSettings frame = null;
+                try {
+                    frame = new GameSettings(me);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
                 frame.setSize(300, 300);
                 frame.setVisible(true);
 
