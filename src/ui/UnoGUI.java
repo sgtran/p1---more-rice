@@ -6,10 +6,13 @@ import util.Deck;
 import util.Player;
 import util.SpecialActions;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class UnoGUI extends JFrame {
@@ -54,7 +57,7 @@ public class UnoGUI extends JFrame {
      * Launch the application.
      */
 
-    public void specialAction(Card cardFromTop) {
+    public void specialAction(Card cardFromTop) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         while (true) {
             String output = model.execute(cardFromTop, action, mGamePileTopCard);
 
@@ -107,7 +110,15 @@ public class UnoGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 action = ACTIONS.DRAW;
                 updateTopCard();
-                specialAction(mTopOfDeckCard);
+                try {
+                    specialAction(mTopOfDeckCard);
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
 
                 updateTopCard();
 
@@ -121,7 +132,15 @@ public class UnoGUI extends JFrame {
 
                 //TODO: to be implemented
                 mCurrentPlayerLabel.setText(mActivePlayer.name);
-                specialAction(selectedCard);
+                try {
+                    specialAction(selectedCard);
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
 
             }
 

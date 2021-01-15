@@ -1,6 +1,9 @@
 package util;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -37,7 +40,7 @@ public class SpecialActions {
     }
 
 
-    public String execute(Card cardFromTop, Actions.ACTIONS action, Card gamePileTopCard){
+    public String execute(Card cardFromTop, Actions.ACTIONS action, Card gamePileTopCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         if( cardFromTop == null ) {
             // no card selected
             return "invalid move";

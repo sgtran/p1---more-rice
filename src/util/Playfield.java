@@ -2,6 +2,9 @@ package util;
 
 import ui.UnoUI;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,7 +15,7 @@ public class Playfield {
     public ArrayList<Player> players = new ArrayList<Player>();
     public static boolean actionSuccess;
 
-    public Playfield(int playerNum, List<String> names, int botNum){ //Initialize playfield
+    public Playfield(int playerNum, List<String> names, int botNum) throws UnsupportedAudioFileException, IOException, LineUnavailableException { //Initialize playfield
 
         Deck deck = Actions.newDeck();
         Card topCard = Actions.pop(deck);

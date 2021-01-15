@@ -6,12 +6,12 @@ import util.Deck;
 import util.Player;
 import util.SpecialActions;
 
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -55,7 +55,7 @@ public class UnoUI extends JFrame {
      * Launch the application.
      */
 
-    public void specialAction(Card cardFromTop) {
+    public void specialAction(Card cardFromTop) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         while (true) {
             String output = model.execute(cardFromTop, action, mGamePileTopCard);
 
@@ -88,7 +88,7 @@ public class UnoUI extends JFrame {
         }
     }
 
-    public UnoUI(Player currentPlayer, Card topCard, Deck deck, ArrayList<Player> players) {
+    public UnoUI(Player currentPlayer, Card topCard, Deck deck, ArrayList<Player> players) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         model = new SpecialActions(deck, players, topCard);
         System.out.println("test");
         createUIComponents();
@@ -108,7 +108,15 @@ public class UnoUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 action = ACTIONS.DRAW;
                 updateTopCard();
-                specialAction(mTopOfDeckCard);
+                try {
+                    specialAction(mTopOfDeckCard);
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
 
                 updateTopCard();
 
@@ -123,6 +131,7 @@ public class UnoUI extends JFrame {
 
                 GameSettings frame = null;
                 try {
+                    gameSettingClick();
                     frame = new GameSettings(me);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
@@ -143,9 +152,16 @@ public class UnoUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 action = ACTIONS.PLACE;
 
-                //TODO: to be implemented
                 mCurrentPlayerLabel.setText(mActivePlayer.name);
-                specialAction(selectedCard);
+                try {
+                    specialAction(selectedCard);
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
 
             }
 
@@ -155,9 +171,17 @@ public class UnoUI extends JFrame {
 
     }
 
+    public static void gameSettingClick() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("gameSettingClick.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+    }
+
     //method is used for player objects
     //method purpose is to update current active player's hand and name
-    private void updateActivePlayer(Player p) {
+    private void updateActivePlayer(Player p) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         mActivePlayer = p;
 
         // First clear and reset the current hand
@@ -329,6 +353,8 @@ public class UnoUI extends JFrame {
         mCurrentPlayerLabel.setText("");
     }
 
+    // this function plays music
+
     private void clearHand() {
         // Hide and disable card buttons
         for (JButton button : mCardButtons) {
@@ -339,7 +365,7 @@ public class UnoUI extends JFrame {
         }
     }
 
-    private void botPlay(Player p) {
+    private void botPlay(Player p) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         for (int i = 0; i < p.getSize(); i++) {
 

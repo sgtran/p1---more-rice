@@ -27,8 +27,17 @@ public class GameSettings extends JFrame {
         });
     }
 
+    // this function plays music
     public void music() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         File file = new File("gameMusic.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+    }
+
+    public void click() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("click.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
@@ -63,16 +72,49 @@ public class GameSettings extends JFrame {
         panel.add( playerNumberReturnLabel);
 
         // button for changing color settings
-        JButton skipSettingButton = new JButton("Color Settings");
-        skipSettingButton.setBounds(10, 70, 200, 20);
-        skipSettingButton.setVisible(true);
-        panel.add(skipSettingButton);
+        JButton colorSettingButton = new JButton("Color Settings");
+        colorSettingButton.setBounds(10, 70, 200, 20);
+        colorSettingButton.setVisible(true);
+        panel.add(colorSettingButton);
+
+        colorSettingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    click();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
+
+            }
+        });
+
 
         // button for removing special cards
         JButton removeSpecialCardsButton = new JButton("Remove all special cards");
         removeSpecialCardsButton.setBounds(10, 100, 200, 20);
         removeSpecialCardsButton.setVisible(true);
         panel.add(removeSpecialCardsButton);
+
+        removeSpecialCardsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    click();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
+
+            }
+        });
 
         // button for quit game
         JButton quitGameButton = new JButton("Quit Game");
@@ -83,6 +125,15 @@ public class GameSettings extends JFrame {
         quitGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    click();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                }
                 unoui.dispose();
                 System.exit(0);
             }

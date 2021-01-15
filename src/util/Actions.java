@@ -1,10 +1,29 @@
 package util;
 
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
+
 public class Actions {
 
     public static enum ACTIONS {DRAW, PLACE, SKIP, REVERSE, DRAWTWO, WILDCARD}
     public static Card mTopCard;
 
+    public static void correctPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("placeSound.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+    }
+
+    public static void wrongPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("wrongSound.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+    }
     public static Card pop(Deck d){
         Card result = d.cardDeck.get(0);
         d.cardDeck.remove(0);
@@ -43,7 +62,7 @@ public class Actions {
         return test;
     }
 
-    public static Card doAction(ACTIONS choice, Player p, int num, Deck d, Card selectedCard, Card topCard){
+    public static Card doAction(ACTIONS choice, Player p, int num, Deck d, Card selectedCard, Card topCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         switch(choice){
             case DRAW:
                 for(int i = 0; i < num; i++){
@@ -54,10 +73,12 @@ public class Actions {
             case PLACE:
                 if( selectedCard == null ) {
                     // no card selected;
+                    wrongPlaceSound();
                     return selectedCard;
                 }
 
                 if(topCard.getColor() == Card.SPECIAL_COLOR){
+                    correctPlaceSound();
                     push(p, selectedCard);
                     return selectedCard;
 
@@ -69,10 +90,13 @@ public class Actions {
                         return selectedCard;}
 
                     if(topCard.getCardNum() != selectedCard.getCardNum()){
+                        wrongPlaceSound();
                         selectedCard.setSuccess(false);
                         return selectedCard;
                     }
                 }
+                correctPlaceSound();
+
                 push(p, selectedCard);
                 return selectedCard;
             case SKIP:

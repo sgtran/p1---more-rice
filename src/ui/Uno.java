@@ -2,8 +2,11 @@ package ui;
 
 import util.Playfield;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -71,7 +74,15 @@ public class Uno extends JFrame {
             while (m.find()) {
                 allMatches.add(m.group());
             }
-            new Playfield(tempNum, allMatches, botNum);
+            try {
+                new Playfield(tempNum, allMatches, botNum);
+            } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                unsupportedAudioFileException.printStackTrace();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (LineUnavailableException lineUnavailableException) {
+                lineUnavailableException.printStackTrace();
+            }
         });
 
     }
