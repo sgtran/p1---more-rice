@@ -100,14 +100,17 @@ public class Actions {
                 push(p, selectedCard);
                 return selectedCard;
             case SKIP:
+                correctPlaceSound();
                 push(p, selectedCard);
                 return selectedCard;
 
             case REVERSE:
+                correctPlaceSound();
                 push(p, selectedCard);
                 return selectedCard;
 
             case DRAWTWO:
+                correctPlaceSound();
                 for(int i = 0; i < num; i++){
                     Card drawnCard = pop(d);
                     p.addCard(drawnCard);
@@ -115,6 +118,7 @@ public class Actions {
                 return selectedCard;
 
             case WILDCARD:
+                correctPlaceSound();
                 push(p, selectedCard);
                 return selectedCard;
 

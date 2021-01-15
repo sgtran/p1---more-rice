@@ -1,8 +1,8 @@
 package util;
 
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.sound.sampled.*;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,10 +39,17 @@ public class SpecialActions {
         return mPlayers.size();
     }
 
-
+    public static void wrongPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("wrongSound.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+    }
     public String execute(Card cardFromTop, Actions.ACTIONS action, Card gamePileTopCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         if( cardFromTop == null ) {
             // no card selected
+            wrongPlaceSound();
             return "invalid move";
         }
 
