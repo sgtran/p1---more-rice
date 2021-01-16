@@ -14,11 +14,20 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
+| **How to run the code**    |
+| :---:   | :-: |
+|Step 1: clone repo from Git                |
+|Step 2: run Uno|
+|Step 3: Play the game and hear the sounds and see the bot play|
+
+
 | **Scrum Cards Focus** | **Evidence** |
 | :---:   | :-: |
-| Goal 1: Integrate sound into game and buttons -Sean Tran [Improve Sound Scrum Card](https://github.com/sgtran/p1---rice/projects/1) | In order to run this code. Just run Uno, and the click on the various buttons and play the game to hear the sounds. Added sound to [gameSettings click](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.javaL#183-189) and [gameSettingClick](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L191-197). I also added sound to [place card](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-26) for correct and incorrect placement. Added sound for [winner case](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L200-205). |
+|Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/1)|
+| Goal 1: Integrate sound into game and buttons -Sean Tran  | In order to run this code. Just run Uno, and the click on the various buttons and play the game to hear the sounds. Added sound to [gameSettings click](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.javaL#183-189) and [gameSettingClick](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L191-197). I also added sound to [place card](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-26) for correct and incorrect placement. Added sound for [winner case](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L200-205). |
 | Goal 2: Fix the Thymeleaf template -Kevin Hu | Fixed [Thymeleaf](https://github.com/sgtran/p1---rice/tree/spring/src/main/resources) template. Checkout spring branch, run "SpringSecurityMongodbSecurityApplication" with JDK 15 and download any necessary maven packages. Navigate to http://localhost:8080. |
-| Goal 3: Improve bot Algorithms -Andrew Pu | Created bot algorithm and added to botPlay method in [UnoUi.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java). Also added code to [Uno.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/Uno.java) and elsewhere in [UnoUI.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java) to allow botPlay method to be run correctly and access next/previous players. |
+| Goal 3: Improve bot Algorithms -Andrew Pu |   |
+|        |
 | Still in progress objective: Remove forms from UI -Alex Hu| Created [UnoGUI](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoGUI.java) to make UI work with no forms. However, something did not work so work was reverted and UnoUI is kept as the UI. Will work to fix this issue ASAP.Module dependencies were changed to accomodate some of the packages/jars in the code. UI is still in progress to be improved. |
 
 
