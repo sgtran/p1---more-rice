@@ -17,7 +17,7 @@
 | **Scrum Cards Focus** | **Evidence** |
 | :---:   | :-: |
 | Sean Tran - Worked on [Improve Sound Scrum Card](https://github.com/sgtran/p1---rice/projects/1) | In order to run this code. Just run Uno, and the click on the various buttons and play the game to hear the sounds. Added sound to [gameSettings click](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.javaL#183-189) and [gameSettingClick](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L191-197). I also added sound to [place card](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-26) for correct and incorrect placement. Added sound for [winner case](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L200-205). |
-| Kevin Hu |   |
+| Kevin Hu - Fixed [Thymeleaf](https://github.com/sgtran/p1---rice/tree/spring/src/main/resources) template | Checkout spring branch, run "SpringSecurityMongodbSecurityApplication" with JDK 15 and download any necessary maven packages. Navigate to http://localhost:8080. |
 | Andrew Pu |   |
 | Alex Hu - Worked on UI and removing GUI Form| The GUI form has been completely converted into source code as GUI forms do not work with Spring. Module dependencies were changed to accomodate some of the packages/jars in the code. UI has not been changed much yet and that is on the todo list. |
 
