@@ -69,6 +69,7 @@ public class UnoUI extends JFrame {
             }
 
             if (output.equalsIgnoreCase("Winner")) {
+                winnerSound();
                 JOptionPane.showMessageDialog(null, output);
                 this.setVisible(false);
                 this.dispose();
@@ -195,6 +196,15 @@ public class UnoUI extends JFrame {
         clip.open(audiStream);
         clip.start();
     }
+
+    public static void winnerSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        File file = new File("winner2.wav");
+        AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiStream);
+        clip.start();
+    }
+
 
     //method is used for player objects
     //method purpose is to update current active player's hand and name

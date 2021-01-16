@@ -14,6 +14,41 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
+| **Scrum Cards Focus** | **Evidence** |
+| :---:   | :-: |
+| Sean Tran - Worked on [Improve Sound Scrum Card](https://github.com/sgtran/p1---rice/projects/1) | In order to run this code. Just run Uno, and the click on the various buttons and play the game to hear the sounds. Added sound to [gameSettings click](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.javaL#183-189) and [gameSettingClick](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L191-197). I also added sound to [place card](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-26) for correct and incorrect placement. |
+| Kevin Hu |   |
+| Andrew Pu |   |
+| Alex Hu | |
+
+
+| **Week** | **Code Updates** |         
+| :---:   | :-: |
+| *Week 0*| Sean -Set up Repo and ReadMe 12/8 |
+|         | Kevin -Move Uno in new repo  12/9|
+|         | Andrew -Brainstormed project ideas & made journal  12/9|
+|         | Alex -Update User info 12/9|
+|         |  
+| *Week 1*| Sean - Fixed Uno to run in Intellij properly. 12/16|
+|         | Kevin - Helped identify issue where Uno wouldn't run in IntelliJ. Experimenting with Spring Boot framework.|
+|         | Andrew - Got more familiar with the code. Added option to add bots, but still working on making them automated|
+|         | Alex - No updates yet, got more familiar with the code as this was an existing project from last tri that I did not work on.|
+|         |                            |
+| *Week 2*| Sean -Set up GameSettings 12/28 |
+|         | Kevin -Work on Spring  12/29|
+|         | Andrew -Bot code  12/29|
+|         | Alex -Work on GUI form conversion 12/29|
+|         |
+| *Week 3*| Sean -Added sound 1/13 |
+|         | Kevin -Fix Thymeleaf  1/14|
+|         | Andrew -Improve bot code  1/14|
+|         | Alex -Improve UI 1/13|
+
+
+
+
+
+
 | **5 hour Challenge** | **Justification and Scrum Master Eval** |         
 | :---:   | :-: |
 | *Week 1*| **Sean** - Debug [Uno.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/Uno.java) to be able to see the [Playfield.java](https://github.com/sgtran/p1---rice/blob/main/src/util/Playfield.java) in util as well as [Card.java](https://github.com/sgtran/p1---rice/blob/main/src/util/Card.java). Corrected source file settings in project settings and cleared the cache and restarting intellij. **Critical Thinking 5/5**. I communicated my progress as well as assignments and deadlines to my team to make sure everyone is on the same page. **Communication 5/5**. Collaborated with Kevin (pair share partner) and talked about how to implement our project into a website and talk to other teammates about roles **Collaboration 5/5**. Created [GameSettings](https://github.com/sgtran/p1---rice/blob/main/src/ui/GameSettings.java) and created labels. Learning how to make the J-Frame without form took longer than expected to learn. I was not able to add buttons to the GameSetting frame. **Creativity and intangibles 4/5**.        *(I am the Scrum Master) I was able to accomplish most of what I was assigned todo and communicated with my teams assignments and deadlines. I agree with the 4 Cs. I however, did not blow myself away with my work. **4/5***  |
@@ -21,15 +56,4 @@
 |         | **Andrew** - Added combo box for bots and changed panel layout in [Uno.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/Uno.java). Bots work as actual players, so currently working on automating them in [UnoUI.java](https://github.com/sgtran/p1---rice/blob/main/src/util/Card.java). **Critical Thinking 4/5**. I only came up with very basic ideas for the bot algorithm and I couldn't figure out how to fully implement the bots. **Communication 5/5**. Talked to Kevin about parts of the code I didn't understand to help gain a better understanding. **Collaboration 5/5**. Connected bot code to the already existing code by working with Kevin and understanding how the other code worked. **Creativity 4/5**.       *(Scrum Master Grade) He did his role for the team. Communicated with teammates. I agree with the 4Cs however work did not blow me away. **4/5*** |
 |         | **Alex** - As per the scrum board, researched how online multiplayer games work, what information is most crucial to send to the servers, and how this information could be represented as numbers in a database (for example, Uno could have several server variables for each person such as turn number, number of cards, previous card number and previous card color). **Critical Thinking 5/5**. I researched on my assigned topic and is still continuing to research more about matchmaking and how they find an available player. **Communication 4/5**. Could have done better on communicating ideas with the team and maybe start putting down some points on the scrum board or project plan. **Collaboration 5/5**. Made sure that I understood the code so that I could collaborate better with people that had previously worked on this code and are much more familiar with it. **Creativity 5/5**. I am still planning to continue researching online multiplayer as it may be the biggest and most unfamiliar struggle we will run into this trimester.         *(Scrum Master Grade) I agree with the 4Cs. Communicated work with group. I appreciate he did his work earlier than later. His work however, did not blow me away. **4/5*** |
 
-| **Week** | **Code Updates** |         
-| :---:   | :-: |
-| *Week 1*| Sean - Fixed Uno to run in Intellij properly. 12/16|
-|         | Kevin - Helped identify issue where Uno wouldn't run in IntelliJ. Experimenting with Spring Boot framework.|
-|         | Andrew - Got more familiar with the code. Added option to add bots, but still working on making them automated|
-|         | Alex - No updates yet, got more familiar with the code as this was an existing project from last tri that I did not work on.|
-|         |                            |
-| *Week 0*| Sean -Set up Repo and ReadMe 12/8 |
-|         | Kevin -Move Uno in new repo  12/9|
-|         | Andrew -Brainstormed project ideas & made journal  12/9|
-|         | Alex -Update User info 12/9|
  
