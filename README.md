@@ -14,15 +14,16 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-| **How to run the code**    |
-
+ **How to run the code**    
+ 
 Step 1: clone repo from Git 
 
 Step 2: run Uno
 
 Step 3: Play the game and hear the sounds and see the bot play
 
-| **Scrum Master Grades**  |
+ **Scrum Master Grades**  
+
 Sean Tran 19/20 Completed scrum card however could have improved sound quality of sound.
 
 Kevin Hu 19/20 Completed scrum card however could have tried to merge branches
