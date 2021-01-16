@@ -21,9 +21,11 @@ Step 1: clone repo from Git
 ![](1.16.5.PNG)
 
 Step 2: run Uno 
+
 ![](1.16.1.PNG)
 
 Step 3: Play the game and hear the sounds and see the bot play 
+
 ![](1.16.2.PNG) 
 ![](1.16.3.PNG)
 
