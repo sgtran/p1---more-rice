@@ -42,6 +42,8 @@ public class UnoUI extends JFrame {
     private ACTIONS action;
 
     private Player mActivePlayer = new Player("test");
+    private Player nextPlayer = new Player("next test");
+    private Player prevPlayer = new Player("prev test");
     public int round = 0;
     private ArrayList<Player> mPlayers = new ArrayList<Player>();
     private Card mTopOfDeckCard;
@@ -64,6 +66,8 @@ public class UnoUI extends JFrame {
                 JOptionPane.showMessageDialog(null, output);
                 round = model.getRound();
                 mActivePlayer = model.getActivePlayer();
+                nextPlayer = model.getNextPlayer();
+                prevPlayer = model.getPrevPlayer();
                 updateActivePlayer(mActivePlayer);
                 break;
             }
@@ -80,6 +84,8 @@ public class UnoUI extends JFrame {
 
             round = model.getRound();
             mActivePlayer = model.getActivePlayer();
+            nextPlayer = model.getNextPlayer();
+            prevPlayer = model.getPrevPlayer();
             updateActivePlayer(mActivePlayer);
             updateGamePile(selectedCard);
 
@@ -240,6 +246,8 @@ public class UnoUI extends JFrame {
                 System.out.println("bot");
                 botPlay(mActivePlayer);
                 mActivePlayer = model.getActivePlayer();
+                nextPlayer = model.getNextPlayer();
+                prevPlayer = model.getPrevPlayer();
                 updateActivePlayer(mActivePlayer);
             }
         }
@@ -394,21 +402,136 @@ public class UnoUI extends JFrame {
 
     private void botPlay(Player p) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
+        ArrayList<Integer> prioritization = new ArrayList<Integer>();
+        int green = 0;
+        int yellow = 0;
+        int blue = 0;
+        int red = 0;
+        int[] colorNum = {green, yellow, blue, red};
+        Color[] colorOrder = {Color.GREEN, Color.YELLOW, Color.BLUE, Color.RED};
+        int[] colorPrioritization = {0, 0, 0, 0};
+        boolean drawCard = false;
+
         for (int i = 0; i < p.getSize(); i++) {
+            selectedCard = p.getHand().get(i);
+
+            //bot should play the color that it has the most of
+            if (selectedCard.getColor() == Color.GREEN) {
+                green++;
+            } else if (selectedCard.getColor() == Color.YELLOW) {
+                yellow++;
+            } else if (selectedCard.getColor() == Color.BLUE) {
+                blue++;
+            } else if (selectedCard.getColor() == Color.RED) {
+                red++;
+            } else if (selectedCard.getColor() == Color.BLACK) {
+                //Used later: if the next player only has 1 card, bot should play draw/skip cards (11 is +2 and 12 is skip)
+                if (selectedCard.getCardNum() == 11 || selectedCard.getCardNum() == 12) {
+                    drawCard = true;
+                }
+            }
+        }
+
+        //priority levels 1, 2, and 3 are reserved for when a player has less than or equal to 2 cards
+        int colorPriority = 4;
+
+        //Assigns priorities to all 4 colors
+        for (int j = 0; j < 4; j++) {
+            int maxIndex = 0;
+            //iterates throught the four colors
+            for (int i = 1; i < 4; i++) {
+                //determines most common color and assigns lowest priority (4)
+                if (colorNum[i] > colorNum[i - 1]) {
+                    maxIndex = i;
+                }
+            }
+            colorPrioritization[maxIndex] = colorPriority;
+            colorPriority++;
+            //ensures that the same color is not chosen again
+            colorNum[maxIndex] = -1;
+        }
+
+        //assigns priorities to cards
+        for (int i = 0; i < p.getSize(); i++) {
+            prioritization.add(0);
 
             selectedCard = p.getHand().get(i);
 
-            if (selectedCard.getColor() == mGamePileTopCard.getColor() || selectedCard.getCardNum() == mGamePileTopCard.getCardNum() || selectedCard.getColor() == Card.SPECIAL_COLOR) {
-                action = ACTIONS.PLACE;
-                mCurrentPlayerLabel.setText(mActivePlayer.name);
-                specialAction(selectedCard);
-                return;
+            //priority 9 is maximum priority (priority 10 is drawing)
+            if (selectedCard.getColor() == Color.BLACK) {
+                prioritization.set(i, 9);
+            }
+
+            //priorities 4-7: play most color first
+            for (int j = 0; j < 4; j++) {
+                if (selectedCard.getColor() == colorOrder[j]) {
+                    prioritization.set(i, colorPrioritization[j]);
+                }
+            }
+
+            //if previous player has 1 or 2 cards, prioritize reversing and playing +2 and skip cards
+            if (prevPlayer.getSize() <= 2 && selectedCard.getCardNum() == 10 && drawCard) {
+                prioritization.set(i, 3);
+            }
+
+            //if next player has 1 or 2 cards, prioritize skip cards
+            if (nextPlayer.getSize() <= 2 && selectedCard.getCardNum() == 12) {
+                prioritization.set(i, 2);
+            }
+
+            //if next player has 1 or 2 cards, prioritize +2 cards
+            if (nextPlayer.getSize() <= 2 && selectedCard.getCardNum() == 11) {
+                prioritization.set(i, 1);
+            }
+
+            //if card is not playable, prioritization must be greater than 10
+            if (selectedCard.getColor() != mGamePileTopCard.getColor() && selectedCard.getCardNum() != mGamePileTopCard.getCardNum() && selectedCard.getColor() != Card.SPECIAL_COLOR) {
+                prioritization.set(i, 100);
+            }
+
+
+        }
+
+        for (int k = 0; k < prioritization.size(); k++) {
+            System.out.println("card " + k + ":" + prioritization.get(k));
+        }
+
+        //goes through all priority levels
+        for (int i = 1; i < 10; i++) {
+            //goes through all cards and checks for cards of priority level i
+            for (int j = 0; j < mActivePlayer.getSize(); j++) {
+                if (prioritization.get(j) == i) {
+                    selectedCard = p.getHand().get(j);
+                    action = ACTIONS.PLACE;
+
+                    //TODO: to be implemented
+                    mCurrentPlayerLabel.setText(mActivePlayer.name);
+                    try {
+                        specialAction(selectedCard);
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    }
+
+                    return;
+                }
             }
         }
 
         action = ACTIONS.DRAW;
         updateTopCard();
-        specialAction(mTopOfDeckCard);
+        try {
+            specialAction(mTopOfDeckCard);
+        } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+            unsupportedAudioFileException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        } catch (LineUnavailableException lineUnavailableException) {
+            lineUnavailableException.printStackTrace();
+        }
 
         updateTopCard();
 

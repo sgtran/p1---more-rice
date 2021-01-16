@@ -11,6 +11,8 @@ import java.util.Collections;
 public class SpecialActions {
     int round;
     Player mActivePlayer;
+    Player nextPlayer;
+    Player prevPlayer;
     Deck mActiveDeck;
     ArrayList<Player> mPlayers = new ArrayList<Player>();
     Card mTopPileCard;
@@ -23,6 +25,8 @@ public class SpecialActions {
         this.round = 0;
         this.mPlayers = p;
         this.mActivePlayer = mPlayers.get(0);
+        this.nextPlayer = mPlayers.get(1);
+        this.prevPlayer = mPlayers.get(mPlayers.size() - 1);
         this.mActiveDeck = d;
         this.mTopPileCard = c;
         this.moveStatus = tempCard;
@@ -79,10 +83,14 @@ public class SpecialActions {
             // Skips to next player
             round++;
             mActivePlayer = mPlayers.get(round % mPlayers.size());
+            nextPlayer = mPlayers.get((round + 1) % mPlayers.size());
+            prevPlayer = mPlayers.get((round - 1) % mPlayers.size());
             String skippedPlayer = mActivePlayer.getName();
             // skips their turn
             round++;
             mActivePlayer = mPlayers.get(round % mPlayers.size());
+            nextPlayer = mPlayers.get((round + 1) % mPlayers.size());
+            prevPlayer = mPlayers.get((round - 1) % mPlayers.size());
 
 
             return "skipping player " + skippedPlayer;
@@ -111,6 +119,8 @@ public class SpecialActions {
             String tempPlayer = mActivePlayer.getName();
 
             mActivePlayer = mPlayers.get(round % mPlayers.size());
+            nextPlayer = mPlayers.get((round + 1) % mPlayers.size());
+            prevPlayer = mPlayers.get((round - 1) % mPlayers.size());
 
             return tempPlayer + " has used reverse!";
 
@@ -129,6 +139,8 @@ public class SpecialActions {
             String activePlayerTemp = mActivePlayer.name;
             round++;
             mActivePlayer = mPlayers.get(round % mPlayers.size());
+            nextPlayer = mPlayers.get((round + 1) % mPlayers.size());
+            prevPlayer = mPlayers.get((round - 1) % mPlayers.size());
 
             // draws 2 for player
             action = Actions.ACTIONS.DRAWTWO;
@@ -150,6 +162,8 @@ public class SpecialActions {
             
             round++;
             mActivePlayer = mPlayers.get(round % mPlayers.size());
+            nextPlayer = mPlayers.get((round + 1) % mPlayers.size());
+            prevPlayer = mPlayers.get((round - 1) % mPlayers.size());
 
             return activePlayerTemp + " has drawn card";
         }
@@ -171,6 +185,8 @@ public class SpecialActions {
             round++;
             String activePlayerTemp = mActivePlayer.name;
             mActivePlayer = mPlayers.get(round % mPlayers.size());
+            nextPlayer = mPlayers.get((round + 1) % mPlayers.size());
+            prevPlayer = mPlayers.get((round - 1) % mPlayers.size());
             return activePlayerTemp + " has placed card";
         }
         if(mActivePlayer.getHand().isEmpty()) {
@@ -194,6 +210,14 @@ public class SpecialActions {
 
     public Player getActivePlayer(){
         return mActivePlayer;
+    }
+
+    public Player getNextPlayer() {
+        return nextPlayer;
+    }
+
+    public Player getPrevPlayer() {
+        return prevPlayer;
     }
 
     public ArrayList getPlayers(){
