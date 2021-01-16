@@ -15,10 +15,10 @@
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
 | **How to run the code**    |
-| :---:   | :-: |
-|Step 1: clone repo from Git                |
-|Step 2: run Uno|
-|Step 3: Play the game and hear the sounds and see the bot play|
+
+Step 1: clone repo from Git 
+Step 2: run Uno
+Step 3: Play the game and hear the sounds and see the bot play
 
 
 | **Scrum Cards Focus** | **Evidence** |
