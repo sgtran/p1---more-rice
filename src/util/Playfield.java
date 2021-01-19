@@ -1,6 +1,6 @@
 package util;
 
-import ui.UnoUI;
+import ui.UnoGUI;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -30,7 +30,7 @@ public class Playfield {
 
         actPlayer = players.get(round % playerNum); //Set first active player
        // topCard = Actions.getmTopCard(); //Set first top card
-        UnoUI gameWindow = new UnoUI(actPlayer, topCard, deck, players); //Start game
+        UnoGUI gameWindow = new UnoGUI(actPlayer, topCard, deck, players); //Start game
         gameWindow.setVisible(true); //Make UnoUI visible
 
     }
