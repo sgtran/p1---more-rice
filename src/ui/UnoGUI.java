@@ -38,6 +38,8 @@ public class UnoGUI extends JFrame {
     private JLabel mGamePile;
     private JButton mGameSettingsButton;
     private Player placeholder = new Player("placeholder");
+    private JFrame message = new JFrame();
+    private JOptionPane optionpane = new JOptionPane();
 
     private ACTIONS action;
 
@@ -62,8 +64,13 @@ public class UnoGUI extends JFrame {
             String output = model.execute(cardFromTop, action, mGamePileTopCard);
 
             System.out.println(model.getStatus());
+            message.setLayout(null);
+            message.setAlwaysOnTop(true);
+            message.setBounds(250, 200, 0, 0);
+            message.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            message.setVisible(true);
             if (output.equalsIgnoreCase("invalid move")) {
-                JOptionPane.showMessageDialog(null, output);
+                optionpane.showMessageDialog(message, output);
                 round = model.getRound();
                 mActivePlayer = model.getActivePlayer();
                 nextPlayer = model.getNextPlayer();
@@ -74,13 +81,13 @@ public class UnoGUI extends JFrame {
 
             if (output.equalsIgnoreCase("Winner")) {
                 winnerSound();
-                JOptionPane.showMessageDialog(null, output);
+                JOptionPane.showMessageDialog(message, output);
                 this.setVisible(false);
                 this.dispose();
                 break;
             }
 
-            JOptionPane.showMessageDialog(null, output);
+            JOptionPane.showMessageDialog(message, output);
 
             round = model.getRound();
             mActivePlayer = model.getActivePlayer();
@@ -91,6 +98,7 @@ public class UnoGUI extends JFrame {
 
             // Reset
             selectedCard = null;
+            message.setVisible(false);
             break;
         }
     }
@@ -183,7 +191,6 @@ public class UnoGUI extends JFrame {
 
 
         });
-
 
     }
 
