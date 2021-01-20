@@ -37,7 +37,7 @@ Kevin Hu 19/20 Completed scrum card however could have tried to merge branches
 
 Andrew Pu 19/20 Completed scrum card however could have done work earlier than later.
 
-Alex Hu 18/20 Was not able to complete scrum card however made genuine effort in his attempts.
+Alex Hu 18/20 Was not able to complete scrum card however made genuine effort in his attempts-Finished Tues 1/19.
 
 | **Scrum Cards Focus** | **Evidence** |
 | :---:   | :-: |
@@ -46,7 +46,7 @@ Alex Hu 18/20 Was not able to complete scrum card however made genuine effort in
 | Goal 2: Fix the Thymeleaf template -Kevin Hu | Fixed [Thymeleaf](https://github.com/sgtran/p1---rice/tree/spring/src/main/resources) template. Checkout spring branch, run "SpringSecurityMongodbSecurityApplication" with JDK 15 and download any necessary maven packages. Navigate to http://localhost:8080. |
 | Goal 3: Improve bot Algorithms -Andrew Pu |  Created bot algorithm and added to botPlay method in [UnoUi.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java). Also added code to [Uno.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/Uno.java) and elsewhere in [UnoUI.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java) to allow botPlay method to be run correctly and access next/previous players. |  |
 |        |
-| Still in progress objective: Remove forms from UI -Alex Hu| Created [UnoGUI](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoGUI.java) to make UI work with no forms. However, something did not work so work was reverted and UnoUI is kept as the UI. Will work to fix this issue ASAP.Module dependencies were changed to accomodate some of the packages/jars in the code. UI is still in progress to be improved. |
+| Still in progress objective-Finished Tues 1/19: Remove forms from UI -Alex Hu| Created [UnoGUI](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoGUI.java) to make UI work with no forms. However, something did not work so work was reverted and UnoUI is kept as the UI. Will work to fix this issue ASAP.Module dependencies were changed to accomodate some of the packages/jars in the code. UI is still in progress to be improved. |
 
 
 | **Week** | **Code Updates** |         
