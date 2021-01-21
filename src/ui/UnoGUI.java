@@ -64,13 +64,14 @@ public class UnoGUI extends JFrame {
             String output = model.execute(cardFromTop, action, mGamePileTopCard);
 
             System.out.println(model.getStatus());
-            message.setLayout(null);
-            message.setAlwaysOnTop(true);
-            message.setBounds(250, 200, 0, 0);
-            message.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            message.setVisible(true);
+           // message.setLayout(null);
+           // message.setAlwaysOnTop(true);
+           // message.setBounds(250, 200, 0, 0);
+           // message.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+           // message.setVisible(true);
             if (output.equalsIgnoreCase("invalid move")) {
-                optionpane.showMessageDialog(message, output);
+            //    optionpane.showMessageDialog(message, output);
+                JOptionPane.showMessageDialog(null, output);
                 round = model.getRound();
                 mActivePlayer = model.getActivePlayer();
                 nextPlayer = model.getNextPlayer();
@@ -81,13 +82,16 @@ public class UnoGUI extends JFrame {
 
             if (output.equalsIgnoreCase("Winner")) {
                 winnerSound();
-                JOptionPane.showMessageDialog(message, output);
+               // JOptionPane.showMessageDialog(message, output);
+                JOptionPane.showMessageDialog(null, output);
                 this.setVisible(false);
                 this.dispose();
                 break;
             }
 
-            JOptionPane.showMessageDialog(message, output);
+           // JOptionPane.showMessageDialog(message, output);
+            JOptionPane.showMessageDialog(null, output);
+
 
             round = model.getRound();
             mActivePlayer = model.getActivePlayer();
@@ -98,7 +102,7 @@ public class UnoGUI extends JFrame {
 
             // Reset
             selectedCard = null;
-            message.setVisible(false);
+            //message.setVisible(false);
             break;
         }
     }
