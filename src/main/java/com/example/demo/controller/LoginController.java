@@ -74,5 +74,12 @@ public class LoginController {
         return modelAndView;
     }
 
+    @RequestMapping(value = {"/uno"}, method = RequestMethod.GET)
+    public ModelAndView uno() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("uno");
+        return modelAndView;
+    }
+
 
 }
