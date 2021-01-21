@@ -53,7 +53,7 @@ public class Playfield {
             for(int j = 0; j < botNum; j++) {
                 if(botPositions[j] == i) {
                     String botName = "Bot" + Integer.toString(j+1);
-                    players.add(new Player(botName));
+                    players.add(new Bot(botName));
                 }
             }
         }
