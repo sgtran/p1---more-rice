@@ -44,7 +44,7 @@ public class GameSettings extends JFrame {
         clip.start();
 
     }
-    public GameSettings(UnoUI unoui) throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+    public GameSettings(UnoGUI unoui) throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         super("Game Settings");
         setBounds(100, 100, 418, 315);
         Container c = getContentPane();

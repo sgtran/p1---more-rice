@@ -36,4 +36,13 @@ public class Player {
     public int getSize() {
         return hand.size();
     }
+
+    public boolean isBot() {
+        return false;
+    }
+
+    //required to make sure bot selectedCard method can run for all players
+    public Card chosenCard(Player p1, Player p2, Card card) {
+        return null;
+    }
 }
