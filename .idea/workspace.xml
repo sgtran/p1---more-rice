@@ -5,11 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="Fix some xml files">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/uno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/GameSettings$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/GameSettings$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/GameSettings$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/GameSettings$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/GameSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/Uno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/ui/UnoGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Actions$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Actions$ACTIONS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Actions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Deck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/Playfield.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p1---rice/util/SpecialActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
+  <component name="RunManager" selected="Application.Uno">
     <configuration name="SpringSecurityMongodbSecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
       <module name="p1---rice" />
@@ -44,13 +69,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration name="Uno" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="adopt-openj9-15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ui.Uno" />
+      <module name="p1---rice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -64,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Uno" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
       </list>
     </recent_temporary>
@@ -79,6 +116,7 @@
       <workItem from="1611210021505" duration="53000" />
       <workItem from="1611210098398" duration="50000" />
       <workItem from="1611210157118" duration="1312000" />
+      <workItem from="1612455446808" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -103,6 +141,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix some xml files" />
