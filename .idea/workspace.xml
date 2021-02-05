@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="made log in page more pretty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,7 @@
       <workItem from="1611210157118" duration="1312000" />
       <workItem from="1612455446808" duration="327000" />
       <workItem from="1612458766857" duration="68000" />
-      <workItem from="1612500866737" duration="6558000" />
+      <workItem from="1612500866737" duration="7620000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -138,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612505633831</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="made log in page more pretty">
+      <created>1612507986249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612507986249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

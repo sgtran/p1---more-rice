@@ -29,24 +29,15 @@ Step 3: Play the game and hear the sounds and see the bot play
 ![](1.16.2.PNG) 
 ![](1.16.3.PNG)
 
- **Scrum Master Grades**  
+ 
 
-Sean Tran 19/20 Completed scrum card however could have improved sound quality of sound.
-
-Kevin Hu 19/20 Completed scrum card however could have tried to merge branches
-
-Andrew Pu 19/20 Completed scrum card however could have done work earlier than later.
-
-Alex Hu 18/20 Was not able to complete scrum card however made genuine effort in his attempts-Finished Tues 1/19.
-
-| **Scrum Cards Focus** | **Evidence** |
+| **Current Ticket Focus** | **Evidence** |
 | :---:   | :-: |
 |Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/1)|
-| Goal 1: Integrate sound into game and buttons -Sean Tran  | In order to run this code. Just run Uno, and the click on the various buttons and play the game to hear the sounds. Added sound to [gameSettings click](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.javaL#183-189) and [gameSettingClick](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L191-197). I also added sound to [place card](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-26) for correct and incorrect placement. Added sound for [winner case](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java#L200-205). |
-| Goal 2: Fix the Thymeleaf template -Kevin Hu | Fixed [Thymeleaf](https://github.com/sgtran/p1---rice/tree/spring/src/main/resources) template. Checkout spring branch, run "SpringSecurityMongodbSecurityApplication" with JDK 15 and download any necessary maven packages. Navigate to http://localhost:8080. |
-| Goal 3: Improve bot Algorithms -Andrew Pu |  Created bot algorithm and added to botPlay method in [UnoUi.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java). Also added code to [Uno.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/Uno.java) and elsewhere in [UnoUI.java](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoUI.java) to allow botPlay method to be run correctly and access next/previous players. |  |
-|        |
-| Still in progress objective-Finished Tues 1/19: Remove forms from UI -Alex Hu| Created [UnoGUI](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoGUI.java) to make UI work with no forms. However, something did not work so work was reverted and UnoUI is kept as the UI. Will work to fix this issue ASAP.Module dependencies were changed to accomodate some of the packages/jars in the code. UI is still in progress to be improved. |
+| Ticket 1: Design more aesthetically pleasing log in page -Sean Tran  | Change the font of and color of Log in [Logo](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L11). Change the background color of log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L7). Added rice logo [here](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L10)  |
+| Ticket 2: Fix the Thymeleaf template -Kevin Hu | |
+| Ticket 3: Make sure IntelliJ code work with Spring -Andrew Pu |  |  
+| Ticket 4: Add Easter eggs -Alex Hu| |
 
 
 | **Week** | **Code Updates** |         
