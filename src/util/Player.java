@@ -49,7 +49,11 @@ public class Player {
         return null;
     }
 
-    public int addScore(int points) {
+    public void addScore(int points) {
         score = score + points;
+    }
+
+    public int getScore() {
+        return score;
     }
 }
