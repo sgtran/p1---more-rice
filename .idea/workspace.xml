@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="Fix some xml files">
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="fixed GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UnoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UnoGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Uno">
+  <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
     <configuration name="SpringSecurityMongodbSecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
       <module name="p1---rice" />
@@ -96,8 +96,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Uno" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
+        <item itemvalue="Application.Uno" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
       </list>
     </recent_temporary>
@@ -115,7 +115,7 @@
       <workItem from="1611210157118" duration="1312000" />
       <workItem from="1612455446808" duration="327000" />
       <workItem from="1612458766857" duration="68000" />
-      <workItem from="1612500866737" duration="1284000" />
+      <workItem from="1612500866737" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -124,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611210461229</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed GUI">
+      <created>1612502354881</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612502354881</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix some xml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some xml files" />
+    <MESSAGE value="fixed GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed GUI" />
   </component>
 </project>
