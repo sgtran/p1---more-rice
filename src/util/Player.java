@@ -4,12 +4,15 @@ import java.util.ArrayList;
 
 public class Player {
 
+    private int score;
+
     public String name; //Player's name
     public int numCards; //Number of cards player has
     private ArrayList<Card> hand = new ArrayList<Card>(); //The player's hand
 
     public Player(String newName){
         this.name = newName;
+        score = 0;
     }
 
 
@@ -44,5 +47,9 @@ public class Player {
     //required to make sure bot selectedCard method can run for all players
     public Card chosenCard(Player p1, Player p2, Card card) {
         return null;
+    }
+
+    public int addScore(int points) {
+        score = score + points;
     }
 }

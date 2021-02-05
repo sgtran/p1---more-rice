@@ -78,6 +78,8 @@ public class SpecialActions {
 
             if(mActivePlayer.getHand().isEmpty()) {
                 return "Winner";
+
+                win();
             }
 
             // Skips to next player
@@ -103,6 +105,8 @@ public class SpecialActions {
 
             if(mActivePlayer.getHand().isEmpty()) {
                 return "Winner";
+
+                win();
             }
 
             return "Place a card of choice";
@@ -180,6 +184,8 @@ public class SpecialActions {
 
             if(mActivePlayer.getHand().isEmpty()) {
                 return "Winner";
+
+                win();
             }
 
             round++;
@@ -191,6 +197,8 @@ public class SpecialActions {
         }
         if(mActivePlayer.getHand().isEmpty()) {
             return "Winner";
+
+            win();
         }
         if(mActiveDeck.cardDeck.isEmpty()){
             mActiveDeck = Actions.newDeck();
@@ -198,6 +206,25 @@ public class SpecialActions {
 
 
         return "error";
+    }
+
+    public void win() {
+        for (int i = 0; i < mPlayers.getSize(); i++) {
+
+            Player tempPlayer = mPlayers.get(i);
+
+            for (int j = 0; j < tempPlayer.getSize(); j++) {
+
+                int cardNum = tempPlayer.getHand().get(j);
+
+                if (cardNum < 10) {
+                    mActivePlayer.addScore(cardNum);
+                } else {
+                    mActivePlayer.addScore(20);
+                }
+
+            }
+        }
     }
 
     public void setDeck(Deck d){
