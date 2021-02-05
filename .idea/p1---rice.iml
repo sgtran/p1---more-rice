@@ -111,5 +111,14 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Intelliji/IntelliJ IDEA Community Edition 2020.2.3/lib/forms_rt.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
