@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="added to README.md">
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/SpecialActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/SpecialActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612509207474</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added scoring system">
+      <created>1612512195779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612512195779</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added scoring system">
+      <created>1612512378621</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612512378621</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +195,17 @@
     <MESSAGE value="fixed GUI" />
     <MESSAGE value="made log in page more pretty" />
     <MESSAGE value="added to README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="added to README.md" />
+    <MESSAGE value="Added scoring system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added scoring system" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="403" y="10" key="CommitChangelistDialog2" timestamp="1612512376450">
+      <screen x="0" y="0" width="1638" height="882" />
+    </state>
+    <state x="403" y="10" key="CommitChangelistDialog2/0.0.1638.882@0.0.1638.882" timestamp="1612512376450" />
+    <state x="412" y="174" key="Vcs.Push.Dialog.v2" timestamp="1612512383879">
+      <screen x="0" y="0" width="1638" height="882" />
+    </state>
+    <state x="412" y="174" key="Vcs.Push.Dialog.v2/0.0.1638.882@0.0.1638.882" timestamp="1612512383879" />
   </component>
 </project>
