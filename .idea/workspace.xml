@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="fixed GUI">
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="made log in page more pretty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
@@ -115,7 +115,7 @@
       <workItem from="1611210157118" duration="1312000" />
       <workItem from="1612455446808" duration="327000" />
       <workItem from="1612458766857" duration="68000" />
-      <workItem from="1612500866737" duration="4094000" />
+      <workItem from="1612500866737" duration="6558000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612502354881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="made log in page more pretty">
+      <created>1612505633831</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612505633831</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +159,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix some xml files" />
     <MESSAGE value="fixed GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed GUI" />
+    <MESSAGE value="made log in page more pretty" />
+    <option name="LAST_COMMIT_MESSAGE" value="made log in page more pretty" />
   </component>
 </project>
