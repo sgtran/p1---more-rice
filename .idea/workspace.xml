@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="made log in page more pretty">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="added to README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +112,7 @@
       <workItem from="1611210157118" duration="1312000" />
       <workItem from="1612455446808" duration="327000" />
       <workItem from="1612458766857" duration="68000" />
-      <workItem from="1612500866737" duration="7620000" />
+      <workItem from="1612500866737" duration="8082000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -145,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612507986249</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added to README.md">
+      <created>1612509207474</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612509207474</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +171,7 @@
     <MESSAGE value="Fix some xml files" />
     <MESSAGE value="fixed GUI" />
     <MESSAGE value="made log in page more pretty" />
-    <option name="LAST_COMMIT_MESSAGE" value="made log in page more pretty" />
+    <MESSAGE value="added to README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="added to README.md" />
   </component>
 </project>

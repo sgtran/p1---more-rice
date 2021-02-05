@@ -33,11 +33,11 @@ Step 3: Play the game and hear the sounds and see the bot play
 
 | **Current Ticket Focus** | **Evidence** |
 | :---:   | :-: |
-|Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/1)|
-| Ticket 1: Design more aesthetically pleasing log in page -Sean Tran  | Change the font of and color of Log in [Logo](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L11). Change the background color of log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L7). Added rice logo [here](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L10)  |
-| Ticket 2: Fix the Thymeleaf template -Kevin Hu | |
-| Ticket 3: Make sure IntelliJ code work with Spring -Andrew Pu |  |  
-| Ticket 4: Add Easter eggs -Alex Hu| |
+|Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/2)|
+| [Ticket 1](https://github.com/sgtran/p1---rice/issues/14): Design more aesthetically pleasing log in page -Sean Tran  | Change the font of and color of Log in [Logo](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L11). Change the background color of log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L7). Added rice logo [here](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L10)  |
+| [Ticket 2](https://github.com/sgtran/p1---rice/issues/16): Fix the Thymeleaf template -Kevin Hu | |
+| [Ticket 3](https://github.com/sgtran/p1---rice/issues/17): Make sure IntelliJ code work with Spring -Andrew Pu |  |  
+| [Ticket 4](https://github.com/sgtran/p1---rice/issues/15): Add Easter eggs -Alex Hu| |
 
 
 | **Week** | **Code Updates** |         
