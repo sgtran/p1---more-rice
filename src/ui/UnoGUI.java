@@ -37,9 +37,9 @@ public class UnoGUI extends JFrame {
     private JButton mPileButton;
     private JLabel mGamePile;
     private JButton mGameSettingsButton;
-    private Player placeholder = new Player("placeholder");
-    private JFrame message = new JFrame();
-    private JOptionPane optionpane = new JOptionPane();
+    private final Player placeholder = new Player("placeholder");
+    private final JFrame message = new JFrame();
+    private final JOptionPane optionpane = new JOptionPane();
 
     private ACTIONS action;
 
@@ -47,7 +47,7 @@ public class UnoGUI extends JFrame {
     private Player nextPlayer = new Player("next test");
     private Player prevPlayer = new Player("prev test");
     public int round = 0;
-    private ArrayList<Player> mPlayers = new ArrayList<Player>();
+    private final ArrayList<Player> mPlayers = new ArrayList<Player>();
     private Card mTopOfDeckCard;
     private ArrayList<JButton> mCardButtons;
     public SpecialActions model;

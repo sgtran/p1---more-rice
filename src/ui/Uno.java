@@ -15,13 +15,13 @@ import java.util.regex.Pattern;
 
 public class Uno extends JFrame {
 
-    private JLabel label1; // Label for player # combo box
-    private JComboBox<String> numPlayersCombo; // Combo box to select number of players
-    private JLabel label2; // Label for player names text field
-    private JTextArea playerNamesTextField; // Text box for player names
-    private JLabel label3; // Label for bot # combo box
-    private JComboBox<String> numBotsCombo; // Combo box to select number of bots
-    private static String ENTER = "Enter"; //Submit button
+    private final JLabel label1; // Label for player # combo box
+    private final JComboBox<String> numPlayersCombo; // Combo box to select number of players
+    private final JLabel label2; // Label for player names text field
+    private final JTextArea playerNamesTextField; // Text box for player names
+    private final JLabel label3; // Label for bot # combo box
+    private final JComboBox<String> numBotsCombo; // Combo box to select number of bots
+    private static final String ENTER = "Enter"; //Submit button
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {

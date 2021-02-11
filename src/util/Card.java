@@ -16,8 +16,8 @@ public class Card {
 
     public boolean success = true;
 
-    private Color cardColor;
-    private int cardNum; //0-9, 10 for reverse, 11 for draw 2, 12 for skip, 13 for Wild
+    private final Color cardColor;
+    private final int cardNum; //0-9, 10 for reverse, 11 for draw 2, 12 for skip, 13 for Wild
 
 
     public Card(Color c, int n){

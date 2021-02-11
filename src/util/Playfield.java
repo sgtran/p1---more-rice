@@ -52,7 +52,7 @@ public class Playfield {
             //if there's a bot at position i, then a bot is added
             for(int j = 0; j < botNum; j++) {
                 if(botPositions[j] == i) {
-                    String botName = "Bot" + Integer.toString(j+1);
+                    String botName = "Bot" + (j + 1);
                     players.add(new Bot(botName));
                 }
             }

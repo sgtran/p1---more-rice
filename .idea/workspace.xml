@@ -7,7 +7,15 @@
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Uno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Uno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/UnoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UnoGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Playfield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Playfield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/SpecialActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/SpecialActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +39,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Intelliji/IntelliJ IDEA Community Edition 2020.2.3/lib/forms_rt.jar" />
+    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/forms_rt.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
     <configuration name="SpringSecurityMongodbSecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -72,15 +81,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +127,8 @@
       <workItem from="1612458766857" duration="68000" />
       <workItem from="1612500866737" duration="8082000" />
       <workItem from="1612593732593" duration="19000" />
+      <workItem from="1612976302430" duration="1234000" />
+      <workItem from="1613003528509" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -195,15 +204,5 @@
     <MESSAGE value="added to README.md" />
     <MESSAGE value="Added scoring system" />
     <option name="LAST_COMMIT_MESSAGE" value="Added scoring system" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="403" y="10" key="CommitChangelistDialog2" timestamp="1612512376450">
-      <screen x="0" y="0" width="1638" height="882" />
-    </state>
-    <state x="403" y="10" key="CommitChangelistDialog2/0.0.1638.882@0.0.1638.882" timestamp="1612512376450" />
-    <state x="412" y="174" key="Vcs.Push.Dialog.v2" timestamp="1612512383879">
-      <screen x="0" y="0" width="1638" height="882" />
-    </state>
-    <state x="412" y="174" key="Vcs.Push.Dialog.v2/0.0.1638.882@0.0.1638.882" timestamp="1612512383879" />
   </component>
 </project>

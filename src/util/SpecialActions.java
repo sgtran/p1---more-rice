@@ -77,9 +77,8 @@ public class SpecialActions {
             Actions.doAction(action, mActivePlayer, 2, mActiveDeck, cardFromTop, gamePileTopCard);
 
             if(mActivePlayer.getHand().isEmpty()) {
-                return "Winner";
-
                 win();
+                return "Winner";
             }
 
             // Skips to next player
@@ -104,9 +103,9 @@ public class SpecialActions {
             Actions.doAction(action, mActivePlayer, 2, mActiveDeck, cardFromTop, gamePileTopCard);
 
             if(mActivePlayer.getHand().isEmpty()) {
+                win();
                 return "Winner";
 
-                win();
             }
 
             return "Place a card of choice";
@@ -183,9 +182,9 @@ public class SpecialActions {
             System.out.println(round + "\n" + mActivePlayer.name + " card " + cardFromTop.getDescription());
 
             if(mActivePlayer.getHand().isEmpty()) {
+                win();
                 return "Winner";
 
-                win();
             }
 
             round++;
@@ -196,9 +195,9 @@ public class SpecialActions {
             return activePlayerTemp + " has placed card";
         }
         if(mActivePlayer.getHand().isEmpty()) {
+            win();
             return "Winner";
 
-            win();
         }
         if(mActiveDeck.cardDeck.isEmpty()){
             mActiveDeck = Actions.newDeck();
@@ -209,13 +208,13 @@ public class SpecialActions {
     }
 
     public void win() {
-        for (int i = 0; i < mPlayers.getSize(); i++) {
+        for (int i = 0; i < mPlayers.get(i).getSize(); i++) {
 
             Player tempPlayer = mPlayers.get(i);
 
             for (int j = 0; j < tempPlayer.getSize(); j++) {
 
-                int cardNum = tempPlayer.getHand().get(j);
+                int cardNum = tempPlayer.getHand().size();
 
                 if (cardNum < 10) {
                     mActivePlayer.addScore(cardNum);

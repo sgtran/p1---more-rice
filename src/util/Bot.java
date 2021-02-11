@@ -47,7 +47,7 @@ public class Bot extends Player {
         int[] tempArray = {green,yellow,blue,red};
         return tempArray;
 
-    };
+    }
 
     public int[] colorPrioritization() {
         int[] temp = {0,0,0,0};

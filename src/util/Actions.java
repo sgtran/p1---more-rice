@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Actions {
 
-    public static enum ACTIONS {DRAW, PLACE, SKIP, REVERSE, DRAWTWO, WILDCARD}
+    public enum ACTIONS {DRAW, PLACE, SKIP, REVERSE, DRAWTWO, WILDCARD}
     public static Card mTopCard;
 
     public static void correctPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {

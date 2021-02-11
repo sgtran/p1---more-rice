@@ -14,7 +14,7 @@ public class GameSettings extends JFrame {
 
     private JComboBox<String> numPlayersCombo; // Combo box to select number of players
     private JTextArea playerNamesTextField; // Text box for player names
-    private static String ENTER = "Enter"; //Submit button
+    private static final String ENTER = "Enter"; //Submit button
     private JLabel label;
 
     public static void main(String[] args) {
