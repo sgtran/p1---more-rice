@@ -37,7 +37,10 @@ Step 3: Play the game and hear the sounds and see the bot play
 | [Ticket 1](https://github.com/sgtran/p1---rice/issues/22): Fix image on log in page add more details to journal page -Sean Tran  | Fixed logo on log in page by centering it using a [class](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L12-15). Centered the title on the log in page by using a class and changing some [settings](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L17). Added logo on log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L20). Put title in log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L18).) |
 | [Ticket 2](https://github.com/sgtran/p1---rice/issues/20): Integrate game into website -Kevin Hu | [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) for web presence error free |
 | [Ticket 3](https://github.com/sgtran/p1---rice/issues/21): Create Leaderboard -Andrew Pu | |  Changed scoring in [player class](https://github.com/sgtran/p1---rice/blob/main/src/util/Player.java) to create more original scoring system. Still working on adding leaderboard to display score data in MongoDB database |
-| [Ticket 4](https://github.com/sgtran/p1---rice/issues/19): Add Easter eggs -Alex Hu| Designed ideas for easter egg: an element such as the rice logo on the webpage will be disguised as a button that when clicked, activates the iframe embed that Kevin has been working on for the journals. I have started researching on how to implement the javascript for this and have found links such as https://stackoverflow.com/questions/52792414/creating-a-clickable-image-and-applying-an-click-event-listener-to-it that will help me. Implementation is still in the works as this week we mainly focused on basic server hosting and I have yet to delve deeper into Spring and javascript.|
+| [Ticket 4](https://github.com/sgtran/p1---rice/issues/19): Clean Up Journal Presentation -Alex Hu|Learned and added JavaScript for hiding the iframes and only showing them when buttons are pressed using display:none|
+
+
+
 
 
 | **Week** | **Code Updates** |         
