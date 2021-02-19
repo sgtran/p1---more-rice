@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+
     <head>
         <title>Login</title>
     </head>
     <body style="background-color: blanchedalmond" >
         <div layout:fragment="content">
             <form class="form-signin" th:action="@{/login}" method="post">
-                <img class="mb-4" src="https://www.pinclipart.com/picdir/middle/541-5418277_cartoon-rice-bowl-png-clipart.png" alt="" width="72" height="72" />
+                <style>
+                    img {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    h1 {text-align: center;}
+
+
+                </style>
+                <img class="mb-4" src="https://www.pinclipart.com/picdir/middle/541-5418277_cartoon-rice-bowl-png-clipart.png" alt="" style="width:50%" />
                 <h1 class="h3 mb-3 font-weight-normal"><span style="color: cornflowerblue; "><i>Please sign in</i></span></h1>
                 <div th:if="${param.error}">
                     Invalid email and password.
