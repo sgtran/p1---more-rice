@@ -4,7 +4,20 @@
 <head>
     <title>Uno</title>
 </head>
+
 <div layout:fragment="content">
+    <style>
+        h1 {text-align: center;}
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+    <h1 class="h3 mb-3 font-weight-normal"><span style="color: coral; "><i>Journal Page</i></span></h1>
+
+    <img class="mb-4" src="https://www.pinclipart.com/picdir/middle/541-5418277_cartoon-rice-bowl-png-clipart.png" alt="" style="width:250px;height:200px;" />
     <iframe style="display: none" id="ksiframe" width="1200" height="600" src="https://docs.google.com/document/d/e/2PACX-1vSF95TOvylim7k2PnHEtX_3ayGsAdoaU-77cF1od_fpe7_95cMNZjHpWLBNr_4xwlbRNkqRAIYqNNjd/pub?embedded=true" frameborder="0" allowfullscreen="true"></iframe>
     <iframe style="display: none" id="aaiframe" width="1200" height="600" src="https://docs.google.com/document/d/e/2PACX-1vS0sUq6boxRvgRP8YqqsrCx4GlqvMRnLSKwAPBTJdUN9ha0OBTfHgJG_oLO0DtnJ90F6eJYzwDw_nzY/pub?embedded=true" frameborder="0" allowfullscreen="true"></iframe>
     <button type="button" id="ks" onclick="showToggle(ks, ksiframe)">Kevin/Sean Journal</button>
