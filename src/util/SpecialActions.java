@@ -20,6 +20,9 @@ public class SpecialActions {
     Card resultCard;
     Card moveStatus;
     Card tempCard = new Card(Color.BLUE, 2);
+    //temporary
+    //We will use database for leaderboard
+    ArrayList<Player> leaderboard = mPlayers;
 
     public SpecialActions(Deck d, ArrayList<Player> p, Card c){
         this.round = 0;
@@ -77,7 +80,7 @@ public class SpecialActions {
             Actions.doAction(action, mActivePlayer, 2, mActiveDeck, cardFromTop, gamePileTopCard);
 
             if(mActivePlayer.getHand().isEmpty()) {
-                win();
+                win(mActivePlayer);
                 return "Winner";
             }
 
@@ -103,7 +106,7 @@ public class SpecialActions {
             Actions.doAction(action, mActivePlayer, 2, mActiveDeck, cardFromTop, gamePileTopCard);
 
             if(mActivePlayer.getHand().isEmpty()) {
-                win();
+                win(mActivePlayer);
                 return "Winner";
 
             }
@@ -182,7 +185,7 @@ public class SpecialActions {
             System.out.println(round + "\n" + mActivePlayer.name + " card " + cardFromTop.getDescription());
 
             if(mActivePlayer.getHand().isEmpty()) {
-                win();
+                win(mActivePlayer);
                 return "Winner";
 
             }
@@ -195,7 +198,7 @@ public class SpecialActions {
             return activePlayerTemp + " has placed card";
         }
         if(mActivePlayer.getHand().isEmpty()) {
-            win();
+            win(mActivePlayer);
             return "Winner";
 
         }
@@ -207,7 +210,7 @@ public class SpecialActions {
         return "error";
     }
 
-    public void win() {
+    public void win(Player winner) {
         for (int i = 0; i < mPlayers.get(i).getSize(); i++) {
 
             Player tempPlayer = mPlayers.get(i);
@@ -217,11 +220,42 @@ public class SpecialActions {
                 int cardNum = tempPlayer.getHand().size();
 
                 if (cardNum < 10) {
-                    mActivePlayer.addScore(cardNum);
-                } else {
-                    mActivePlayer.addScore(20);
+                    winner.addScore(cardNum);
+                } else if (cardNum == 10) {
+                    winner.addScore(15);
+                } else if (cardNum == 11) {
+                    winner.addScore(20);
+                } else if (cardNum == 10) {
+                    winner.addScore(30);
+                } else if (cardNum == 10) {
+                    winner.addScore(40);
                 }
 
+            }
+        }
+
+        updateLeaderboard(winner);
+
+    }
+
+    public void updateLeaderboard(Player winner) {
+
+        int index = 0;
+
+        for (int i = 0; i < leaderboard.size(); i++) {
+            if (leaderboard.get(i).equals(winner)) {
+                index = i;
+            }
+            break;
+        }
+
+        for (int i = index; i > 0; i--) {
+            if (leaderboard.get(i).getScore() > leaderboard.get(i-1).getScore()) {
+                Player temp = leaderboard.get(i-1);
+                leaderboard.set(i - 1, leaderboard.get(i));
+                leaderboard.set(i, temp);
+            } else {
+                break;
             }
         }
     }
