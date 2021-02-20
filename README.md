@@ -14,7 +14,9 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
- **How to run the code**    
+*Please scroll down for Readme Guide* 
+
+ **How to run the code for the game**    
  
 Step 1: clone repo from Git 
 
@@ -29,26 +31,26 @@ Step 3: Play the game and hear the sounds and see the bot play
 ![](resources/1.16.2.PNG) 
 ![](resources/1.16.3.PNG)
 
-Front End Progress:
-To check frontend deployment, access website here: http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080/
-The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.
-![](resources/website.png)
-Register an account buy pressing log in and clicking sign up.
-You can also use the following credentials (Username: test@gmail.com password: test)
-![](resources/login.png)
-Once registered, log in and access the dashboard where the journals are located.
-![](resources/dashboard.png)
+**ReadMe Guide me** 
 
-
- 
-
-| **Current Ticket Focus** | **Evidence** |
+| **Ticket Review** | **Evidence** |
 | :---:   | :-: |
 |Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/2)|
 | [Ticket 1](https://github.com/sgtran/p1---rice/issues/22): Fix image on log in page add more details to journal page -Sean Tran  | Fixed logo on log in page by centering it using a [class](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L12-15). Centered the title on the log in page by using a class and changing some [settings](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L17). Added logo on log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L20). Put title in log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L18).) |
 | [Ticket 2](https://github.com/sgtran/p1---rice/issues/20): Integrate game into website -Kevin Hu | [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) for web presence error free |
 | [Ticket 3](https://github.com/sgtran/p1---rice/issues/21): Create Leaderboard -Andrew Pu | Changed scoring and added leaderboard in [player class](https://github.com/sgtran/p1---rice/blob/main/src/util/Player.java). Still working on adding leaderboard to display score data in MongoDB database |
 | [Ticket 4](https://github.com/sgtran/p1---rice/issues/19): Clean Up Journal Presentation -Alex Hu|Learned and added JavaScript for hiding the iframes and only showing them when buttons are pressed using display:none (https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L24)|
+
+| **Front End Progress** | **Evidence** |
+| :---:   | :-: |
+| Link to website (from padlet) [here](http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080)|
+| The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.  | ![](resources/website.png) |
+| Register an account by pressing log in and clicking sign up. You can also use the following credentials (Username: test@gmail.com password: test) | ![](resources/login.png) |
+| Once registered, log in and access the dashboard where the journals are located.| ![](resources/dashboard.png)|
+
+
+
+
 
 
 
