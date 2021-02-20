@@ -14,7 +14,7 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-*Please scroll down for Readme Guide* 
+#*Please scroll down for Readme Guide* 
 
  **How to run the code for the game**    
  
@@ -31,7 +31,7 @@ Step 3: Play the game and hear the sounds and see the bot play
 ![](resources/1.16.2.PNG) 
 ![](resources/1.16.3.PNG)
 
-**ReadMe Guide me** 
+#**ReadMe Guide me** 
 
 | **Ticket Review** | **Evidence** |
 | :---:   | :-: |
@@ -41,7 +41,7 @@ Step 3: Play the game and hear the sounds and see the bot play
 | [Ticket 3](https://github.com/sgtran/p1---rice/issues/21): Create Leaderboard -Andrew Pu | Changed scoring and added leaderboard in [player class](https://github.com/sgtran/p1---rice/blob/main/src/util/Player.java). Still working on adding leaderboard to display score data in MongoDB database |
 | [Ticket 4](https://github.com/sgtran/p1---rice/issues/19): Clean Up Journal Presentation -Alex Hu|Learned and added JavaScript for hiding the iframes and only showing them when buttons are pressed using display:none (https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L24)|
 
-| **Front End Progress** | **Evidence** |
+| **Front End Progress / Feedback** | **Evidence** |
 | :---:   | :-: |
 | Link to website (from padlet) [here](http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080)|
 | The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.  | ![](resources/website.png) |
@@ -53,7 +53,7 @@ Step 3: Play the game and hear the sounds and see the bot play
 
 
 
-
+_____________________________________________________________________________________
 
 
 | **Week** | **Code Updates** |         
