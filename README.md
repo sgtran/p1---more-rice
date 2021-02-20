@@ -14,7 +14,7 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-#*Please scroll down for Readme Guide* 
+## *Please scroll down for Readme Guide* 
 
  **How to run the code for the game**    
  
@@ -31,7 +31,7 @@ Step 3: Play the game and hear the sounds and see the bot play
 ![](resources/1.16.2.PNG) 
 ![](resources/1.16.3.PNG)
 
-#**ReadMe Guide me** 
+## **ReadMe Guide me** 
 
 | **Ticket Review** | **Evidence** |
 | :---:   | :-: |
