@@ -34,7 +34,10 @@ To check frontend deployment, access website here: http://ec2-13-57-248-92.us-we
 The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.
 ![](resources/website.png)
 Register an account buy pressing log in and clicking sign up.
+You can also use the following credentials (Username: test@gmail.com password: test)
+![](resources/login.png)
 Once registered, log in and access the dashboard where the journals are located.
+![](resources/dashboard.png)
 
 
  

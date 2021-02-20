@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add jars with dependencies">
-      <change beforePath="$PROJECT_DIR$/out/artifacts/p1___rice_jar/p1---rice.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="organize files">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +127,7 @@
       <workItem from="1612976302430" duration="1234000" />
       <workItem from="1613003528509" duration="4082000" />
       <workItem from="1613614564769" duration="4005000" />
+      <workItem from="1613790914136" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -205,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613721467807</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="organize files">
+      <created>1613791013234</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613791013234</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +241,7 @@
     <MESSAGE value="updated readme with new tickets" />
     <MESSAGE value="centered picture and title log in" />
     <MESSAGE value="add jars with dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="add jars with dependencies" />
+    <MESSAGE value="organize files" />
+    <option name="LAST_COMMIT_MESSAGE" value="organize files" />
   </component>
 </project>
