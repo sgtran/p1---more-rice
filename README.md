@@ -18,21 +18,21 @@
  
 Step 1: clone repo from Git 
 
-![](1.16.5.PNG)
+![](resources/1.16.5.PNG)
 
 Step 2: run Uno 
 
-![](1.16.1.PNG)
+![](resources/1.16.1.PNG)
 
 Step 3: Play the game and hear the sounds and see the bot play 
 
-![](1.16.2.PNG) 
-![](1.16.3.PNG)
+![](resources/1.16.2.PNG) 
+![](resources/1.16.3.PNG)
 
 Front End Progress:
 To check frontend deployment, access website here: http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080/
 The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.
-![](website.png)
+![](resources/website.png)
 Register an account buy pressing log in and clicking sign up.
 Once registered, log in and access the dashboard where the journals are located.
 
