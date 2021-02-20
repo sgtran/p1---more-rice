@@ -53,7 +53,7 @@ This table shows Front End Progress and Visuals.
 This table talks about Code Review and feedback.
 | **Code Review and Feedback** | **Evidence** |
 | :---:   | :-: |
-| From crossover event, we learned how implemented embedded journals  | This can be seen in completed [Ticket 4](https://github.com/sgtran/p1---rice#L43)) |
+| From crossover event, we learned how implemented embedded journals  | This can be seen in completed [Ticket 4](https://github.com/sgtran/p1---rice/blob/main/README.md#L43) |
 
 
 End of ReadMe Guide
