@@ -33,6 +33,7 @@ Step 3: Play the game and hear the sounds and see the bot play
 
 ## **ReadMe Guide me** 
 
+This table shows the tickets and completion evidence.
 | **Ticket Review** | **Evidence** |
 | :---:   | :-: |
 |Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/2)|
@@ -41,13 +42,18 @@ Step 3: Play the game and hear the sounds and see the bot play
 | [Ticket 3](https://github.com/sgtran/p1---rice/issues/21): Create Leaderboard -Andrew Pu | Changed scoring and added leaderboard in [player class](https://github.com/sgtran/p1---rice/blob/main/src/util/Player.java). Still working on adding leaderboard to display score data in MongoDB database |
 | [Ticket 4](https://github.com/sgtran/p1---rice/issues/19): Clean Up Journal Presentation -Alex Hu|Learned and added JavaScript for hiding the iframes and only showing them when buttons are pressed using display:none (https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L24)|
 
-| **Front End Progress / Feedback** | **Evidence** |
+This table shows Front End Progress and Visuals.
+| **Front End Progress** | **Evidence** |
 | :---:   | :-: |
 | Link to website (from padlet) [here](http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080)|
 | The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.  | ![](resources/website.png) |
 | Register an account by pressing log in and clicking sign up. You can also use the following credentials (Username: test@gmail.com password: test) | ![](resources/login.png) |
 | Once registered, log in and access the dashboard where the journals are located.| ![](resources/dashboard.png)|
 
+This table talks about Code Review and feedback.
+| **Code Review and Feedback** | **Evidence** |
+| :---:   | :-: |
+| From crossover event, we learned how implemented embedded journals  | This can be seen in completed [Ticket 4](https://github.com/sgtran/p1---rice#L43)) |
 
 
 
