@@ -33,6 +33,8 @@ Front End Progress:
 To check frontend deployment, access website here: http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080/
 The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.
 ![](website.png)
+Register an account buy pressing log in and clicking sign up.
+Once registered, log in and access the dashboard where the journals are located.
 
 
  
