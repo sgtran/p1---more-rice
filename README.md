@@ -53,8 +53,8 @@ This table shows Front End Progress and Visuals.
 This table talks about Code Review and feedback.
 | **Code Review and Feedback** | **Evidence** |
 | :---:   | :-: |
-| From crossover event, we learned how implemented embedded journals  | This can be seen in completed Ticket 4 |
-
+| From crossover event, we learned how to implemented embedded journals  | This can be seen in completed Ticket 4 |
+| We also are trying to figure how to embed our game into the website. That is still in progress, however we plan to use Repl to help us embed our game.|
 
 End of ReadMe Guide
 
