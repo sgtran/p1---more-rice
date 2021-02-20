@@ -56,6 +56,8 @@ This table talks about Code Review and feedback.
 | From crossover event, we learned how implemented embedded journals  | This can be seen in completed [Ticket 4](https://github.com/sgtran/p1---rice#L43)) |
 
 
+End of ReadMe Guide
+
 
 
 
