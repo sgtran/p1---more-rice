@@ -16,7 +16,12 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-
+| **Technical** | **Description** |
+| :---:   | :-: |
+| Mongo DB |  |
+| MVC |   |
+| Spring | |
+| Audio |  |
 
 
 
