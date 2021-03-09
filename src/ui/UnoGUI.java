@@ -199,27 +199,27 @@ public class UnoGUI extends JFrame {
     }
 
     public static void gameSettingClick() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("gameSettingClick.wav");
+      /*  File file = new File("gameSettingClick.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); */
     }
 
     public static void drawCardClick() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("swoop3.wav");
+       /* File file = new File("swoop3.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); */
     }
 
     public static void winnerSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("winner2.wav");
+       /* File file = new File("winner2.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); */
     }
 
 

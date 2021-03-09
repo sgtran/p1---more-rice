@@ -29,19 +29,19 @@ public class GameSettings extends JFrame {
 
     // this function plays music
     public void music() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("gameMusic.wav");
+     /*   File file = new File("gameMusic.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); */
     }
 
     public void click() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("click.wav");
+      /*  File file = new File("click.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); */
 
     }
     public GameSettings(UnoGUI unoui) throws IOException, UnsupportedAudioFileException, LineUnavailableException {

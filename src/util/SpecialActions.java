@@ -47,11 +47,11 @@ public class SpecialActions {
     }
 
     public static void wrongPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("wrongSound.wav");
+      /*  File file = new File("wrongSound.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); */
     }
     public String execute(Card cardFromTop, Actions.ACTIONS action, Card gamePileTopCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         if( cardFromTop == null ) {

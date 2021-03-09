@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="update readme">
+      <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/UnoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UnoGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/SpecialActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/SpecialActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +68,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Uno" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.Uno" />
+    <configuration name="java" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Uno.java" />
       <module name="p1---rice" />
       <extension name="coverage">
         <pattern>
@@ -77,15 +81,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,13 +101,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
-      <item itemvalue="Application.Uno" />
+      <item itemvalue="Application.java" />
       <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
-        <item itemvalue="Application.Uno" />
+        <item itemvalue="Application.java" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
       </list>
     </recent_temporary>
@@ -129,6 +131,11 @@
       <workItem from="1613003528509" duration="4082000" />
       <workItem from="1613614564769" duration="4005000" />
       <workItem from="1613790914136" duration="325000" />
+      <workItem from="1614315589821" duration="8000" />
+      <workItem from="1614316840236" duration="23000" />
+      <workItem from="1614615686203" duration="1466000" />
+      <workItem from="1615088991902" duration="1872000" />
+      <workItem from="1615265163111" duration="330000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -235,7 +242,49 @@
       <option name="project" value="LOCAL" />
       <updated>1613801806612</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update readme">
+      <created>1613802583045</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1613802583045</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update readme">
+      <created>1613802727328</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1613802727328</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update readme">
+      <created>1613802819038</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1613802819038</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update readme">
+      <created>1613802866673</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1613802866673</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update readme">
+      <created>1613803013759</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1613803013759</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update readme">
+      <created>1613803107451</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1613803107451</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
