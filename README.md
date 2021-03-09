@@ -7,6 +7,8 @@
 
 **Link to project plan:** [Here](https://docs.google.com/document/d/1J7p0vuNPozwbu0-tjaQCutQNg-10E0QndgibnOdazJU/edit?usp=sharing)
 
+**Link to website** [here](http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080)
+
 | **Member** | **Git id** |
 | :---:   | :-: |
 | Sean Tran | [Link](https://github.com/sgtran) |
@@ -14,9 +16,20 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-## *Please scroll down for Readme Guide* 
+| **Technical** | **Description** |
+| :---:   | :-: |
+| Mongo DB |  |
+| MVC |   |
+| Spring | |
+| Audio |  |
 
- **How to run the code for the game**    
+
+
+
+
+_____________________________________________________________________________________
+
+ **How to run the code for the game from Intellij**    
  
 Step 1: clone repo from Git 
 
@@ -57,11 +70,6 @@ This table talks about Code Review and feedback.
 | We also are trying to figure how to embed our game into the website. That is still in progress, however we plan to use Repl to help us embed our game.|
 
 End of ReadMe Guide
-
-
-
-
-_____________________________________________________________________________________
 
 
 | **Week** | **Code Updates** |         
