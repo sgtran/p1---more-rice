@@ -10,19 +10,19 @@ public class Actions {
     public static Card mTopCard;
 
     public static void correctPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-     /*   File file = new File("placeSound.wav");
+        File file = new File("placeSound.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start(); */
+        clip.start();
     }
 
     public static void wrongPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-       /* File file = new File("wrongSound.wav");
+       File file = new File("wrongSound.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start(); */
+        clip.start();
     }
     public static Card pop(Deck d){
         Card result = d.cardDeck.get(0);
