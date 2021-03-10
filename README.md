@@ -16,7 +16,12 @@
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
 
-
+| **Technical** | **Description** |
+| :---:   | :-: |
+| Mongo DB -Andrew | We were able to successfully use MongoDB in our project to store user information, which allowed us to create a login system. In order to set up our database, we mostly did personal research outside of class by experimenting with the program, and we made changes to our already existing database as we learned about MongoDB through class and collaboration. For the future of our project, we can use the database to hold more information about each user, such as their total score and win rate, which would give a purpose to the user account system. |
+| MVC-Alex | MVC has been implemented in the project since it was first created last trimester. However, the main difference between the two trimesters so far is that in the first tri, the view portions were handled by a GUI form while this tri we removed the form and put it JFrame code so that our game would run on Repl.it which we used to embed the game into a website. The JFrame code in UnoGUI also handle the controller aspect of MVC, while the model is being handled by the util folder. This organization was crucial to the project as without MVC, we would not be able to remove the GUI From effectively and place the JFrame code in a separate file. |
+| Spring | |
+| Audio-Sean | We were able to achieve having sound in our game. Sound works if you run our code from Intellij. In order to have the game work on our website we needed to use Repl. Repl does not support the sound that we use. Next trimester we will take a look and see if we can get sound to work on the website if possible. The audio was from personal research outside of class. We used the javax.sound.sampled and AudioStream to play music from wav files stored in our repo. Resources that we used to help us with this process are [youtube](https://www.youtube.com/watch?v=3q4f6I5zi2w) and [stack overflow](https://stackoverflow.com/questions/26305/how-can-i-play-sound-in-java). Sound is used for almost every click in our game. [Here](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-L17) is an example of code that makes sound be played when a player palces a correct card. [Here](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoGUI.java#L209-L214) is an example of code that plays a draw card.  |
 
 
 

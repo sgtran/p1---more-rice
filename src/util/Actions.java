@@ -18,7 +18,7 @@ public class Actions {
     }
 
     public static void wrongPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File file = new File("wrongSound.wav");
+       File file = new File("wrongSound.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);

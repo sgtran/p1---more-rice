@@ -51,7 +51,7 @@ public class SpecialActions {
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
-        clip.start();
+        clip.start(); 
     }
     public String execute(Card cardFromTop, Actions.ACTIONS action, Card gamePileTopCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         if( cardFromTop == null ) {
