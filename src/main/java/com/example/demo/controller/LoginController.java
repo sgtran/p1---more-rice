@@ -81,5 +81,13 @@ public class LoginController {
         return modelAndView;
     }
 
+    @RequestMapping(value = {"/cards"}, method = RequestMethod.GET)
+    public ModelAndView cards() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("cards");
+        return modelAndView;
+    }
+
+
 
 }

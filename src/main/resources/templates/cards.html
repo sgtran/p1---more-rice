@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+    <title>Cards</title>
+</head>
+
+<div layout:fragment="content">
+    <style>
+        h1 {text-align: center;}
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        article {
+            margin: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+            gap: 0.5rem;
+        }
+        .img--container {
+            width: 20ch;
+            border: 1ch solid #1e88e5;
+            background: salmon;
+        }
+        img {
+            width: 100%;
+            display: block;
+            object-fit: none;
+        }
+        .image-1 {
+            object-position: 50% 50%;
+        }
+        .image-2 {
+            object-position: 50% 50%;
+        }
+        .image-3 {
+            object-position: 50% 50%;
+        }
+        .image-4 {
+            object-position: 50% 50%;
+        }
+        .image-5 {
+            object-position: 50% 50%;
+        }
+        .image-6 {
+            object-position: 50% 50%;
+        }
+        .image-7 {
+            object-position: 50% 50%;
+        }
+        .image-8 {
+            object-position: 50% 50%;
+        }
+
+    </style>
+    <h1 class="h3 mb-3 font-weight-normal"><span style="color: coral; "><i>UNO</i></span></h1>
+
+    <article>
+        <div class="container">
+            <h3>Card 1</h3>
+            <div class="img--container">
+                <img class="image-1" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+        <div class="container">
+            <h3>Card 2</h3>
+            <div class="img--container">
+                <img class="image-2" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+        <div class="container">
+            <h3>Card 3</h3>
+            <div class="img--container">
+                <img class="image-3" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+        <div class="container">
+            <h3>Card 4</h3>
+            <div class="img--container">
+                <img class="image-4" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+        <div class="container">
+            <h3>Card 5</h3>
+            <div class="img--container">
+                <img class="image-5" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+        <div class="container">
+            <h3>Card 6</h3>
+            <div class="img--container">
+                <img class="image-6" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Card 7</h3>
+            <div class="img--container">
+                <img class="image-7" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Card 8</h3>
+            <div class="img--container">
+                <img class="image-8" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
+            </div>
+        </div>
+    </article>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</div>
+
+</html>
