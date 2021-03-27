@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LabSelect {
     private static int selection;
-    private static String[] options = {"1. Factorial"};
+    private static String[] options = {"1. Factorial", "2. Fibonacci - Andrew"};
 
     public static void main(String args[]) {
 
@@ -20,6 +20,11 @@ public class LabSelect {
         switch(selection){
             case 1:
                 FactorialController fact = new FactorialController();
+                break;
+            case 2:
+                FibonacciController fib = new FibonacciController();
+                fib.FibonacciController(20);
+                break;
 
         }
     }
