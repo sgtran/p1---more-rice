@@ -9,12 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="update JAR">
-      <change afterPath="$PROJECT_DIR$/minilabs/FactModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="Fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minilabs/FactorialModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/FactModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FactModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/FactorialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FactorialController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilabs/FibonacciController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FibonacciController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/FibonacciModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FibonacciModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/LabSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/LabSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +96,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="p1---rice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -143,6 +157,7 @@
       <workItem from="1616821270523" duration="1002000" />
       <workItem from="1617030325081" duration="8000" />
       <workItem from="1617337517282" duration="755000" />
+      <workItem from="1617338287774" duration="284000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -256,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613849323349</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixed bugs">
+      <created>1617338314181</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617338314181</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +309,7 @@
     <MESSAGE value="organize files" />
     <MESSAGE value="update readme" />
     <MESSAGE value="update JAR" />
-    <option name="LAST_COMMIT_MESSAGE" value="update JAR" />
+    <MESSAGE value="Fixed bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
   </component>
 </project>

@@ -1,5 +1,3 @@
-package minilabs;
-import minilabs.FactorialController.java;
 
 public class FactModel{
     public static void main (String[] args) {

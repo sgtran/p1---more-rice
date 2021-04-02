@@ -1,10 +1,9 @@
-package minilabs;
 
 import java.util.ArrayList;
 
 public class FibonacciModel {
 
-    ArrayList<int> list;
+    ArrayList<Integer> list;
     int size;
 
     public FibonacciModel(int s) {
@@ -23,9 +22,9 @@ public class FibonacciModel {
 
     public void print() {
         System.out.println("Sequence Size: " + size);
-        System.out.print("Sequence: " + list[0]);
+        System.out.print("Sequence: " + list.get(0));
         for(int i = 1; i < size; i++) {
-            System.out.print(", " + list[i]);
+            System.out.print(", " + list.get(0));
         }
     }
 

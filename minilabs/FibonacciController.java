@@ -1,4 +1,3 @@
-package minilabs;
 
 import org.springframework.stereotype.Controller;
 

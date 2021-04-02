@@ -1,5 +1,3 @@
-package minilabs;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +21,7 @@ public class LabSelect {
                 break;
             case 2:
                 FibonacciController fib = new FibonacciController();
-                fib.FibonacciController(20);
+                fib.Fibonacci(20);
                 break;
 
         }
