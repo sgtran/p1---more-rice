@@ -1,7 +1,7 @@
 package minilabs;
 import minilabs.FactorialController.java;
 
-public class FactorialModel{
+public class FactModel{
     public static void main (String[] args) {
         //only algo has been implemented for now
     }

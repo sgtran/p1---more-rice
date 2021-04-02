@@ -11,7 +11,7 @@ public class FibonacciController{
         Fibonacci(20);
     }
 
-    public void Fibonacci(size) {
+    public void Fibonacci(int size) {
         FibonacciModel model = new FibonacciModel(size);
         model.print();
 
