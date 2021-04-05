@@ -23,7 +23,6 @@ public class LabSelect {
                 FibonacciController fib = new FibonacciController();
                 fib.Fibonacci(20);
                 break;
-
         }
     }
 

@@ -1,8 +1,5 @@
 
 public class FactModel{
-    public static void main (String[] args) {
-        //only algo has been implemented for now
-    }
 
     public static int fact(int n) {
         if (n >= 0) {

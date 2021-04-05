@@ -13,8 +13,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilabs/FactModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FactModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilabs/FactorialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FactorialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minilabs/FibonacciController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FibonacciController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minilabs/FibonacciModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FibonacciModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilabs/LabSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/LabSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +64,21 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
+  <component name="RunManager" selected="Application.LabSelect">
+    <configuration name="FactorialController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FactorialController" />
+      <module name="p1---rice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LabSelect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LabSelect" />
+      <module name="p1---rice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
       <module name="p1---rice" />
@@ -96,15 +108,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,9 +130,13 @@
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.Uno" />
       <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
+      <item itemvalue="Application.FactorialController" />
+      <item itemvalue="Application.LabSelect" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LabSelect" />
+        <item itemvalue="Application.FactorialController" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
         <item itemvalue="Application.Uno" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
@@ -157,7 +171,8 @@
       <workItem from="1616821270523" duration="1002000" />
       <workItem from="1617030325081" duration="8000" />
       <workItem from="1617337517282" duration="755000" />
-      <workItem from="1617338287774" duration="284000" />
+      <workItem from="1617338287774" duration="507000" />
+      <workItem from="1617595043262" duration="2162000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -278,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617338314181</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed bugs">
+      <created>1617338668010</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617338668010</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
