@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LabSelect {
     private static int selection;
-    private static String[] options = {"1. Factorial - Alex", "2. Fibonacci - Andrew", "3. GCD - Sean"};
+    private static String[] options = {"1. Factorial - Alex", "2. Fibonacci - Andrew", "3. GCD - Sean", "4. Binary Search - Kevin"};
 
     public static void main(String args[]) {
 
@@ -19,12 +19,15 @@ public class LabSelect {
             case 1:
                 FactorialController fact = new FactorialController();
                 break;
-            /*case 2:
+            case 2:
                 FibonacciController fib = new FibonacciController();
                 fib.Fibonacci(20);
-                break; */
+                break;
             case 3:
                 GCDController gcd = new GCDController();
+                break;
+            case 4:
+                BinarySearchController binary = new BinarySearchController();
                 break;
         }
     }

@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="fix leaderboard">
-      <change afterPath="$PROJECT_DIR$/minilabs/BinarySearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minilabs/BinarySearchModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/BinarySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/BinarySearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/BinarySearchModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/BinarySearchModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilabs/LabSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/LabSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
+  <component name="RunManager" selected="Application.LabSelect">
     <configuration name="FactorialController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FactorialController" />
       <module name="p1---rice" />
@@ -108,13 +109,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,8 +138,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
         <item itemvalue="Application.LabSelect" />
+        <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
         <item itemvalue="Application.FactorialController" />
         <item itemvalue="Application.Uno" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
@@ -178,6 +181,7 @@
       <workItem from="1617602275930" duration="44000" />
       <workItem from="1617602465436" duration="81000" />
       <workItem from="1617602586713" duration="1707000" />
+      <workItem from="1617634050030" duration="478000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
