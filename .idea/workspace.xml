@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="Fixed bugs">
+      <change afterPath="$PROJECT_DIR$/minilabs/GCDController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/minilabs/GCDModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minilabs/FactModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FactModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minilabs/FactorialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/FactorialController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilabs/LabSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/minilabs/LabSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,13 +108,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,9 +131,9 @@
     <list>
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.Uno" />
-      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.FactorialController" />
       <item itemvalue="Application.LabSelect" />
+      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -173,6 +175,7 @@
       <workItem from="1617337517282" duration="755000" />
       <workItem from="1617338287774" duration="507000" />
       <workItem from="1617595043262" duration="2162000" />
+      <workItem from="1617599856758" duration="1456000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
