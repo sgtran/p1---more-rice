@@ -11,7 +11,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
+import org.springframework.security.core.parameters.P;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
@@ -93,6 +98,40 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("minilabTest");
         return modelAndView;
+    }
+
+    @RequestMapping(value = {"/Factorial"}, method = RequestMethod.GET)
+    public String factorialD(@RequestParam(name = "value", required = false) String value, Model model) {
+
+        long InputVal;
+        try {
+            InputVal = Long.parseLong(value);
+        } catch (Exception Ex) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "Recursion/Factorial";
+        }
+
+        if (InputVal < 0 || InputVal > 20) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "Recursion/Factorial";
+        }
+
+        // Benchmarks
+        long StartRec = System.nanoTime();
+        long Result = minilabz.Factorial.Recursion(InputVal);
+        long EndRec = System.nanoTime();
+        long Result2 = minilabz.Factorial.ForLoop(InputVal);
+        long EndForLoop = System.nanoTime();
+        long Result3 = minilabz.Factorial.Stream(InputVal);
+        long EndStream = System.nanoTime();
+
+        model.addAttribute("result", Result);
+        model.addAttribute("input", InputVal);
+        model.addAttribute("recursionTime", (EndRec - StartRec) / 1000000.0);
+        model.addAttribute("forLoopTime", (EndForLoop - EndRec) / 1000000.0);
+        model.addAttribute("streamTime", (EndStream - EndForLoop) / 1000000.0);
+
+        return "Recursion/Factorial";
     }
 
 
