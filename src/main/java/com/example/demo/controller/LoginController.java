@@ -100,7 +100,7 @@ public class LoginController {
         return modelAndView;
     }
 
-    @RequestMapping(value = {"/Factorial"}, method = RequestMethod.GET)
+    @GetMapping("/Factorial")
     public String factorialD(@RequestParam(name = "value", required = false) String value, Model model) {
 
         long InputVal;
@@ -108,12 +108,12 @@ public class LoginController {
             InputVal = Long.parseLong(value);
         } catch (Exception Ex) {
             model.addAttribute("error", "Please input a valid integer between 0 and 20.");
-            return "Recursion/Factorial";
+            return "Factorial";
         }
 
         if (InputVal < 0 || InputVal > 20) {
             model.addAttribute("error", "Please input a valid integer between 0 and 20.");
-            return "Recursion/Factorial";
+            return "Factorial";
         }
 
         // Benchmarks
@@ -131,7 +131,7 @@ public class LoginController {
         model.addAttribute("forLoopTime", (EndForLoop - EndRec) / 1000000.0);
         model.addAttribute("streamTime", (EndStream - EndForLoop) / 1000000.0);
 
-        return "Recursion/Factorial";
+        return "Factorial";
     }
 
 

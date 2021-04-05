@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="fix leaderboard">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Factorial.html" afterDir="false" />
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add Factorial test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +167,7 @@
       <workItem from="1617602465436" duration="81000" />
       <workItem from="1617602586713" duration="1707000" />
       <workItem from="1617634050030" duration="1426000" />
-      <workItem from="1617648246972" duration="1104000" />
+      <workItem from="1617648246972" duration="4386000" />
     </task>
     <task id="LOCAL-00001" summary="Fix some xml files">
       <created>1611210461229</created>
@@ -320,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617634560215</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add Factorial test">
+      <created>1617649475954</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1617649475954</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +358,7 @@
     <MESSAGE value="Added minilab" />
     <MESSAGE value="fix leaderboard" />
     <MESSAGE value="fix binary search with extra debug statements" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix binary search with extra debug statements" />
+    <MESSAGE value="add Factorial test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Factorial test" />
   </component>
 </project>
