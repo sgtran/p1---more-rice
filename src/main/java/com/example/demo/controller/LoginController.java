@@ -88,6 +88,13 @@ public class LoginController {
         return modelAndView;
     }
 
+    @RequestMapping(value = {"/minilabTest"}, method = RequestMethod.GET)
+    public ModelAndView minilabTest() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("minilabTest");
+        return modelAndView;
+    }
+
 
 
 }
