@@ -16,7 +16,7 @@ public class BinarySearchController {
         binarySearch(arr, 0, n - 1, x);
     }
 
-    public void binarySearch(int arr[], int l, int r, int x) {
-        BinarySearchModel model = new BinarySearchModel(arr, l, r, x);
+    public static void binarySearch(int arr[], int l, int r, int x) {
+        new BinarySearchModel(arr, l, r, x);
     }
 }
