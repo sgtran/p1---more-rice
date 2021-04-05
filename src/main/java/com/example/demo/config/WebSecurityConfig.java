@@ -43,6 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/uno").permitAll()
                 .antMatchers("/minilabTest").permitAll()
+                .antMatchers("/leaderboard").permitAll()
                 .antMatchers("/cards").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
