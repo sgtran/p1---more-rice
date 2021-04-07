@@ -101,7 +101,7 @@ public class LoginController {
     }
 
     @GetMapping("/Factorial")
-    public String factorialD(@RequestParam(name = "value", required = false) String value, Model model) {
+    public String Factorial(@RequestParam(name = "value", required = false) String value, Model model) {
 
         long InputVal;
         try {

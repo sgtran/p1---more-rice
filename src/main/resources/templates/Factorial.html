@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <div th:replace="fragments/header :: head"></div>
-    <title>Factorial</title>
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 <body>
 <!-- Navbar -->
-<div th:replace="fragments/body :: navbar"></div>
+<div layout:fragment="fragments/body :: navbar"></div>
 
 <div class="header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Factorial</h1>
@@ -30,30 +27,33 @@
 
 <br>
 
-<table th:if="${result}" class="table table-striped w-75" style="margin: auto;">
-    <thead>
-    <tr>
-        <th scope="col">Method</th>
-        <th scope="col">Time (ms)</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Recursion</td>
-        <td th:text="${recursionTime}"></td>
-    </tr>
-    <tr>
-        <td>For Loop</td>
-        <td th:text="${forLoopTime}"></td>
-    </tr>
-    <tr>
-        <td>Stream</td>
-        <td th:text="${streamTime}"></td>
-    </tr>
-    </tbody>
-</table>
+<div layout:fragment="content">
+
+    <table th:if="${result}" class="table table-striped w-75" style="margin: auto;">
+        <thead>
+        <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Time (ms)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Recursion</td>
+            <td th:text="${recursionTime}"></td>
+        </tr>
+        <tr>
+            <td>For Loop</td>
+            <td th:text="${forLoopTime}"></td>
+        </tr>
+        <tr>
+            <td>Stream</td>
+            <td th:text="${streamTime}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 <!-- Bootstrap & JQuery JS -->
-<div th:replace="fragments/body :: scripts"></div>
+<!-- <div th:replace="fragments/body :: scripts"></div> -->
 </body>
 </html>
