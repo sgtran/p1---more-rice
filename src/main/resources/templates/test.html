@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+    <title>minilabTest</title>
+</head>
+
+<div layout:fragment="content">
+    <div class="card-body">
+        <h5 class="card-title">Factorial Algorithm</h5>
+        <form method="GET" th:action="@{/test}">
+            <div class="form-group">
+                <input type="number" class="form-control" name="value" placeholder="Enter value">
+                <small th:if="${error}" th:text="${error}" class="form-text text-danger">Please enter a valid integer between 0 and 20.</small>
+            </div>
+            <p th:if="${result}" class="card-text" th:text="'Input: ' + ${input} + ' | Result: ' + ${result}"></p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+</html>
