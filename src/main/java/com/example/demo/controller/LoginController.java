@@ -1,7 +1,10 @@
 package com.example.demo.controller;
+import com.example.demo.models.linkedlists.CircleQueue;
+import lombok.Getter;
 
 import com.example.demo.models.User;
 import com.example.demo.service.CustomUserDetailsService;
+import minilabz.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -136,6 +139,49 @@ public class LoginController {
         return "test";
     }
 
+    @GetMapping("/GCD")
+    public String GCD(@RequestParam(name = "value", required = false) String value,
+                      @RequestParam(name = "value2",required = false, defaultValue = "1") String value2,
+                      Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("GCD");
+        long InputVal;
 
+        try {
+            InputVal = Long.parseLong(value);
+        } catch (Exception Ex) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "GCD";
+        }
+
+        if (InputVal < 0 || InputVal > 20) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "GCD";
+        }
+        long InputVal2;
+
+        try {
+            InputVal2 = Long.parseLong(value2);
+        } catch (Exception Ex) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "GCD";
+        }
+
+        if (InputVal2 < 0 || InputVal2 > 20) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "GCD";
+        }
+
+        // Benchmarks
+        long Result = minilabz.GCD.gcd(InputVal, InputVal2);
+
+
+        model.addAttribute("result", Result);
+        model.addAttribute("input", InputVal);
+        model.addAttribute("input2", InputVal2);
+
+
+        return "GCD";
+    }
 
 }
