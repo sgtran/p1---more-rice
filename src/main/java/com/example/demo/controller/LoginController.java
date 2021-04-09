@@ -60,7 +60,7 @@ public class LoginController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+    @GetMapping(value = "/dashboard")
     public ModelAndView dashboard() {
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -100,20 +100,22 @@ public class LoginController {
         return modelAndView;
     }
 
-    @GetMapping("/Factorial")
+    @GetMapping("/test")
     public String factorialD(@RequestParam(name = "value", required = false) String value, Model model) {
-
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("test");
         long InputVal;
+
         try {
             InputVal = Long.parseLong(value);
         } catch (Exception Ex) {
             model.addAttribute("error", "Please input a valid integer between 0 and 20.");
-            return "Factorial";
+            return "test";
         }
 
         if (InputVal < 0 || InputVal > 20) {
             model.addAttribute("error", "Please input a valid integer between 0 and 20.");
-            return "Factorial";
+            return "test";
         }
 
         // Benchmarks
@@ -131,7 +133,7 @@ public class LoginController {
         model.addAttribute("forLoopTime", (EndForLoop - EndRec) / 1000000.0);
         model.addAttribute("streamTime", (EndStream - EndForLoop) / 1000000.0);
 
-        return "Factorial";
+        return "test";
     }
 
 
