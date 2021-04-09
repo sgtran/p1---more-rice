@@ -46,6 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/leaderboard").permitAll()
                 .antMatchers("/test").permitAll()
                 .antMatchers("/cards").permitAll()
+                .antMatchers("/Factorial").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/signup").permitAll()
