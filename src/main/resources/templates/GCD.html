@@ -14,7 +14,8 @@
                 <input type="number" class="form-control" name="value2" placeholder="Enter another value">
                 <small th:if="${error}" th:text="${error}" class="form-text text-danger">Please enter a valid integer between 0 and 20.</small>
             </div>
-            <p th:if="${result}" class="card-text" th:text="'First Input: ' + ${input} + ' | Second Input: ' + ${input2}+' | Result: ' + ${result}"></p>
+            <p th:if="${result}" class="card-text" th:text="'First Input: ' + ${input} + ' | Second Input: ' + ${input2}+' | Result: ' + ${result}+
+                '| Time to execute ' + ${recursionTime}+' nanoseconds'"></p>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

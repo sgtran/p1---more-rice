@@ -174,11 +174,17 @@ public class LoginController {
 
         // Benchmarks
         long Result = minilabz.GCD.gcd(InputVal, InputVal2);
+        long StartRec = System.nanoTime();
+        long EndRec = System.nanoTime();
+
+
 
 
         model.addAttribute("result", Result);
         model.addAttribute("input", InputVal);
         model.addAttribute("input2", InputVal2);
+        model.addAttribute("recursionTime", (EndRec - StartRec) / 1000000.0);
+
 
 
         return "GCD";
