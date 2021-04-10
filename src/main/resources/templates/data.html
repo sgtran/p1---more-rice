@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout}" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
 <head>
-    <div layout:fragment="metadata" th:remove="tag">
+    <div layout:fragment="content">
         <title>Sean Algo</title>
     </div>
 </head>
@@ -46,34 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Cupcakes -->
-                        <div class="col-md-4">
-                            <input type="checkbox" id="cake" name="cake" value="1" th:checked="${ctl.isCake()}">
-                            <label for="cake">Cup Cakes</label>
-                            <div class="form-group">
-                                <label>Sort by</label>
-                                <div th:each="option : ${T(com.nighthawk.csa.algorithm.genericDataModel.Cupcakes.KeyType).values()}">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" th:field="*{cakeKey}" th:value="${option}" class="custom-control-input">
-                                        <label class="custom-control-label" th:for="${#ids.prev('cakeKey')}" th:text="${option}">option</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Alphabet -->
-                        <div class="col-md-4">
-                            <input type="checkbox" id="alpha" name="alpha" value="1" th:checked="${ctl.isAlpha()}">
-                            <label for="alpha">Alphabet</label>
-                            <div class="form-group">
-                                <label>Sort by</label>
-                                <div th:each="option : ${T(com.nighthawk.csa.algorithm.genericDataModel.Alphabet.KeyType).values()}">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" th:field="*{alphaKey}" th:value="${option}" class="custom-control-input">
-                                        <label class="custom-control-label" th:for="${#ids.prev('alphaKey')}" th:text="${option}">option</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <button>Go!</button>
                 </form>
