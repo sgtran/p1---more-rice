@@ -4,11 +4,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
-<head>
-    <div layout:fragment="content">
-        <title>Sean Algo</title>
-    </div>
-</head>
+
 
 <body>
 <div layout:fragment="content" th:remove="tag">
@@ -38,7 +34,7 @@
                                 2. animalKey is the result of radio button selection
                                 3. each radio option is provided a unique id, review rendered code to see expansion
                                 -->
-                                <div th:each="option : ${T(com.nighthawk.csa.algorithm.genericDataModel.Animal.KeyType).values()}">
+                                <div th:each="option : ${T(minilabz.Animal.KeyType).values()}">
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" th:field="*{animalKey}" th:value="${option}" class="custom-control-input">
                                         <label class="custom-control-label" th:for="${#ids.prev('animalKey')}" th:text="${option}">option</label>
@@ -78,13 +74,6 @@
                     </tr>
                 </table>
             </div>
-        </div>
-        <!-- Source Code -->
-        <div class="col-12" style="text-align: left; ">
-            <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csa%2Fblob%2Fmaster%2Fsrc%2Fmain%2Fjava%2Fcom%2Fnighthawk%2Fcsa%2Falgorithm%2FDataOpsController.java&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"></script>
-            <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csa%2Fblob%2Fmaster%2Fsrc%2Fmain%2Fresources%2Ftemplates%2Falgorithm%2Fdata.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"></script>
-            <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csa%2Fblob%2Fmaster%2Fsrc%2Fmain%2Fjava%2Fcom%2Fnighthawk%2Fcsa%2Falgorithm%2FgenericDataModel%2FAnimal.java&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"></script>
-            <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csa%2Fblob%2Fmaster%2Fsrc%2Fmain%2Fjava%2Fcom%2Fnighthawk%2Fcsa%2Fmodel%2Flinkedlists%2FCircleQueue.java&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"></script>
         </div>
     </div>
     <!-- Table Style -->

@@ -127,7 +127,7 @@ public class DataOPsController {
 
         //data is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
-        return "/data"; //HTML render default condition
+        return "data"; //HTML render default condition
     }
 
     /*
@@ -140,6 +140,7 @@ public class DataOPsController {
 
             Model model)
     {
+
         //re-init data according to check boxes selected
         count = 0;
         queue = new CircleQueue();
@@ -157,7 +158,7 @@ public class DataOPsController {
         this.queue.insertionSort();
         //render with options
         model.addAttribute("ctl", this);
-        return "/data";
+        return "data";
     }
 
     /*
