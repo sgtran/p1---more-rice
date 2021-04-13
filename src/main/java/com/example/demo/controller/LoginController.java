@@ -171,9 +171,9 @@ public class LoginController {
         long EndForLoop = System.nanoTime();
         minilabz.Fibonacci.While(InputVal, 0, 1);
         long EndWhileLoop = System.nanoTime();
-        String Result = minilabz.Fibonacci.recResult();
-        String Result2 = minilabz.Fibonacci.forResult();
-        String Result3 = minilabz.Fibonacci.whileResult();
+        String Result = minilabz.Fibonacci.RecResult();
+        String Result2 = minilabz.Fibonacci.ForResult();
+        String Result3 = minilabz.Fibonacci.WhileResult();
 
         model.addAttribute("result", Result);
         model.addAttribute("input", InputVal);
