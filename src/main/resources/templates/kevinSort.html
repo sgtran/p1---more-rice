@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    `<div class="container">
+
+    <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-20" style="text-align: center;">
+            <h1><strong>Data Filtering and Sorting</strong></h1>
+        </div>
+        <!-- Form and Action -->
+        <div class="jumbotron text-center row">
+            <!-- Input -->
+            <div class="col-md-14">
+                <h3>Select options to filter and sort</h3>
+                <form id="fibForm" action="/kevinSort" th:object="${ctl}" method="POST" >
+                    <div class="jumbotron text-left row">
+                        <!-- Water -->
+                        <div class="col-md-4">
+                            <input type="checkbox" id="water" name="water" value="1" th:checked="${ctl.isWater()}">
+                            <label for="water">Water</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Water.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{waterKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('waterKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Go!</button>
+                </form>
+            </div>
+            <!-- Output/Result -->
+            <div class="col-md-6">
+                <h3>Filtered Summary</h3>
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Size</th>
+                        <th scope="col">First Row</th>
+                        <th scope="col">Last Row</th>
+                    </tr>
+                    <tr>
+                        <!-- Circle Queue Highlight data (summary)  -->
+                        <td th:text="${ctl.getCount()}"></td>
+                        <td th:text="${ctl.getQueue().getFirstObject()}"></td>
+                        <td th:text="${ctl.getQueue().getLastObject()}"></td>
+                    </tr>
+                </table>
+                <br><h3>Data Details</h3>
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Rows</th>
+                    </tr>
+                    <!-- Circle Detail data (rows) -->
+                    <tr th:each="line: ${ctl.getCQList()}">
+                        <td th:text="${line}" ></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Table Style -->
+    <style>
+        table, td, th {
+            border: 1px solid var(--dblue);
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+</div>`
+</body>
+
+</html>

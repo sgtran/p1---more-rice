@@ -112,6 +112,55 @@ public class DataOPsController {
     /*
      GET request,, parameters are passed within the URI
      */
+
+    @GetMapping("/kevinSort")
+
+    public String kevinSort(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("kevinSort");
+
+        this.count = 0;
+        this.queue = new CircleQueue();
+
+        this.waterKey = Water.KeyType.title;
+        Water.key = this.waterKey;
+
+        this.water = true;
+
+        this.addCQueue(Water.waterData());
+
+        model.addAttribute("ctl", this);
+        return "kevinSort"; //HTML render default condition
+    }
+
+    @PostMapping("/kevinSort")
+    public String kevinSortFilter(
+            @RequestParam(value = "water", required = false) String water,
+            @RequestParam(value = "waterKey") Water.KeyType waterKey,
+
+            Model model)
+    {
+
+        if (water != null) {
+            this.addCQueue(Water.waterData());
+            this.water = true;
+            this.waterKey = waterKey;
+            Water.key = this.waterKey;
+        } else {
+            this.water = false;
+        }
+
+        //sort data according to selected options
+        this.queue.insertionSort();
+        //render with options
+        model.addAttribute("ctl", this);
+        return "kevinSort";
+    }
+
+    /*
+     * Show key objects/properties of circle queue
+     */
+
     @GetMapping("/data")
 
     public String data(Model model) {
