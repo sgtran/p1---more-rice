@@ -24,11 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add time comparisons for factorial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/CakeShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="cakeshop inheritance lab" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -408,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618295600822</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="cakeshop inheritance lab">
+      <created>1618302011483</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1618302011484</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,9 +450,46 @@
     <MESSAGE value="sort minilab add" />
     <MESSAGE value="Add inheritance/sort minilab" />
     <MESSAGE value="add time comparisons for factorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="add time comparisons for factorial" />
+    <MESSAGE value="cakeshop inheritance lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="cakeshop inheritance lab" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="123" width="1198" height="677" key="DiffContextDialog" timestamp="1618302437096">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state x="100" y="123" width="1198" height="677" key="DiffContextDialog/0.23.1400.877@0.23.1400.877" timestamp="1618302437096" />
+    <state width="1356" height="231" key="GridCell.Tab.0.bottom" timestamp="1618302067491">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="231" key="GridCell.Tab.0.bottom/0.23.1400.877@0.23.1400.877" timestamp="1618302067491" />
+    <state width="1356" height="231" key="GridCell.Tab.0.center" timestamp="1618302067489">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="231" key="GridCell.Tab.0.center/0.23.1400.877@0.23.1400.877" timestamp="1618302067489" />
+    <state width="1356" height="231" key="GridCell.Tab.0.left" timestamp="1618302067486">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="231" key="GridCell.Tab.0.left/0.23.1400.877@0.23.1400.877" timestamp="1618302067486" />
+    <state width="1356" height="231" key="GridCell.Tab.0.right" timestamp="1618302067490">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="231" key="GridCell.Tab.0.right/0.23.1400.877@0.23.1400.877" timestamp="1618302067490" />
+    <state width="1356" height="286" key="GridCell.Tab.1.bottom" timestamp="1618301956432">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="286" key="GridCell.Tab.1.bottom/0.23.1400.877@0.23.1400.877" timestamp="1618301956432" />
+    <state width="1356" height="286" key="GridCell.Tab.1.center" timestamp="1618301956428">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="286" key="GridCell.Tab.1.center/0.23.1400.877@0.23.1400.877" timestamp="1618301956428" />
+    <state width="1356" height="286" key="GridCell.Tab.1.left" timestamp="1618301956427">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="286" key="GridCell.Tab.1.left/0.23.1400.877@0.23.1400.877" timestamp="1618301956427" />
+    <state width="1356" height="286" key="GridCell.Tab.1.right" timestamp="1618301956429">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state width="1356" height="286" key="GridCell.Tab.1.right/0.23.1400.877@0.23.1400.877" timestamp="1618301956429" />
     <state x="286" y="47" key="SettingsEditor" timestamp="1618301411822">
       <screen x="0" y="23" width="1400" height="877" />
     </state>
