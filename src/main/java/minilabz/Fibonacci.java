@@ -22,7 +22,7 @@ public class Fibonacci{
         listFor.clear();
     }
 
-    public void Recurse(long size, Integer num1, Integer num2) {
+    public static void Recurse(long size, Integer num1, Integer num2) {
         assert size >= 2 : "'Size' must be at least 2";
         listRecurse.add(num1);
         if (size == 2) {
@@ -33,7 +33,7 @@ public class Fibonacci{
 
     }
 
-    public void For(long size, Integer num1, Integer num2) {
+    public static void For(long size, Integer num1, Integer num2) {
         assert size >= 2 : "'Size' must be at least 2";
         listFor.add(num1);
         listFor.add(num2);

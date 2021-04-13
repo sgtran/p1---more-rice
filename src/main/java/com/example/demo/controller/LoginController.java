@@ -139,47 +139,41 @@ public class LoginController {
         return "test";
     }
 
-    public ArrayList<String> fibTimes(int nth) {
-        Fibonacci fib = new Fibonacci(nth);
-        ArrayList<String> times = new ArrayList<>();
-
-        long StartRec = System.nanoTime();
-        fib.Recurse(nth, 0, 1);
-        long RecurseEndTime = System.nanoTime();
-        String RecTime = "" + (RecurseEndTime - StartRec);
-        fib.For(nth, 0, 1);
-        long ForEndTime = System.nanoTime();
-        String ForTime = "" + (ForEndTime - RecurseEndTime);
-        fib.While(nth, 0, 1);
-        long WhileEndTime = System.nanoTime();
-        String WhileTime = "" + (WhileEndTime - ForEndTime);
-
-        times.add(RecTime);
-        times.add(ForTime);
-        times.add(WhileTime);
-
-        return times;
-    }
-
-    public String fibSequence(int nth) {
-        Fibonacci fib = new Fibonacci(nth);
-        return fib.Result();
-    }
 
     @GetMapping("/fibonacci")
-    public String fibonacci(@RequestParam(name="fibseq", required=false,  defaultValue="2") String fibseq, Model model) {
-        int nth = Integer.parseInt(fibseq);
+    public String fibonacciD(@RequestParam(name="fibseq", required=false,  defaultValue="2") String fibseq, Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("test");
+        long InputVal;
 
-        model.addAttribute("input", nth);
-        model.addAttribute("result", fibSequence(nth));
+        try {
+            InputVal = Long.parseLong(fibseq);
+        } catch (Exception Ex) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "test";
+        }
 
-        ArrayList<String> times = fibTimes(nth);
+        if (InputVal < 0 || InputVal > 20) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "test";
+        }
 
-        model.addAttribute("RecurseTime", times.get(0));
-        model.addAttribute("ForTime", times.get(1));
-        model.addAttribute("WhileTime", times.get(2));
+        // Benchmarks
+        long StartRec = System.nanoTime();
+        long Result = minilabz.Fibonacci.Recursion(InputVal);
+        long EndRec = System.nanoTime();
+        long Result2 = minilabz.Fibonacci.ForLoop(InputVal);
+        long EndForLoop = System.nanoTime();
+        long Result3 = minilabz.Fibonacci.Stream(InputVal);
+        long EndStream = System.nanoTime();
 
-        return "fibonacci";
+        model.addAttribute("result", Result);
+        model.addAttribute("input", InputVal);
+        model.addAttribute("recursionTime", (EndRec - StartRec) / 1000000.0);
+        model.addAttribute("forLoopTime", (EndForLoop - EndRec) / 1000000.0);
+        model.addAttribute("streamTime", (EndStream - EndForLoop) / 1000000.0);
+
+        return "test";
 
     }
 
