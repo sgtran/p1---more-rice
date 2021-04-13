@@ -63,6 +63,20 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Water -->
+                        <div class="col-md-4">
+                            <input type="checkbox" id="water" name="water" value="1" th:checked="${ctl.isWater()}">
+                            <label for="water">Water</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Water.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{waterKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('waterKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <button>Go!</button>
