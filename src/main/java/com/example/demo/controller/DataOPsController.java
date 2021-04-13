@@ -159,7 +159,7 @@ public class DataOPsController {
 
     @GetMapping("/andrewSort")
 
-    public String kevinSort(Model model) {
+    public String andrewSort(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("andrewSort");
 
@@ -175,24 +175,24 @@ public class DataOPsController {
 
         this.pet = true;
         this.student = true;
-        this.parent = true;
+        this.teacher = true;
 
         this.addCQueue(Pet.pets());
         this.addCQueue(Student.students());
-        this.addCQueue(Parent.parents());
+        this.addCQueue(Teacher.teachers());
 
         model.addAttribute("ctl", this);
         return "andrewSort"; //HTML render default condition
     }
 
     @PostMapping("/andrewSort")
-    public String kevinSortFilter(
+    public String andrewSortFilter(
             @RequestParam(value = "pet", required = false) String pet,
-            @RequestParam(value = "petKey") Water.KeyType petKey,
+            @RequestParam(value = "petKey") Pet.KeyType petKey,
             @RequestParam(value = "student", required = false) String student,
-            @RequestParam(value = "studentKey") Water.KeyType studentKey,
-            @RequestParam(value = "parent", required = false) String parent,
-            @RequestParam(value = "parentKey") Water.KeyType parentKey,
+            @RequestParam(value = "studentKey") Student.KeyType studentKey,
+            @RequestParam(value = "teacher", required = false) String teacher,
+            @RequestParam(value = "teacherKey") Teacher.KeyType teacherKey,
 
             Model model)
     {
@@ -215,13 +215,13 @@ public class DataOPsController {
             this.student = false;
         }
 
-        if (parent != null) {
-            this.addCQueue(Parent.parents());
-            this.parent = true;
-            this.parentKey = parentKey;
-            Parent.key = this.parentKey;
+        if (teacher != null) {
+            this.addCQueue(Teacher.teachers());
+            this.teacher = true;
+            this.teacherKey = teacherKey;
+            Teacher.key = this.teacherKey;
         } else {
-            this.parent = false;
+            this.teacher = false;
         }
 
         //sort data according to selected options
