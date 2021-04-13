@@ -31,6 +31,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,12 +105,10 @@ public class DataOPsController {
         } while (queue.setNext() != first);
         return log;
     }
-
     /*
      GET request,, parameters are passed within the URI
      */
-    @GetMapping("/data")
-
+    @GetMapping(value = {"/data", "/data2"})
     public String data(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("data");
@@ -133,13 +132,17 @@ public class DataOPsController {
 
         //data is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
-        return "data"; //HTML render default condition
+        if (ServletUriComponentsBuilder.fromCurrentRequest().toUriString().charAt(ServletUriComponentsBuilder.fromCurrentRequest().toUriString().length() - 1) == '2') { //if current url ends with a "2" indicating data2.html, show data2.html instead of data.html
+            return "data2"; //HTML render default condition
+        } else {
+            return "data";
+        }
     }
 
     /*
      GET request,, parameters are passed within the URI
      */
-    @PostMapping("/data")
+    @PostMapping(value = {"/data", "/data2"})
     public String dataFilter(
             @RequestParam(value = "animal", required = false) String animal,
             @RequestParam(value = "animalKey") Animal.KeyType animalKey,
@@ -175,7 +178,11 @@ public class DataOPsController {
         this.queue.insertionSort();
         //render with options
         model.addAttribute("ctl", this);
-        return "data";
+        if (!this.ice) {
+            return "data";
+        } else {
+            return "data2";
+        }
     }
 
     /*
