@@ -139,6 +139,50 @@ public class LoginController {
         return "test";
     }
 
+    public ArrayList<String> fibTimes(int nth) {
+        Fibonacci fib = new Fibonacci(nth);
+        ArrayList<String> times = new ArrayList<>();
+
+        long StartRec = System.nanoTime();
+        fib.Recurse(nth, 0, 1);
+        long RecurseEndTime = System.nanoTime();
+        String RecTime = "" + (RecurseEndTime - StartRec);
+        fib.For(nth, 0, 1);
+        long ForEndTime = System.nanoTime();
+        String ForTime = "" + (ForEndTime - RecurseEndTime);
+        fib.While(nth, 0, 1);
+        long WhileEndTime = System.nanoTime();
+        String WhileTime = "" + (WhileEndTime - ForEndTime);
+
+        times.add(RecTime);
+        times.add(ForTime);
+        times.add(WhileTime);
+
+        return times;
+    }
+
+    public String fibSequence(int nth) {
+        Fibonacci fib = new Fibonacci(nth);
+        return fib.Result();
+    }
+
+    @GetMapping("/fibonacci")
+    public String fibonacci(@RequestParam(name="fibseq", required=false,  defaultValue="2") String fibseq, Model model) {
+        int nth = Integer.parseInt(fibseq);
+
+        model.addAttribute("input", nth);
+        model.addAttribute("result", fibSequence(nth));
+
+        ArrayList<String> times = fibTimes(nth);
+
+        model.addAttribute("RecurseTime", times.get(0));
+        model.addAttribute("ForTime", times.get(1));
+        model.addAttribute("WhileTime", times.get(2));
+
+        return "fibonacci";
+
+    }
+
     @GetMapping("/GCD")
     public String GCD(@RequestParam(name = "value", required = false) String value,
                       @RequestParam(name = "value2",required = false, defaultValue = "1") String value2,

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <title>Fibonacci Algo</title>
+    </div>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    `<div class="container">
+
+    <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Fibonacci Recursion Minilab</strong></h1>
+        </div>
+
+        <!-- Form and Action -->
+        <div class="jumbotron text-center row">
+            <!-- Input -->
+            <div class="col-md-6">
+                <h3>Choose a number from 2 to 47</h3>
+                <form id="fibForm" action="/fibonacci" method="GET" >
+                    <input name="fibseq" id="fibseq" type="number" min="2" max="47" >
+                    <button>Go!</button>
+                </form>
+            </div>
+            <!-- Output/Result -->
+            <div class="col-md-6">
+                <h3>Algorithm comparison</h3>
+                <p th:text="${input}"></p>
+                <p th:text="${result}"></p>
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                    <tr>
+                        <td scope="col">Recursion</td>
+                        <td th:text="${RecurseTime}"></td>
+                    </tr>
+                    <tr>
+                        <td scope="col">For Loop</td>
+                        <td th:text="${ForTime}"></td>
+                    </tr>
+                    <tr>
+                        <td scope="col">While Loop</td>
+                        <td th:text="${WhileTime}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <style>
+        table, td, th {
+            border: 1px solid var(--dblue);
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+</div>`
+</body>
+
+</html>
