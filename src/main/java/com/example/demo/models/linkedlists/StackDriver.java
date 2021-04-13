@@ -5,6 +5,9 @@ package com.example.demo.models.linkedlists;
 import consoleUI.ConsoleMethods;
 import minilabz.Animal;
 import minilabz.IceCream;
+import minilabz.Pet;
+import minilabz.Student;
+import minilabz.Teacher;
 
 /**
  * Stack Driver takes a list of Objects and puts them onto the Stack
@@ -71,10 +74,22 @@ public class StackDriver {
         trial.setDataType("Ice Cream");
         trial.pushStack(IceCream.iceCreamData());
 
+        trial.setDataType("Pet");
+        trial.pushStack(Pet.pets());
+
+        trial.setDataType("Student");
+        trial.pushStack(Student.students());
+
+        trial.setDataType("Teacher");
+        trial.pushStack(Teacher.teachers());
+
 
         // mixed stack
         trial.setDataType("Animals");
         trial.setDataType("Ice Cream");
+        trial.setDataType("Pet");
+        trial.setDataType("Student");
+        trial.setDataType("Teacher");
         trial.showStack();
         trial.popStack();
     }
