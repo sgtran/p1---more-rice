@@ -157,6 +157,81 @@ public class DataOPsController {
      * Show key objects/properties of circle queue
      */
 
+    @GetMapping("/andrewSort")
+
+    public String kevinSort(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("andrewSort");
+
+        this.count = 0;
+        this.queue = new CircleQueue();
+
+        this.petKey = Pet.KeyType.title;
+        Pet.key = this.petKey;
+        this.studentKey = Student.KeyType.title;
+        Student.key = this.studentKey;
+        this.parentKey = Parent.KeyType.title;
+        Paret.key = this.parentKey;
+
+        this.pet = true;
+        this.student = true;
+        this.parent = true;
+
+        this.addCQueue(Pet.pets());
+        this.addCQueue(Student.students());
+        this.addCQueue(Parent.parents());
+
+        model.addAttribute("ctl", this);
+        return "andrewSort"; //HTML render default condition
+    }
+
+    @PostMapping("/andrewSort")
+    public String kevinSortFilter(
+            @RequestParam(value = "pet", required = false) String pet,
+            @RequestParam(value = "petKey") Water.KeyType petKey,
+            @RequestParam(value = "student", required = false) String student,
+            @RequestParam(value = "studentKey") Water.KeyType studentKey,
+            @RequestParam(value = "parent", required = false) String parent,
+            @RequestParam(value = "parentKey") Water.KeyType parentKey,
+
+            Model model)
+    {
+
+        if (pet != null) {
+            this.addCQueue(Pet.pets());
+            this.pet = true;
+            this.petKey = petKey;
+            Pet.key = this.petKey;
+        } else {
+            this.pet = false;
+        }
+
+        if (student != null) {
+            this.addCQueue(Student.students());
+            this.student = true;
+            this.studentKey = studentKey;
+            Student.key = this.studentKey;
+        } else {
+            this.student = false;
+        }
+
+        if (parent != null) {
+            this.addCQueue(Parent.parents());
+            this.parent = true;
+            this.parentKey = parentKey;
+            Parent.key = this.parentKey;
+        } else {
+            this.parent = false;
+        }
+
+        //sort data according to selected options
+        this.queue.insertionSort();
+        //render with options
+        model.addAttribute("ctl", this);
+        return "andrewSort";
+    }
+
+
     @GetMapping("/data")
 
     public String data(Model model) {
