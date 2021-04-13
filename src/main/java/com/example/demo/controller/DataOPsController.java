@@ -55,7 +55,6 @@ public class DataOPsController {
     private Pokemon.KeyType pokeKey;
 
 
-
     /*
      * Circle queue constructor
      */
@@ -127,8 +126,6 @@ public class DataOPsController {
         Animal.key = this.animalKey;
         this.iceKey = IceCream.KeyType.title;
         IceCream.key = this.iceKey;
-        this.waterKey = Water.KeyType.title;
-        Water.key = this.waterKey;
 
         this.pokeKey = Pokemon.KeyType.title;
         Pokemon.key = this.pokeKey;
@@ -161,6 +158,7 @@ public class DataOPsController {
             @RequestParam(value = "waterKey") Water.KeyType waterKey,
             @RequestParam(value = "pokemon", required = false) String pokemon,
             @RequestParam(value = "pokeKey") Pokemon.KeyType pokeKey,
+
 
             Model model)
     {
@@ -251,7 +249,6 @@ public class DataOPsController {
         IceCream.key = IceCream.KeyType.flavor;
         Water.key = Water.KeyType.brand;
         Pokemon.key = Pokemon.KeyType.name;
-
 
         trial.queue.insertionSort();
         ConsoleMethods.println("Sorted order (key only)");

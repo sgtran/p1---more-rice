@@ -12,13 +12,13 @@
 
     <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
         <!-- Title -->
-        <div class="col-12" style="text-align: center;">
+        <div class="col-20" style="text-align: center;">
             <h1><strong>Data Filtering and Sorting</strong></h1>
         </div>
         <!-- Form and Action -->
         <div class="jumbotron text-center row">
             <!-- Input -->
-            <div class="col-md-6">
+            <div class="col-md-14">
                 <h3>Select options to filter and sort</h3>
                 <form id="fibForm" action="/data" th:object="${ctl}" method="POST" >
                     <div class="jumbotron text-left row">
@@ -92,7 +92,52 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Pet -->
+                        <div class="col-md-4">
 
+                            <input type="checkbox" id="pet" name="pet" value="1" th:checked="${ctl.isPet()}">
+                            <label for="pet">Pet</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Pet.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{petKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('petKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Student -->
+                        <div class="col-md-4">
+                            <input type="checkbox" id="student" name="student" value="1" th:checked="${ctl.isStudent()}">
+                            <label for="student">Student</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Student.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{studentKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('studentKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teacher -->
+                        <div class="col-md-4">
+                            <!-- Checkbox on/off works off of @Getter for boolean isTeacher() -->
+                            <input type="checkbox" id="teacher" name="teacher" value="1" th:checked="${ctl.isTeacher()}">
+                            <label for="teacher">Teacher</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Teacher.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{teacherKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('teacherKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <button>Go!</button>
                 </form>
