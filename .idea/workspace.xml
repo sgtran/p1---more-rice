@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="seanData fix for all users">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\andre\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1r7looXYGK3pflkGzUFLpcvKdFQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -91,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618339961623</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fibonacci">
+      <created>1618340858419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618340858419</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +128,17 @@
     <MESSAGE value="Added invidual sort to drop down" />
     <MESSAGE value="remove some code" />
     <MESSAGE value="seanData fix for all users" />
-    <option name="LAST_COMMIT_MESSAGE" value="seanData fix for all users" />
+    <MESSAGE value="Fibonacci" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fibonacci" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="447" y="9" key="CommitChangelistDialog2" timestamp="1618340857293">
+      <screen x="0" y="0" width="1638" height="882" />
+    </state>
+    <state x="447" y="9" key="CommitChangelistDialog2/0.0.1638.882@0.0.1638.882" timestamp="1618340857293" />
+    <state x="412" y="174" key="Vcs.Push.Dialog.v2" timestamp="1618340872077">
+      <screen x="0" y="0" width="1638" height="882" />
+    </state>
+    <state x="412" y="174" key="Vcs.Push.Dialog.v2/0.0.1638.882@0.0.1638.882" timestamp="1618340872077" />
   </component>
 </project>
