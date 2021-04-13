@@ -20,9 +20,6 @@ public class SpecialActions {
     Card resultCard;
     Card moveStatus;
     Card tempCard = new Card(Color.BLUE, 2);
-    //temporary
-    //We will use database for leaderboard
-    ArrayList<Player> leaderboard = mPlayers;
 
     public SpecialActions(Deck d, ArrayList<Player> p, Card c){
         this.round = 0;
@@ -234,31 +231,11 @@ public class SpecialActions {
             }
         }
 
-        updateLeaderboard(winner);
+        Leaderboard.updateLeaderboard(winner);
 
     }
 
-    public void updateLeaderboard(Player winner) {
 
-        int index = 0;
-
-        for (int i = 0; i < leaderboard.size(); i++) {
-            if (leaderboard.get(i).equals(winner)) {
-                index = i;
-            }
-            break;
-        }
-
-        for (int i = index; i > 0; i--) {
-            if (leaderboard.get(i).getScore() > leaderboard.get(i-1).getScore()) {
-                Player temp = leaderboard.get(i-1);
-                leaderboard.set(i - 1, leaderboard.get(i));
-                leaderboard.set(i, temp);
-            } else {
-                break;
-            }
-        }
-    }
 
     public void setDeck(Deck d){
         mActiveDeck = d;
@@ -293,5 +270,7 @@ public class SpecialActions {
     public boolean getStatus() {
         return moveStatus.getSuccess();
     }
+
+
 
 }

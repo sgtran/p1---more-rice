@@ -62,6 +62,11 @@
                     <td>---</td>
                     <td>---</td>
                 </tr>
+                <tr th:each="Player : ${leaderboard}">
+                    <td th:text="${leaderboard.IndexOf(Player) + 1}"></td>
+                    <td th:text="${Player.getName()}"></td>
+                    <td th:text="${Player.getScore}"></td>
+                </tr>
             </table>
         </div>
     </body>
