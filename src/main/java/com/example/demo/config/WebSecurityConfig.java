@@ -48,6 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/GCD").permitAll()
                 .antMatchers("/cards").permitAll()
                 .antMatchers("/kevinSort").permitAll()
+                .antMatchers("/seanData").permitAll()
                 .antMatchers("/Factorial").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
