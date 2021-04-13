@@ -1,4 +1,4 @@
-package ;
+package minilabz;
 
 import java.util.ArrayList;
 
@@ -45,8 +45,24 @@ public class Fibonacci{
 
     public static String RecResult() {
         String result = "" + listRecurse.get(0);
-        for (int i = 1; i < listRecures.size(); i++) {
+        for (int i = 1; i < listRecurse.size(); i++) {
             result += ", " + listRecurse.get(i);
+        }
+        return result;
+    }
+
+    public static String ForResult() {
+        String result = "" + listFor.get(0);
+        for (int i = 1; i < listFor.size(); i++) {
+            result += ", " + listFor.get(i);
+        }
+        return result;
+    }
+
+    public static String WhileResult() {
+        String result = "" + WhileResult.get(0);
+        for (int i = 1; i < WhileResult.size(); i++) {
+            result += ", " + WhileResult.get(i);
         }
         return result;
     }
