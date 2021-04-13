@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import consoleUI.ConsoleMethods;
 import minilabz.Animal;
 import minilabz.Water;
+import minilabz.Pokemon;
 
 import com.example.demo.models.linkedlists.CircleQueue;
 import lombok.Getter;
@@ -47,10 +48,12 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal, ice, water;
+    private boolean animal, ice, water, pokemon;
     private Animal.KeyType animalKey;
     private IceCream.KeyType iceKey;
     private Water.KeyType waterKey;
+    private Pokemon.KeyType pokeKey;
+
 
 
     /*
@@ -127,10 +130,14 @@ public class DataOPsController {
         this.waterKey = Water.KeyType.title;
         Water.key = this.waterKey;
 
+        this.pokeKey = Pokemon.KeyType.title;
+        Pokemon.key = this.pokeKey;
+
         //control options
         this.animal = true;
         this.ice = true;
         this.water = true;
+        this.pokemon = true;
 
         //load data
         this.addCQueue(Animal.animalData());
@@ -152,6 +159,8 @@ public class DataOPsController {
             @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
             @RequestParam(value = "water", required = false) String water,
             @RequestParam(value = "waterKey") Water.KeyType waterKey,
+            @RequestParam(value = "pokemon", required = false) String pokemon,
+            @RequestParam(value = "pokeKey") Pokemon.KeyType pokeKey,
 
             Model model)
     {
@@ -185,6 +194,15 @@ public class DataOPsController {
             Water.key = this.waterKey;
         } else {
             this.water = false;
+        }
+
+        if (pokemon != null) {
+            this.addCQueue(Pokemon.pokemonData());
+            this.pokemon = true;
+            this.pokeKey = pokeKey;
+            Pokemon.key = this.pokeKey;
+        } else {
+            this.pokemon = false;
         }
 
         //sort data according to selected options
@@ -222,6 +240,7 @@ public class DataOPsController {
         trial.addCQueue(Animal.animalData());
         trial.addCQueue(IceCream.iceCreamData());
         trial.addCQueue(Water.waterData());
+        trial.addCQueue(Pokemon.pokemonData());
 
         //display queue objects in queue order
         ConsoleMethods.println("Add order (all data)");
@@ -231,6 +250,8 @@ public class DataOPsController {
         Animal.key = Animal.KeyType.name;
         IceCream.key = IceCream.KeyType.flavor;
         Water.key = Water.KeyType.brand;
+        Pokemon.key = Pokemon.KeyType.name;
+
 
         trial.queue.insertionSort();
         ConsoleMethods.println("Sorted order (key only)");
@@ -240,6 +261,7 @@ public class DataOPsController {
         Animal.key = Animal.KeyType.title;
         IceCream.key = IceCream.KeyType.title;
         Water.key = Water.KeyType.title;
+        Pokemon.key = Pokemon.KeyType.title;
 
         ConsoleMethods.println("Retain sorted order (all data)");
         trial.printCQueue();

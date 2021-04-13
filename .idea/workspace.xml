@@ -8,9 +8,27 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add time comparisons for factorial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Water.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Pokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data.html" afterDir="false" />
@@ -30,6 +48,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\sgtra\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1nMprp7HinhTwWehUCLTmD3URBT" />
   <component name="ProjectViewState">
@@ -66,10 +91,36 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringSecurityMongodbSecurityApplication">
+  <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FactorialController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FactorialController" />
       <module name="p1---rice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IceCream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="minilabz.IceCream" />
+      <module name="p1---rice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="minilabz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,13 +154,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Uno" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.Uno" />
-      <module name="p1---rice" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Water" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="minilabz.Water" />
       <module name="p1---rice" />
@@ -123,19 +167,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="p1---rice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -145,19 +176,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
-      <item itemvalue="Application.Uno" />
       <item itemvalue="Application.FactorialController" />
       <item itemvalue="Application.LabSelect" />
-      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.Water" />
+      <item itemvalue="Application.IceCream" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Water" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
+        <item itemvalue="Application.IceCream" />
+        <item itemvalue="Application.Water" />
         <item itemvalue="Application.LabSelect" />
         <item itemvalue="Application.FactorialController" />
-        <item itemvalue="Application.Uno" />
       </list>
     </recent_temporary>
   </component>
@@ -426,6 +456,32 @@
     <MESSAGE value="Add inheritance/sort minilab" />
     <MESSAGE value="add time comparisons for factorial" />
     <option name="LAST_COMMIT_MESSAGE" value="add time comparisons for factorial" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="101" key="GridCell.Tab.0.bottom" timestamp="1618299403628">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="101" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
+    <state width="1493" height="101" key="GridCell.Tab.0.center" timestamp="1618299403628">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="101" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
+    <state width="1493" height="101" key="GridCell.Tab.0.left" timestamp="1618299403628">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="101" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
+    <state width="1493" height="101" key="GridCell.Tab.0.right" timestamp="1618299403628">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="101" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1618297788982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618297788982" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618297775262">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618297775262" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

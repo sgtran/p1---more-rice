@@ -78,6 +78,21 @@
                             </div>
                         </div>
 
+                        <!-- Pokemon -->
+                        <div class="col-md-4">
+                            <input type="checkbox" id="pokemon" name="pokemon" value="1" th:checked="${ctl.isPokemon()}">
+                            <label for="pokemon">Pokemon</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Pokemon.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{pokeKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('pokeKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <button>Go!</button>
                 </form>
