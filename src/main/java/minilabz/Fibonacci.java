@@ -7,20 +7,6 @@ public class Fibonacci{
     public ArrayList<Integer> listFor;
     public ArrayList<Integer> listWhile;
     private long size;
-    private String result;
-
-    public Fibonacci(long s) {
-        listRecurse = new ArrayList<Integer>();
-        listFor = new ArrayList<Integer>();
-        listWhile = new ArrayList<Integer>();
-        size = s;
-        For(size, 0, 1);
-        result = "" + listFor.get(0);
-        for (int i = 1; i < listFor.size(); i++) {
-            result += ", " + listFor.get(i);
-        }
-        listFor.clear();
-    }
 
     public static void Recurse(long size, Integer num1, Integer num2) {
         assert size >= 2 : "'Size' must be at least 2";
@@ -44,7 +30,7 @@ public class Fibonacci{
         }
     }
 
-    public void While(long size, Integer num1, Integer num2) {
+    public static void While(long size, Integer num1, Integer num2) {
         assert size >= 2 : "'Size' must be at least 2";
         listFor.add(num1);
         listFor.add(num2);
@@ -57,11 +43,11 @@ public class Fibonacci{
         }
     }
 
-    public String Result() {
+    public static String RecResult() {
+        String result = "" + listRecurse.get(0);
+        for (int i = 1; i < listRecures.size(); i++) {
+            result += ", " + listRecurse.get(i);
+        }
         return result;
-    }
-
-    public long getSize() {
-        return size;
     }
 }

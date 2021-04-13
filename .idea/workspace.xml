@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="data cleanup">
+    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Fibonacci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fibonacci.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fibonacci.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +49,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/forms_rt.jar" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -144,5 +133,15 @@
     <MESSAGE value="seanData fix for all users" />
     <MESSAGE value="Fibonacci" />
     <option name="LAST_COMMIT_MESSAGE" value="Fibonacci" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="447" y="9" key="CommitChangelistDialog2" timestamp="1618340857293">
+      <screen x="0" y="0" width="1638" height="882" />
+    </state>
+    <state x="447" y="9" key="CommitChangelistDialog2/0.0.1638.882@0.0.1638.882" timestamp="1618340857293" />
+    <state x="412" y="174" key="Vcs.Push.Dialog.v2" timestamp="1618340872077">
+      <screen x="0" y="0" width="1638" height="882" />
+    </state>
+    <state x="412" y="174" key="Vcs.Push.Dialog.v2/0.0.1638.882@0.0.1638.882" timestamp="1618340872077" />
   </component>
 </project>

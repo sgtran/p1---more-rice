@@ -143,7 +143,7 @@ public class LoginController {
     @GetMapping("/fibonacci")
     public String fibonacciD(@RequestParam(name="fibseq", required=false,  defaultValue="2") String fibseq, Model model) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("test");
+        modelAndView.setViewName("fibonacci");
         long InputVal;
 
         try {
@@ -160,20 +160,23 @@ public class LoginController {
 
         // Benchmarks
         long StartRec = System.nanoTime();
-        long Result = minilabz.Fibonacci.Recursion(InputVal);
+        minilabz.Fibonacci.Recursion(InputVal, 0, 1);
         long EndRec = System.nanoTime();
-        long Result2 = minilabz.Fibonacci.ForLoop(InputVal);
+        minilabz.Fibonacci.For(InputVal, 0, 1);
         long EndForLoop = System.nanoTime();
-        long Result3 = minilabz.Fibonacci.Stream(InputVal);
-        long EndStream = System.nanoTime();
+        inilabz.Fibonacci.While(InputVal, 0, 1);
+        long EndWhileLoop = System.nanoTime();
+        String Result = minilabz.Fibonacci.RecResult();
+        String Result2 = minilabz.Fibonacci.ForResult();
+        String Result3 = minilabz.Fibonacci.WhileResult();
 
         model.addAttribute("result", Result);
         model.addAttribute("input", InputVal);
-        model.addAttribute("recursionTime", (EndRec - StartRec) / 1000000.0);
-        model.addAttribute("forLoopTime", (EndForLoop - EndRec) / 1000000.0);
-        model.addAttribute("streamTime", (EndStream - EndForLoop) / 1000000.0);
+        model.addAttribute("recurseTime", (EndRec - StartRec) / 1000000.0);
+        model.addAttribute("forTime", (EndForLoop - EndRec) / 1000000.0);
+        model.addAttribute("whileTime", (EndWhileLoop - EndForLoop) / 1000000.0);
 
-        return "test";
+        return "fibonacci";
 
     }
 
