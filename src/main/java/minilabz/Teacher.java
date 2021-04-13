@@ -37,6 +37,7 @@ public class Teacher extends Generic {
             case age:
                 output += "0" + this.age;
                 output = output.substring(output.length() - 2);
+            case title:
             default:
                 output = super.getType() + ": " + this.formOfAddress + " " + this.lastName + " is " + age + " years old and ";
                 if(!married) {output += "not ";}
@@ -46,16 +47,16 @@ public class Teacher extends Generic {
     }
 
     public static Generic[] teachers(){
-        Generic[] teachers = {};
-        teachers[0] = new Teacher("Mr.", "Ross", true, 32);
-        teachers[0] = new Teacher("Mrs.", "Ross", true, 32);
-        teachers[0] = new Teacher("Ms.", "Smith", false, 30);
-        teachers[0] = new Teacher("Ya Boi", "Rogers", false, 20);
-        teachers[0] = new Teacher("Dr.", "Dre", true, 56);
-        teachers[0] = new Teacher("Mr.", "Mortensen", true, 20);
-        teachers[0] = new Teacher("Madame", "Ping", false, 99);
-        teachers[0] = new Teacher("Mrs.", "Barkley", true, 30);
-        return teachers;
+        return new Generic[]{
+            new Teacher("Mr.", "Ross", true, 32),
+            new Teacher("Mrs.", "Ross", true, 32),
+            new Teacher("Ms.", "Smith", false, 30),
+            new Teacher("Ya Boi", "Rogers", false, 20),
+            new Teacher("Dr.", "Dre", true, 56),
+            new Teacher("Mr.", "Mortensen", true, 20),
+            new Teacher("Madame", "Ping", false, 99),
+            new Teacher("Mrs.", "Barkley", true, 30)
+        };
     }
 
     public static void main(String[] args) {

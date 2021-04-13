@@ -23,6 +23,7 @@ public class Pet extends Generic {
             case species:
                 output += this.species + ", " + this.species;
                 break;
+            case title:
             default:
                 output = super.getType() + ": " + this.nickname + " the " + this.species;
         }
@@ -30,16 +31,16 @@ public class Pet extends Generic {
     }
 
     public static Generic[] pets(){
-        Generic[] pets = {};
-        pets[0] = new Pet("Clifford", "Big Red Dog");
-        pets[0] = new Pet("Nemo", "Clownfish");
-        pets[0] = new Pet("Camel", "Camel");
-        pets[0] = new Pet("Alexander", "Great");
-        pets[0] = new Pet("Bozo", "Clown");
-        pets[0] = new Pet("Tyler", "Creator");
-        pets[0] = new Pet("Harambe", "Gorilla");
-        pets[0] = new Pet("Garfield", "Dog");
-        return pets;
+        return new Generic[]{
+                new Pet("Clifford", "Big Red Dog"),
+                new Pet("Nemo", "Clownfish"),
+                new Pet("Camel", "Camel"),
+                new Pet("Alexander", "Great"),
+                new Pet("Bozo", "Clown"),
+                new Pet("Tyler", "Creator"),
+                new Pet("Harambe", "Gorilla"),
+                new Pet("Garfield", "Dog")
+        };
     }
 
     public static void main(String[] args) {

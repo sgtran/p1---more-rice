@@ -1,13 +1,10 @@
 package com.example.demo.controller;
 
 import consoleUI.ConsoleMethods;
-import minilabz.Animal;
-import minilabz.Water;
-import minilabz.Pokemon;
+import minilabz.*;
 
 import com.example.demo.models.linkedlists.CircleQueue;
 import lombok.Getter;
-import minilabz.IceCream;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,11 +45,14 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal, ice, water, pokemon;
+    private boolean animal, ice, water, pokemon, student, teacher, pet;
     private Animal.KeyType animalKey;
     private IceCream.KeyType iceKey;
     private Water.KeyType waterKey;
     private Pokemon.KeyType pokeKey;
+    private Student.KeyType studentKey;
+    private Teacher.KeyType teacherKey;
+    private Pet.KeyType petKey;
 
 
     /*
@@ -124,17 +124,34 @@ public class DataOPsController {
         //title defaults
         this.animalKey = Animal.KeyType.title;
         Animal.key = this.animalKey;
+
         this.iceKey = IceCream.KeyType.title;
         IceCream.key = this.iceKey;
 
+        this.waterKey = Water.KeyType.title;
+        Water.key = this.waterKey;
+
         this.pokeKey = Pokemon.KeyType.title;
         Pokemon.key = this.pokeKey;
+
+        this.studentKey = Student.KeyType.title;
+        Student.key = this.studentKey;
+
+        this.teacherKey = Teacher.KeyType.title;
+        Teacher.key = this.teacherKey;
+
+        this.petKey = Pet.KeyType.title;
+        Pet.key = this.petKey;
 
         //control options
         this.animal = true;
         this.ice = true;
         this.water = true;
         this.pokemon = true;
+        this.student = true;
+        this.teacher = true;
+        this.pet = true;
+
 
         //load data
         this.addCQueue(Animal.animalData());
@@ -158,7 +175,12 @@ public class DataOPsController {
             @RequestParam(value = "waterKey") Water.KeyType waterKey,
             @RequestParam(value = "pokemon", required = false) String pokemon,
             @RequestParam(value = "pokeKey") Pokemon.KeyType pokeKey,
-
+            @RequestParam(value = "student", required = false) String student,
+            @RequestParam(value = "studentKey") Student.KeyType studentKey,
+            @RequestParam(value = "teacher", required = false) String teacher,
+            @RequestParam(value = "teacherKey") Teacher.KeyType teacherKey,
+            @RequestParam(value = "pet", required = false) String pet,
+            @RequestParam(value = "petKey") Pet.KeyType petKey,
 
             Model model)
     {
@@ -203,6 +225,33 @@ public class DataOPsController {
             this.pokemon = false;
         }
 
+        if (student != null) {
+            this.addCQueue(Student.students());
+            this.student = true;
+            this.studentKey = studentKey;
+            Student.key = this.studentKey;
+        } else {
+            this.student = false;
+        }
+
+        if (teacher != null) {
+            this.addCQueue(Teacher.teachers());
+            this.teacher = true;
+            this.teacherKey = teacherKey;
+            Teacher.key = this.teacherKey;
+        } else {
+            this.teacher = false;
+        }
+
+        if (pet != null) {
+            this.addCQueue(Pet.pets());
+            this.pet = true;
+            this.petKey = petKey;
+            Pet.key = this.petKey;
+        } else {
+            this.pet = false;
+        }
+
         //sort data according to selected options
         this.queue.insertionSort();
         //render with options
@@ -240,6 +289,10 @@ public class DataOPsController {
         trial.addCQueue(Water.waterData());
         trial.addCQueue(Pokemon.pokemonData());
 
+        trial.addCQueue(Student.students());
+        trial.addCQueue(Teacher.teachers());
+        trial.addCQueue(Pet.pets());
+
         //display queue objects in queue order
         ConsoleMethods.println("Add order (all data)");
         trial.printCQueue();
@@ -250,6 +303,10 @@ public class DataOPsController {
         Water.key = Water.KeyType.brand;
         Pokemon.key = Pokemon.KeyType.name;
 
+        Student.key = Student.KeyType.lastName;
+        Teacher.key = Teacher.KeyType.lastName;
+        Pet.key = Pet.KeyType.nickname;
+
         trial.queue.insertionSort();
         ConsoleMethods.println("Sorted order (key only)");
         trial.printCQueue();
@@ -259,6 +316,10 @@ public class DataOPsController {
         IceCream.key = IceCream.KeyType.title;
         Water.key = Water.KeyType.title;
         Pokemon.key = Pokemon.KeyType.title;
+
+        Student.key = Student.KeyType.title;
+        Teacher.key = Teacher.KeyType.title;
+        Pet.key = Pet.KeyType.title;
 
         ConsoleMethods.println("Retain sorted order (all data)");
         trial.printCQueue();

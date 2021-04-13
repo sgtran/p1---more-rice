@@ -28,12 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add time comparisons for factorial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/StackDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/StackDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -460,22 +459,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="add time comparisons for factorial" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="101" key="GridCell.Tab.0.bottom" timestamp="1618299403628">
+    <state width="1493" height="214" key="GridCell.Tab.0.bottom" timestamp="1618302034952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="101" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
-    <state width="1493" height="101" key="GridCell.Tab.0.center" timestamp="1618299403628">
+    <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618302034952" />
+    <state width="1493" height="214" key="GridCell.Tab.0.center" timestamp="1618302034952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="101" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
-    <state width="1493" height="101" key="GridCell.Tab.0.left" timestamp="1618299403628">
+    <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618302034952" />
+    <state width="1493" height="214" key="GridCell.Tab.0.left" timestamp="1618302034952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="101" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
-    <state width="1493" height="101" key="GridCell.Tab.0.right" timestamp="1618299403628">
+    <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618302034952" />
+    <state width="1493" height="214" key="GridCell.Tab.0.right" timestamp="1618302034952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="101" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618299403628" />
+    <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618302034952" />
     <state x="147" y="65" key="MergeDialog" timestamp="1618297788982">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -484,6 +483,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618297775262" />
+    <state x="479" y="145" width="578" height="534" key="find.popup" timestamp="1618300450432">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="479" y="145" width="578" height="534" key="find.popup/0.0.1536.824/-1920.-169.1920.1040@0.0.1536.824" timestamp="1618300450432" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
