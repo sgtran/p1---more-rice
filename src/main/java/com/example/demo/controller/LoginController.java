@@ -5,6 +5,7 @@ import lombok.Getter;
 import com.example.demo.models.User;
 import com.example.demo.service.CustomUserDetailsService;
 import minilabz.Animal;
+import minilabz.Fibonacci;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,6 +21,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import static minilabz.Fibonacci.listRecurse;
+
 @Controller
 public class LoginController {
 
@@ -139,45 +143,43 @@ public class LoginController {
         return "test";
     }
 
-    public ArrayList<String> fibTimes(int nth) {
-        Fibonacci fib = new Fibonacci(nth);
-        ArrayList<String> times = new ArrayList<>();
-
-        long StartRec = System.nanoTime();
-        fib.Recurse(nth, 0, 1);
-        long RecurseEndTime = System.nanoTime();
-        String RecTime = "" + (RecurseEndTime - StartRec);
-        fib.For(nth, 0, 1);
-        long ForEndTime = System.nanoTime();
-        String ForTime = "" + (ForEndTime - RecurseEndTime);
-        fib.While(nth, 0, 1);
-        long WhileEndTime = System.nanoTime();
-        String WhileTime = "" + (WhileEndTime - ForEndTime);
-
-        times.add(RecTime);
-        times.add(ForTime);
-        times.add(WhileTime);
-
-        return times;
-    }
-
-    public String fibSequence(int nth) {
-        Fibonacci fib = new Fibonacci(nth);
-        return fib.Result();
-    }
 
     @GetMapping("/fibonacci")
-    public String fibonacci(@RequestParam(name="fibseq", required=false,  defaultValue="2") String fibseq, Model model) {
-        int nth = Integer.parseInt(fibseq);
+    public String fibonacciD(@RequestParam(name="fibseq", required=false,  defaultValue="2") String fibseq, Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("fibonacci");
+        long InputVal;
 
-        model.addAttribute("input", nth);
-        model.addAttribute("result", fibSequence(nth));
+        try {
+            InputVal = Long.parseLong(fibseq);
+        } catch (Exception Ex) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "fibonacci";
+        }
 
-        ArrayList<String> times = fibTimes(nth);
+        if (InputVal < 0 || InputVal > 47) {
+            model.addAttribute("error", "Please input a valid integer between 0 and 20.");
+            return "fibonacci";
+        }
 
-        model.addAttribute("RecurseTime", times.get(0));
-        model.addAttribute("ForTime", times.get(1));
-        model.addAttribute("WhileTime", times.get(2));
+        // Benchmarks
+        long StartRec = System.nanoTime();
+        listRecurse.removeAll(listRecurse);
+        minilabz.Fibonacci.Recurse(InputVal, 0, 1);
+        long EndRec = System.nanoTime();
+        minilabz.Fibonacci.For(InputVal, 0, 1);
+        long EndForLoop = System.nanoTime();
+        minilabz.Fibonacci.While(InputVal, 0, 1);
+        long EndWhileLoop = System.nanoTime();
+        String Result = minilabz.Fibonacci.recResult();
+        String Result2 = minilabz.Fibonacci.forResult();
+        String Result3 = minilabz.Fibonacci.whileResult();
+
+        model.addAttribute("result", Result);
+        model.addAttribute("input", InputVal);
+        model.addAttribute("recurseTime", (EndRec - StartRec) / 1000000.0);
+        model.addAttribute("forTime", (EndForLoop - EndRec) / 1000000.0);
+        model.addAttribute("whileTime", (EndWhileLoop - EndForLoop) / 1000000.0);
 
         return "fibonacci";
 

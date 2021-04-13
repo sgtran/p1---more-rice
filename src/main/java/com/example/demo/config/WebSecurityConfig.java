@@ -52,6 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/Factorial").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/fibonacci").permitAll()
                 .antMatchers("/signup").permitAll()
                 .antMatchers("/data").permitAll()
                 .antMatchers("/dashboard/**").hasAuthority("ADMIN").anyRequest()
