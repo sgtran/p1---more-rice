@@ -170,8 +170,8 @@ public class DataOPsController {
         Pet.key = this.petKey;
         this.studentKey = Student.KeyType.title;
         Student.key = this.studentKey;
-        this.parentKey = Parent.KeyType.title;
-        Paret.key = this.parentKey;
+        this.teacherKey = Teacher.KeyType.title;
+        Teacher.key = this.teacherKey;
 
         this.pet = true;
         this.student = true;

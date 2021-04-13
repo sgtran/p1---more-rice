@@ -50,16 +50,16 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Parent -->
+                        <!-- Teacher -->
                         <div class="col-md-4">
-                            <input type="checkbox" id="parent" name="parent" value="1" th:checked="${ctl.isParent()}">
-                            <label for="parent">Parent</label>
+                            <input type="checkbox" id="teacher" name="teacher" value="1" th:checked="${ctl.isTeacher()}">
+                            <label for="teacher">Teacher</label>
                             <div class="form-group">
                                 <label>Sort by</label>
-                                <div th:each="option : ${T(minilabz.Parent.KeyType).values()}">
+                                <div th:each="option : ${T(minilabz.Teacher.KeyType).values()}">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" th:field="*{parentKey}" th:value="${option}" class="custom-control-input">
-                                        <label class="custom-control-label" th:for="${#ids.prev('parentKey')}" th:text="${option}">option</label>
+                                        <input type="radio" th:field="*{teacherKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('teacherKey')}" th:text="${option}">option</label>
                                     </div>
                                 </div>
                             </div>

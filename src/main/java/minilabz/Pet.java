@@ -8,7 +8,7 @@ public class Pet extends Generic {
     private final String species;
 
     public Pet(String n, String s) {
-        this.setType("Student");
+        this.setType("Pet");
         this.nickname = n;
         this.species = s;
     }
