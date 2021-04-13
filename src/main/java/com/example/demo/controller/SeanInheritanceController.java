@@ -5,6 +5,7 @@ import minilabz.*;
 
 import com.example.demo.models.linkedlists.CircleQueue;
 import lombok.Getter;
+import org.springframework.data.mongodb.core.aggregation.AccumulatorOperators;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,9 +46,9 @@ public class SeanInheritanceController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal, pokemon;
+    private boolean animal, pokemon, minecraft;
     private Animal.KeyType animalKey;
-
+    private Minecraft.KeyType mineKey;
     private Pokemon.KeyType pokeKey;
 
 
@@ -120,7 +121,8 @@ public class SeanInheritanceController {
         //title defaults
         this.animalKey = Animal.KeyType.title;
         Animal.key = this.animalKey;
-
+        this.mineKey = Minecraft.KeyType.title;
+        Minecraft.key = this.mineKey;
 
         this.pokeKey = Pokemon.KeyType.title;
         Pokemon.key = this.pokeKey;
@@ -132,7 +134,7 @@ public class SeanInheritanceController {
 
         //control options
         this.animal = true;
-
+        this.minecraft = true;
         this.pokemon = true;
 
 
@@ -156,6 +158,9 @@ public class SeanInheritanceController {
             @RequestParam(value = "pokemon", required = false) String pokemon,
             @RequestParam(value = "pokeKey") Pokemon.KeyType pokeKey,
 
+            @RequestParam(value = "minecraft", required = false) String minecraft,
+            @RequestParam(value = "mineKey") Minecraft.KeyType mineKey,
+
             Model model)
     {
 
@@ -172,6 +177,14 @@ public class SeanInheritanceController {
             this.animal = false;
         }
 
+        if (minecraft != null) {
+            this.addCQueue(Minecraft.minecraftData());  //adding Animal data to queue
+            this.minecraft = true;             //persistent selection from check box selection
+            this.mineKey = mineKey;     //persistent enum update from radio button selection
+            Minecraft.key = this.mineKey;    //toString configure for sort order
+        } else {
+            this.minecraft = false;
+        }
 
 
 
@@ -238,6 +251,7 @@ public class SeanInheritanceController {
 
         Pokemon.key = Pokemon.KeyType.name;
 
+        Minecraft.key = Minecraft.KeyType.name;
 
 
         trial.queue.insertionSort();
@@ -249,6 +263,7 @@ public class SeanInheritanceController {
 
         Pokemon.key = Pokemon.KeyType.title;
 
+        Minecraft.key = Minecraft.KeyType.title;
 
 
         ConsoleMethods.println("Retain sorted order (all data)");

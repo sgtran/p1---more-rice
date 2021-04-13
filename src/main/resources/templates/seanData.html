@@ -61,6 +61,21 @@
                             </div>
                         </div>
 
+                        <!-- Minecraft -->
+                        <div class="col-md-4">
+                            <input type="checkbox" id="minecraft" name="minecraft" value="1" th:checked="${ctl.isMinecraft()}">
+                            <label for="minecraft">Minecraft</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.Minecraft.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{mineKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('mineKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
 
 

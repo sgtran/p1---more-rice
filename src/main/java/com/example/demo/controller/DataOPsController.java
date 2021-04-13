@@ -45,11 +45,11 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal, ice, water, pokemon, student, teacher, pet, cake;
-    private Animal.KeyType animalKey;
+    private boolean  ice, water, student, teacher, pet, cake;
+
     private IceCream.KeyType iceKey;
     private Water.KeyType waterKey;
-    private Pokemon.KeyType pokeKey;
+
     private Student.KeyType studentKey;
     private Teacher.KeyType teacherKey;
     private Pet.KeyType petKey;
@@ -171,8 +171,7 @@ public class DataOPsController {
         this.queue = new CircleQueue();
         //application specific inits
         //title defaults
-        this.animalKey = Animal.KeyType.title;
-        Animal.key = this.animalKey;
+
 
         this.iceKey = IceCream.KeyType.title;
         IceCream.key = this.iceKey;
@@ -180,8 +179,7 @@ public class DataOPsController {
         this.waterKey = Water.KeyType.title;
         Water.key = this.waterKey;
 
-        this.pokeKey = Pokemon.KeyType.title;
-        Pokemon.key = this.pokeKey;
+
 
         this.studentKey = Student.KeyType.title;
         Student.key = this.studentKey;
@@ -197,10 +195,8 @@ public class DataOPsController {
 
 
         //control options
-        this.animal = true;
         this.ice = true;
         this.water = true;
-        this.pokemon = true;
         this.student = true;
         this.teacher = true;
         this.pet = true;
@@ -220,14 +216,10 @@ public class DataOPsController {
      */
     @PostMapping("/data")
     public String dataFilter(
-            @RequestParam(value = "animal", required = false) String animal,
-            @RequestParam(value = "animalKey") Animal.KeyType animalKey,
             @RequestParam(value = "ice", required = false) String ice,
             @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
             @RequestParam(value = "water", required = false) String water,
             @RequestParam(value = "waterKey") Water.KeyType waterKey,
-            @RequestParam(value = "pokemon", required = false) String pokemon,
-            @RequestParam(value = "pokeKey") Pokemon.KeyType pokeKey,
             @RequestParam(value = "student", required = false) String student,
             @RequestParam(value = "studentKey") Student.KeyType studentKey,
             @RequestParam(value = "teacher", required = false) String teacher,
@@ -244,14 +236,7 @@ public class DataOPsController {
         count = 0;
         queue = new CircleQueue();
         //for each category rebuild data, set presentation and data defaults
-        if (animal != null) {
-            this.addCQueue(Animal.animalData());  //adding Animal data to queue
-            this.animal = true;             //persistent selection from check box selection
-            this.animalKey = animalKey;     //persistent enum update from radio button selection
-            Animal.key = this.animalKey;    //toString configure for sort order
-        } else {
-            this.animal = false;
-        }
+
 
         if (ice != null) {
             this.addCQueue(IceCream.iceCreamData());  //adding ice data to queue
@@ -271,14 +256,6 @@ public class DataOPsController {
             this.water = false;
         }
 
-        if (pokemon != null) {
-            this.addCQueue(Pokemon.pokemonData());
-            this.pokemon = true;
-            this.pokeKey = pokeKey;
-            Pokemon.key = this.pokeKey;
-        } else {
-            this.pokemon = false;
-        }
 
         if (student != null) {
             this.addCQueue(Student.students());
@@ -348,10 +325,8 @@ public class DataOPsController {
         DataOPsController trial = new DataOPsController();
 
         //add different types of objects to the same opaque queue
-        trial.addCQueue(Animal.animalData());
         trial.addCQueue(IceCream.iceCreamData());
         trial.addCQueue(Water.waterData());
-        trial.addCQueue(Pokemon.pokemonData());
 
         trial.addCQueue(Student.students());
         trial.addCQueue(Teacher.teachers());
@@ -362,10 +337,8 @@ public class DataOPsController {
         trial.printCQueue();
 
         //sort queue objects by specific element within the object and display in sort order
-        Animal.key = Animal.KeyType.name;
         IceCream.key = IceCream.KeyType.flavor;
         Water.key = Water.KeyType.brand;
-        Pokemon.key = Pokemon.KeyType.name;
 
         Student.key = Student.KeyType.lastName;
         Teacher.key = Teacher.KeyType.lastName;
@@ -378,10 +351,8 @@ public class DataOPsController {
         trial.printCQueue();
 
         //display queue objects, changing output but not sort
-        Animal.key = Animal.KeyType.title;
         IceCream.key = IceCream.KeyType.title;
         Water.key = Water.KeyType.title;
-        Pokemon.key = Pokemon.KeyType.title;
 
         Student.key = Student.KeyType.title;
         Teacher.key = Teacher.KeyType.title;
