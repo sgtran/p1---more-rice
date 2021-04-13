@@ -138,6 +138,22 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- CakeShop -->
+                        <div class="col-md-4">
+                            <!-- Checkbox on/off works off of @Getter for boolean isTeacher() -->
+                            <input type="checkbox" id="cake" name="cake" value="1" th:checked="${ctl.isCake()}">
+                            <label for="cake">Cakes</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <div th:each="option : ${T(minilabz.CakeShop.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{cakeKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('cakeKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <button>Go!</button>
                 </form>

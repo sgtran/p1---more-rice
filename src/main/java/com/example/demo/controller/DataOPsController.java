@@ -45,7 +45,7 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal, ice, water, pokemon, student, teacher, pet;
+    private boolean animal, ice, water, pokemon, student, teacher, pet, cake;
     private Animal.KeyType animalKey;
     private IceCream.KeyType iceKey;
     private Water.KeyType waterKey;
@@ -53,7 +53,7 @@ public class DataOPsController {
     private Student.KeyType studentKey;
     private Teacher.KeyType teacherKey;
     private Pet.KeyType petKey;
-
+    private CakeShop.KeyType cakeKey;
 
     /*
      * Circle queue constructor
@@ -143,6 +143,10 @@ public class DataOPsController {
         this.petKey = Pet.KeyType.title;
         Pet.key = this.petKey;
 
+        this.cakeKey = CakeShop.KeyType.title;
+        CakeShop.key = this.cakeKey;
+
+
         //control options
         this.animal = true;
         this.ice = true;
@@ -151,7 +155,7 @@ public class DataOPsController {
         this.student = true;
         this.teacher = true;
         this.pet = true;
-
+        this.cake = true;
 
         //load data
         this.addCQueue(Animal.animalData());
@@ -181,6 +185,8 @@ public class DataOPsController {
             @RequestParam(value = "teacherKey") Teacher.KeyType teacherKey,
             @RequestParam(value = "pet", required = false) String pet,
             @RequestParam(value = "petKey") Pet.KeyType petKey,
+            @RequestParam(value = "cake", required = false) String cake,
+            @RequestParam(value = "cakeKey") CakeShop.KeyType cakeKey,
 
             Model model)
     {
@@ -252,6 +258,15 @@ public class DataOPsController {
             this.pet = false;
         }
 
+        if (cake != null) {
+            this.addCQueue(CakeShop.cakes());
+            this.cake = true;
+            this.cakeKey = cakeKey;
+            CakeShop.key = this.cakeKey;
+        } else {
+            this.cake = false;
+        }
+
         //sort data according to selected options
         this.queue.insertionSort();
         //render with options
@@ -307,6 +322,8 @@ public class DataOPsController {
         Teacher.key = Teacher.KeyType.lastName;
         Pet.key = Pet.KeyType.nickname;
 
+        CakeShop.key = CakeShop.KeyType.caketype;
+
         trial.queue.insertionSort();
         ConsoleMethods.println("Sorted order (key only)");
         trial.printCQueue();
@@ -320,6 +337,8 @@ public class DataOPsController {
         Student.key = Student.KeyType.title;
         Teacher.key = Teacher.KeyType.title;
         Pet.key = Pet.KeyType.title;
+
+        CakeShop.key = CakeShop.KeyType.title;
 
         ConsoleMethods.println("Retain sorted order (all data)");
         trial.printCQueue();
