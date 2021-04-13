@@ -5,6 +5,7 @@ import lombok.Getter;
 import com.example.demo.models.User;
 import com.example.demo.service.CustomUserDetailsService;
 import minilabz.Animal;
+import minilabz.Fibonacci;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -164,11 +165,11 @@ public class LoginController {
         long EndRec = System.nanoTime();
         minilabz.Fibonacci.For(InputVal, 0, 1);
         long EndForLoop = System.nanoTime();
-        inilabz.Fibonacci.While(InputVal, 0, 1);
+        minilabz.Fibonacci.While(InputVal, 0, 1);
         long EndWhileLoop = System.nanoTime();
-        String Result = minilabz.Fibonacci.RecResult();
-        String Result2 = minilabz.Fibonacci.ForResult();
-        String Result3 = minilabz.Fibonacci.WhileResult();
+        String Result = minilabz.Fibonacci.recResult();
+        String Result2 = minilabz.Fibonacci.forResult();
+        String Result3 = minilabz.Fibonacci.whileResult();
 
         model.addAttribute("result", Result);
         model.addAttribute("input", InputVal);
