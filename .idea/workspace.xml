@@ -5,15 +5,29 @@
       <artifact name="p1---rice:jar" />
     </artifacts-to-build>
   </component>
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add time comparisons for factorial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Water.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/CakeShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +66,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -66,7 +80,33 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringSecurityMongodbSecurityApplication">
+  <component name="RunManager" selected="Application.CakeShop">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CakeShop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="minilabz.CakeShop" />
+      <module name="p1---rice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="minilabz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FactorialController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FactorialController" />
       <module name="p1---rice" />
@@ -103,13 +143,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Uno" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.Uno" />
-      <module name="p1---rice" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Water" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="minilabz.Water" />
       <module name="p1---rice" />
@@ -123,19 +156,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="p1---rice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -145,23 +165,25 @@
     </configuration>
     <list>
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
-      <item itemvalue="Application.Uno" />
       <item itemvalue="Application.FactorialController" />
       <item itemvalue="Application.LabSelect" />
-      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.Water" />
+      <item itemvalue="Application.CakeShop" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CakeShop" />
         <item itemvalue="Application.Water" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
         <item itemvalue="Application.LabSelect" />
         <item itemvalue="Application.FactorialController" />
-        <item itemvalue="Application.Uno" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="" />
@@ -426,6 +448,12 @@
     <MESSAGE value="Add inheritance/sort minilab" />
     <MESSAGE value="add time comparisons for factorial" />
     <option name="LAST_COMMIT_MESSAGE" value="add time comparisons for factorial" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="286" y="47" key="SettingsEditor" timestamp="1618301411822">
+      <screen x="0" y="23" width="1400" height="877" />
+    </state>
+    <state x="286" y="47" key="SettingsEditor/0.23.1400.877@0.23.1400.877" timestamp="1618301411822" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
