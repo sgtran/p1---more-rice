@@ -35,11 +35,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Circle Queue Driver takes a list of Objects and puts them into a Queue
- * @author     John Mortensen
- *
- */
+
 @Getter
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class SeanInheritanceController {
