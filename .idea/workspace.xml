@@ -10,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e32a38-e7e1-4c6d-a804-10c3c1c7ebe2" name="Default Changelist" comment="add html element for factorial">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/IceCream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/p1---rice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/p1---rice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nighthawk_csa_inheritance/src/main/java/com/nighthawk/csa/algorithm/DataOpsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/nighthawk_csa_inheritance/src/main/java/com/nighthawk/csa/algorithm/DataOpsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/StackDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/StackDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,13 +113,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -394,16 +398,5 @@
     <MESSAGE value="add Factorial test" />
     <MESSAGE value="sort minilab add" />
     <option name="LAST_COMMIT_MESSAGE" value="sort minilab add" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

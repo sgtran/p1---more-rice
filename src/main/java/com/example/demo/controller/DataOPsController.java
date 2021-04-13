@@ -5,6 +5,7 @@ import minilabz.Animal;
 
 import com.example.demo.models.linkedlists.CircleQueue;
 import lombok.Getter;
+import minilabz.IceCream;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,8 +46,9 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal;
+    private boolean animal, ice;
     private Animal.KeyType animalKey;
+    private IceCream.KeyType iceKey;
 
 
     /*
@@ -118,12 +120,16 @@ public class DataOPsController {
         //title defaults
         this.animalKey = Animal.KeyType.title;
         Animal.key = this.animalKey;
+        this.iceKey = IceCream.KeyType.title;
+        IceCream.key = this.iceKey;
 
         //control options
         this.animal = true;
+        this.ice = true;
 
         //load data
         this.addCQueue(Animal.animalData());
+        this.addCQueue(IceCream.iceCreamData());
 
         //data is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
@@ -137,6 +143,8 @@ public class DataOPsController {
     public String dataFilter(
             @RequestParam(value = "animal", required = false) String animal,
             @RequestParam(value = "animalKey") Animal.KeyType animalKey,
+            @RequestParam(value = "ice", required = false) String ice,
+            @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
 
             Model model)
     {
@@ -152,6 +160,15 @@ public class DataOPsController {
             Animal.key = this.animalKey;    //toString configure for sort order
         } else {
             this.animal = false;
+        }
+
+        if (ice != null) {
+            this.addCQueue(IceCream.iceCreamData());  //adding ice data to queue
+            this.ice = true;             //persistent selection from check box selection
+            this.iceKey = iceKey;     //persistent enum update from radio button selection
+            IceCream.key = this.iceKey;    //toString configure for sort order
+        } else {
+            this.ice = false;
         }
 
         //sort data according to selected options
@@ -187,6 +204,7 @@ public class DataOPsController {
 
         //add different types of objects to the same opaque queue
         trial.addCQueue(Animal.animalData());
+        trial.addCQueue(IceCream.iceCreamData());
 
         //display queue objects in queue order
         ConsoleMethods.println("Add order (all data)");
@@ -194,6 +212,7 @@ public class DataOPsController {
 
         //sort queue objects by specific element within the object and display in sort order
         Animal.key = Animal.KeyType.name;
+        IceCream.key = IceCream.KeyType.flavor;
 
         trial.queue.insertionSort();
         ConsoleMethods.println("Sorted order (key only)");
@@ -201,6 +220,7 @@ public class DataOPsController {
 
         //display queue objects, changing output but not sort
         Animal.key = Animal.KeyType.title;
+        IceCream.key = IceCream.KeyType.title;
 
         ConsoleMethods.println("Retain sorted order (all data)");
         trial.printCQueue();

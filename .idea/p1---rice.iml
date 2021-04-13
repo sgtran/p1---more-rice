@@ -45,6 +45,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.16" level="project" />
     <orderEntry type="library" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: nz.net.ultraq.extensions:groovy-extensions:0.3.0" level="project" />
     <orderEntry type="library" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.2.0" level="project" />
