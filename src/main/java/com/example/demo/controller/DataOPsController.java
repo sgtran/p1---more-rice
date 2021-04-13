@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import consoleUI.ConsoleMethods;
 import minilabz.Animal;
+import minilabz.Water;
 
 import com.example.demo.models.linkedlists.CircleQueue;
 import lombok.Getter;
@@ -46,9 +47,10 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean animal, ice;
+    private boolean animal, ice, water;
     private Animal.KeyType animalKey;
     private IceCream.KeyType iceKey;
+    private Water.KeyType waterKey;
 
 
     /*
@@ -122,10 +124,13 @@ public class DataOPsController {
         Animal.key = this.animalKey;
         this.iceKey = IceCream.KeyType.title;
         IceCream.key = this.iceKey;
+        this.waterKey = Water.KeyType.title;
+        Water.key = this.waterKey;
 
         //control options
         this.animal = true;
         this.ice = true;
+        this.water = true;
 
         //load data
         this.addCQueue(Animal.animalData());
@@ -145,6 +150,8 @@ public class DataOPsController {
             @RequestParam(value = "animalKey") Animal.KeyType animalKey,
             @RequestParam(value = "ice", required = false) String ice,
             @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
+            @RequestParam(value = "water", required = false) String water,
+            @RequestParam(value = "waterKey") Water.KeyType waterKey,
 
             Model model)
     {
@@ -169,6 +176,15 @@ public class DataOPsController {
             IceCream.key = this.iceKey;    //toString configure for sort order
         } else {
             this.ice = false;
+        }
+
+        if (water != null) {
+            this.addCQueue(Water.waterData());
+            this.water = true;
+            this.waterKey = waterKey;
+            Water.key = this.waterKey;
+        } else {
+            this.water = false;
         }
 
         //sort data according to selected options
@@ -205,6 +221,7 @@ public class DataOPsController {
         //add different types of objects to the same opaque queue
         trial.addCQueue(Animal.animalData());
         trial.addCQueue(IceCream.iceCreamData());
+        trial.addCQueue(Water.waterData());
 
         //display queue objects in queue order
         ConsoleMethods.println("Add order (all data)");
@@ -213,6 +230,7 @@ public class DataOPsController {
         //sort queue objects by specific element within the object and display in sort order
         Animal.key = Animal.KeyType.name;
         IceCream.key = IceCream.KeyType.flavor;
+        Water.key = Water.KeyType.brand;
 
         trial.queue.insertionSort();
         ConsoleMethods.println("Sorted order (key only)");
@@ -221,6 +239,7 @@ public class DataOPsController {
         //display queue objects, changing output but not sort
         Animal.key = Animal.KeyType.title;
         IceCream.key = IceCream.KeyType.title;
+        Water.key = Water.KeyType.title;
 
         ConsoleMethods.println("Retain sorted order (all data)");
         trial.printCQueue();

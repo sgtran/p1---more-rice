@@ -16,6 +16,28 @@
             <p th:if="${result}" class="card-text" th:text="'Input: ' + ${input} + ' | Result: ' + ${result}"></p>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <table th:if="${result}" class="table table-striped w-75" style="margin: auto;">
+            <thead>
+            <tr>
+                <th scope="col">Method</th>
+                <th scope="col">Time (ms)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Recursion</td>
+                <td th:text="${recursionTime}"></td>
+            </tr>
+            <tr>
+                <td>For Loop</td>
+                <td th:text="${forLoopTime}"></td>
+            </tr>
+            <tr>
+                <td>Stream</td>
+                <td th:text="${streamTime}"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
