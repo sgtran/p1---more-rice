@@ -21,6 +21,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import static minilabz.Fibonacci.listRecurse;
+
 @Controller
 public class LoginController {
 
@@ -151,17 +154,18 @@ public class LoginController {
             InputVal = Long.parseLong(fibseq);
         } catch (Exception Ex) {
             model.addAttribute("error", "Please input a valid integer between 0 and 20.");
-            return "test";
+            return "fibonacci";
         }
 
-        if (InputVal < 0 || InputVal > 20) {
+        if (InputVal < 0 || InputVal > 47) {
             model.addAttribute("error", "Please input a valid integer between 0 and 20.");
-            return "test";
+            return "fibonacci";
         }
 
         // Benchmarks
         long StartRec = System.nanoTime();
-        minilabz.Fibonacci.Recursion(InputVal, 0, 1);
+        listRecurse.removeAll(listRecurse);
+        minilabz.Fibonacci.Recurse(InputVal, 0, 1);
         long EndRec = System.nanoTime();
         minilabz.Fibonacci.For(InputVal, 0, 1);
         long EndForLoop = System.nanoTime();

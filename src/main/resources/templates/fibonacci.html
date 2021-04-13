@@ -1,17 +1,13 @@
 <!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout}" lang="en">
-
-<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 <head>
-    <div layout:fragment="metadata" th:remove="tag">
-        <title>Fibonacci Algo</title>
-    </div>
+    <title>Fibonacci</title>
 </head>
 
 <body>
-<div layout:fragment="content" th:remove="tag">
+<div layout:fragment="content">
     `<div class="container">
 
     <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
@@ -25,6 +21,7 @@
             <!-- Input -->
             <div class="col-md-6">
                 <h3>Choose a number from 2 to 47</h3>
+                <small th:if="${error}" th:text="${error}" class="form-text text-danger">Please enter a valid integer between 0 and 20.</small>
                 <form id="fibForm" action="/fibonacci" method="GET" >
                     <input name="fibseq" id="fibseq" type="number" min="2" max="47" >
                     <button>Go!</button>
