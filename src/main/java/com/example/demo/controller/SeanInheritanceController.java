@@ -107,14 +107,13 @@ public class SeanInheritanceController {
      */
     @GetMapping("/seanData")
 
-    public String data(Model model) {
+    public String seanData(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("seanData");
-        //initialize data
+
         this.count = 0;
         this.queue = new CircleQueue();
-        //application specific inits
-        //title defaults
+
         this.animalKey = Animal.KeyType.title;
         Animal.key = this.animalKey;
         this.mineKey = Minecraft.KeyType.title;
@@ -122,11 +121,6 @@ public class SeanInheritanceController {
 
         this.pokeKey = Pokemon.KeyType.title;
         Pokemon.key = this.pokeKey;
-
-
-
-
-
 
         //control options
         this.animal = true;
@@ -136,7 +130,8 @@ public class SeanInheritanceController {
 
         //load data
         this.addCQueue(Animal.animalData());
-        this.addCQueue(IceCream.iceCreamData());
+        this.addCQueue(Pokemon.pokemonData());
+        this.addCQueue(Minecraft.minecraftData());
 
         //data is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
@@ -160,9 +155,7 @@ public class SeanInheritanceController {
             Model model)
     {
 
-        //re-init data according to check boxes selected
-        count = 0;
-        queue = new CircleQueue();
+
         //for each category rebuild data, set presentation and data defaults
         if (animal != null) {
             this.addCQueue(Animal.animalData());  //adding Animal data to queue
@@ -182,8 +175,6 @@ public class SeanInheritanceController {
             this.minecraft = false;
         }
 
-
-
         if (pokemon != null) {
             this.addCQueue(Pokemon.pokemonData());
             this.pokemon = true;
@@ -192,13 +183,6 @@ public class SeanInheritanceController {
         } else {
             this.pokemon = false;
         }
-
-
-
-
-
-
-
 
 
         //sort data according to selected options
