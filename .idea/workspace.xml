@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="remove some code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SeanInheritanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SeanInheritanceController.java" afterDir="false" />
-    </list>
+    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="fixed default output for SeanData" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618337890050</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed default output for SeanData">
+      <created>1618339075014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618339075014</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +123,7 @@
     <MESSAGE value="KevinSort split. add dropdown to html sort" />
     <MESSAGE value="Added invidual sort to drop down" />
     <MESSAGE value="remove some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove some code" />
+    <MESSAGE value="fixed default output for SeanData" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed default output for SeanData" />
   </component>
 </project>

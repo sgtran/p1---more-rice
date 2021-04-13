@@ -55,12 +55,12 @@ public class Animal extends Generic {
      */
     public static Generic[] animalData() {
         return new Generic[]{
-                new Animal("Lion", 8, "Gold"),
-                new Animal("Pig", 3, "Pink"),
-                new Animal("Robin", 7, "Red"),
-                new Animal("Cat", 10, "Black"),
-                new Animal("Kitty", 1, "Calico"),
-                new Animal("Dog", 14, "Brown")
+                new Animal("Mouse", 8, "Gold"),
+                new Animal("Bear", 3, "Pink"),
+                new Animal("Moose", 7, "Red"),
+                new Animal("Cat", 10, "Pink"),
+                new Animal("Mouse", 1, "White"),
+                new Animal("Dog", 14, "Black")
         };
     }
 
