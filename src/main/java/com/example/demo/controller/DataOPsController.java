@@ -250,17 +250,6 @@ public class DataOPsController {
         this.waterKey = Water.KeyType.title;
         Water.key = this.waterKey;
 
-
-
-        this.studentKey = Student.KeyType.title;
-        Student.key = this.studentKey;
-
-        this.teacherKey = Teacher.KeyType.title;
-        Teacher.key = this.teacherKey;
-
-        this.petKey = Pet.KeyType.title;
-        Pet.key = this.petKey;
-
         this.cakeKey = CakeShop.KeyType.title;
         CakeShop.key = this.cakeKey;
 
