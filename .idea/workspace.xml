@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="Teacher Inheritance Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Yogurt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSort.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="Seperated my html into a different page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/StackDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/StackDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618353549078</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Seperated my html into a different page">
+      <created>1618460545609</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1618460545609</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +191,8 @@
     <MESSAGE value="Andrew Sort changes" />
     <MESSAGE value="Fibonacci Changes" />
     <MESSAGE value="Teacher Inheritance Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Teacher Inheritance Changes" />
+    <MESSAGE value="Seperated my html into a different page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seperated my html into a different page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
