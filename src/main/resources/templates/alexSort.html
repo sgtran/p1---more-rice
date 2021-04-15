@@ -23,22 +23,48 @@
                 <form id="fibForm" action="/data" th:object="${ctl}" method="POST" >
                     <div class="jumbotron text-left row">
 
-                        <!-- CakeShop -->
+
+                        <!-- Ice Cream -->
                         <div class="col-md-4">
-                            <!-- Checkbox on/off works off of @Getter for boolean isTeacher() -->
-                            <input type="checkbox" id="cake" name="cake" value="1" th:checked="${ctl.isCake()}">
-                            <label for="cake">Cakes</label>
+                            <!-- Checkbox on/off works off of @Getter for boolean isIce() -->
+                            <input type="checkbox" id="ice" name="ice" value="1" th:checked="${ctl.isIce()}">
+                            <label for="ice">Ice Cream</label>
                             <div class="form-group">
                                 <label>Sort by</label>
-                                <div th:each="option : ${T(minilabz.CakeShop.KeyType).values()}">
+                                <!-- Sort by Radio buttons:
+                                1. option(s) are generated directly from ice.KeyType
+                                2. iceKey is the result of radio button selection
+                                3. each radio option is provided a unique id, review rendered code to see expansion
+                                -->
+                                <div th:each="option : ${T(minilabz.IceCream.KeyType).values()}">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" th:field="*{cakeKey}" th:value="${option}" class="custom-control-input">
-                                        <label class="custom-control-label" th:for="${#ids.prev('cakeKey')}" th:text="${option}">option</label>
+                                        <input type="radio" th:field="*{iceKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('iceKey')}" th:text="${option}">option</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <!-- Yogurt -->
+                        <div class="col-md-4">
+                            <!-- Checkbox on/off works off of @Getter for boolean isIce() -->
+                            <input type="checkbox" id="yog" name="yog" value="1" th:checked="${ctl.isYogurt()}">
+                            <label for="yog">Yogurt</label>
+                            <div class="form-group">
+                                <label>Sort by</label>
+                                <!-- Sort by Radio buttons:
+                                1. option(s) are generated directly from ice.KeyType
+                                2. iceKey is the result of radio button selection
+                                3. each radio option is provided a unique id, review rendered code to see expansion
+                                -->
+                                <div th:each="option : ${T(minilabz.Yogurt.KeyType).values()}">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" th:field="*{yogKey}" th:value="${option}" class="custom-control-input">
+                                        <label class="custom-control-label" th:for="${#ids.prev('yogKey')}" th:text="${option}">option</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <button>Go!</button>
                 </form>
             </div>

@@ -41,9 +41,10 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean  ice, water, student, teacher, pet, cake;
+    private boolean  ice, water, student, teacher, pet, cake, yog;
 
     private IceCream.KeyType iceKey;
+    private Yogurt.KeyType yogKey;
     private Water.KeyType waterKey;
 
     private Student.KeyType studentKey;
@@ -231,6 +232,65 @@ public class DataOPsController {
         return "andrewSort";
     }
 
+    @GetMapping("/alexSort")
+
+    public String alexSort(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("alexSort");
+
+        this.count = 0;
+        this.queue = new CircleQueue();
+
+        this.iceKey = IceCream.KeyType.title;
+        IceCream.key = this.iceKey;
+        this.yogKey = Yogurt.KeyType.title;
+        Yogurt.key = this.yogKey;
+
+        this.yog = true;
+        this.ice = true;
+
+        this.addCQueue(Yogurt.yogurtData());
+        this.addCQueue(IceCream.iceCreamData());
+
+        model.addAttribute("ctl", this);
+        return "alexSort"; //HTML render default condition
+    }
+
+    @PostMapping("/alexSort")
+    public String alexSortFilter(
+            @RequestParam(value = "yog", required = false) String yog,
+            @RequestParam(value = "yogKey") Yogurt.KeyType yogKey,
+            @RequestParam(value = "ice", required = false) String ice,
+            @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
+
+            Model model)
+    {
+
+        if (ice != null) {
+            this.addCQueue(IceCream.iceCreamData());
+            this.ice = true;
+            this.iceKey = iceKey;
+            IceCream.key = this.iceKey;
+        } else {
+            this.ice = false;
+        }
+
+        if (yog != null) {
+            this.addCQueue(Yogurt.yogurtData());
+            this.yog = true;
+            this.yogKey = yogKey;
+            Yogurt.key = this.yogKey;
+        } else {
+            this.yog = false;
+        }
+
+        //sort data according to selected options
+        this.queue.insertionSort();
+        //render with options
+        model.addAttribute("ctl", this);
+        return "alexSort";
+    }
+
 
     @GetMapping("/data")
 
@@ -244,9 +304,6 @@ public class DataOPsController {
         //title defaults
 
 
-        this.iceKey = IceCream.KeyType.title;
-        IceCream.key = this.iceKey;
-
         this.waterKey = Water.KeyType.title;
         Water.key = this.waterKey;
 
@@ -255,7 +312,6 @@ public class DataOPsController {
 
 
         //control options
-        this.ice = true;
         this.water = true;
         this.student = true;
         this.teacher = true;
@@ -264,7 +320,6 @@ public class DataOPsController {
 
         //load data
         this.addCQueue(Animal.animalData());
-        this.addCQueue(IceCream.iceCreamData());
 
         //data is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
@@ -276,8 +331,6 @@ public class DataOPsController {
      */
     @PostMapping("/data")
     public String dataFilter(
-            @RequestParam(value = "ice", required = false) String ice,
-            @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
             @RequestParam(value = "water", required = false) String water,
             @RequestParam(value = "waterKey") Water.KeyType waterKey,
             @RequestParam(value = "student", required = false) String student,
@@ -297,15 +350,6 @@ public class DataOPsController {
         queue = new CircleQueue();
         //for each category rebuild data, set presentation and data defaults
 
-
-        if (ice != null) {
-            this.addCQueue(IceCream.iceCreamData());  //adding ice data to queue
-            this.ice = true;             //persistent selection from check box selection
-            this.iceKey = iceKey;     //persistent enum update from radio button selection
-            IceCream.key = this.iceKey;    //toString configure for sort order
-        } else {
-            this.ice = false;
-        }
 
         if (water != null) {
             this.addCQueue(Water.waterData());
