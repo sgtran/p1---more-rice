@@ -41,7 +41,7 @@ public class DataOPsController {
     private CircleQueue queue;	// circle queue object
     private int count; // number of objects in circle queue
     //control variables for UI checkboxes and radios
-    private boolean  ice, water, student, teacher, pet, cake, yog;
+    private boolean ice, water, student, teacher, pet, cake, yog;
 
     private IceCream.KeyType iceKey;
     private Yogurt.KeyType yogKey;
@@ -237,34 +237,50 @@ public class DataOPsController {
     public String alexSort(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("alexSort");
-
+        //initialize alexSort
         this.count = 0;
         this.queue = new CircleQueue();
+        //application specific inits
+        //title defaults
+
 
         this.iceKey = IceCream.KeyType.title;
         IceCream.key = this.iceKey;
+
         this.yogKey = Yogurt.KeyType.title;
         Yogurt.key = this.yogKey;
 
-        this.yog = true;
+        //control options
         this.ice = true;
+        this.yog = true;
 
-        this.addCQueue(Yogurt.yogurtData());
+        //load alexSort
         this.addCQueue(IceCream.iceCreamData());
+        this.addCQueue(Yogurt.yogurtData());
 
+        //alexSort is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
         return "alexSort"; //HTML render default condition
     }
 
+    /*
+     GET request,, parameters are passed within the URI
+     */
     @PostMapping("/alexSort")
     public String alexSortFilter(
-            @RequestParam(value = "yog", required = false) String yog,
-            @RequestParam(value = "yogKey") Yogurt.KeyType yogKey,
             @RequestParam(value = "ice", required = false) String ice,
             @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
+            @RequestParam(value = "yogurt", required = false) String yogurt,
+            @RequestParam(value = "yogurtKey") Yogurt.KeyType yogKey,
 
             Model model)
     {
+
+        //re-init alexSort according to check boxes selected
+        count = 0;
+        queue = new CircleQueue();
+        //for each category rebuild alexSort, set presentation and alexSort defaults
+
 
         if (ice != null) {
             this.addCQueue(IceCream.iceCreamData());
@@ -275,7 +291,8 @@ public class DataOPsController {
             this.ice = false;
         }
 
-        if (yog != null) {
+
+        if (yogurt != null) {
             this.addCQueue(Yogurt.yogurtData());
             this.yog = true;
             this.yogKey = yogKey;
@@ -284,7 +301,7 @@ public class DataOPsController {
             this.yog = false;
         }
 
-        //sort data according to selected options
+        //sort alexSort according to selected options
         this.queue.insertionSort();
         //render with options
         model.addAttribute("ctl", this);
@@ -430,6 +447,7 @@ public class DataOPsController {
 
         //add different types of objects to the same opaque queue
         trial.addCQueue(IceCream.iceCreamData());
+        trial.addCQueue(Yogurt.yogurtData());
         trial.addCQueue(Water.waterData());
 
         trial.addCQueue(Student.students());
@@ -442,6 +460,7 @@ public class DataOPsController {
 
         //sort queue objects by specific element within the object and display in sort order
         IceCream.key = IceCream.KeyType.flavor;
+        Yogurt.key = Yogurt.KeyType.flavor;
         Water.key = Water.KeyType.brand;
 
         Student.key = Student.KeyType.lastName;
@@ -456,6 +475,7 @@ public class DataOPsController {
 
         //display queue objects, changing output but not sort
         IceCream.key = IceCream.KeyType.title;
+        Yogurt.key = Yogurt.KeyType.title;
         Water.key = Water.KeyType.title;
 
         Student.key = Student.KeyType.title;
