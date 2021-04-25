@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="Seperated my html into a different page">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/IceCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/IceCream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Yogurt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Yogurt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/alexSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSort.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,13 +62,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,6 +105,7 @@
       <workItem from="1619313030993" duration="630000" />
       <workItem from="1619313782851" duration="460000" />
       <workItem from="1619314278607" duration="3785000" />
+      <workItem from="1619391462467" duration="2391000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>

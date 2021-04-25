@@ -34,12 +34,12 @@ public class Yogurt extends Generic{
 
     public static Generic[] yogurtData () {
         return new Generic[]{
-                new Yogurt("Vanilla", true),
                 new Yogurt("Vanilla", false),
-                new Yogurt("Peach", true),
+                new Yogurt("Vanilla", true),
                 new Yogurt("Peach", false),
-                new Yogurt("Strawberry", true),
+                new Yogurt("Peach", true),
                 new Yogurt("Strawberry", false),
+                new Yogurt("Strawberry", true),
         };
     }
 

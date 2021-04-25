@@ -34,10 +34,10 @@ public class IceCream extends Generic{
 
     public static Generic[] iceCreamData () {
         return new Generic[]{
-                new IceCream("Chocolate", true),
                 new IceCream("Chocolate", false),
-                new IceCream("Vanilla", true),
+                new IceCream("Chocolate", true),
                 new IceCream("Vanilla", false),
+                new IceCream("Vanilla", true),
                 new IceCream("Strawberry", true),
                 new IceCream("Strawberry", false),
         };

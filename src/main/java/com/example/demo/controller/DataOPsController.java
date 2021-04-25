@@ -268,18 +268,13 @@ public class DataOPsController {
      */
     @PostMapping("/alexSort")
     public String alexSortFilter(
-            @RequestParam(value = "ice", required = false) String ice,
+            @RequestParam(value = "IceCream", required = false) String ice,
             @RequestParam(value = "iceKey") IceCream.KeyType iceKey,
-            @RequestParam(value = "yogurt", required = false) String yogurt,
-            @RequestParam(value = "yogurtKey") Yogurt.KeyType yogKey,
+            @RequestParam(value = "Yogurt", required = false) String yogurt,
+            @RequestParam(value = "yogKey") Yogurt.KeyType yogKey,
 
             Model model)
     {
-
-        //re-init alexSort according to check boxes selected
-        count = 0;
-        queue = new CircleQueue();
-        //for each category rebuild alexSort, set presentation and alexSort defaults
 
 
         if (ice != null) {
@@ -321,22 +316,15 @@ public class DataOPsController {
         //title defaults
 
 
-        this.waterKey = Water.KeyType.title;
-        Water.key = this.waterKey;
-
         this.cakeKey = CakeShop.KeyType.title;
         CakeShop.key = this.cakeKey;
 
 
         //control options
-        this.water = true;
-        this.student = true;
-        this.teacher = true;
-        this.pet = true;
         this.cake = true;
 
         //load data
-        this.addCQueue(Animal.animalData());
+        this.addCQueue(CakeShop.cakes());
 
         //data is not sorted, queue order (FIFO) is default
         model.addAttribute("ctl", this);
@@ -348,62 +336,11 @@ public class DataOPsController {
      */
     @PostMapping("/data")
     public String dataFilter(
-            @RequestParam(value = "water", required = false) String water,
-            @RequestParam(value = "waterKey") Water.KeyType waterKey,
-            @RequestParam(value = "student", required = false) String student,
-            @RequestParam(value = "studentKey") Student.KeyType studentKey,
-            @RequestParam(value = "teacher", required = false) String teacher,
-            @RequestParam(value = "teacherKey") Teacher.KeyType teacherKey,
-            @RequestParam(value = "pet", required = false) String pet,
-            @RequestParam(value = "petKey") Pet.KeyType petKey,
             @RequestParam(value = "cake", required = false) String cake,
             @RequestParam(value = "cakeKey") CakeShop.KeyType cakeKey,
 
             Model model)
     {
-
-        //re-init data according to check boxes selected
-        count = 0;
-        queue = new CircleQueue();
-        //for each category rebuild data, set presentation and data defaults
-
-
-        if (water != null) {
-            this.addCQueue(Water.waterData());
-            this.water = true;
-            this.waterKey = waterKey;
-            Water.key = this.waterKey;
-        } else {
-            this.water = false;
-        }
-
-
-        if (student != null) {
-            this.addCQueue(Student.students());
-            this.student = true;
-            this.studentKey = studentKey;
-            Student.key = this.studentKey;
-        } else {
-            this.student = false;
-        }
-
-        if (teacher != null) {
-            this.addCQueue(Teacher.teachers());
-            this.teacher = true;
-            this.teacherKey = teacherKey;
-            Teacher.key = this.teacherKey;
-        } else {
-            this.teacher = false;
-        }
-
-        if (pet != null) {
-            this.addCQueue(Pet.pets());
-            this.pet = true;
-            this.petKey = petKey;
-            Pet.key = this.petKey;
-        } else {
-            this.pet = false;
-        }
 
         if (cake != null) {
             this.addCQueue(CakeShop.cakes());
