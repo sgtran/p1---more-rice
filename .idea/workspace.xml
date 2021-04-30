@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="fixed default output for SeanData">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SeanSortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Athlete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/seanSort.html" afterDir="false" />
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="added minilab sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/seanSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/seanSort.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,19 +60,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -99,7 +80,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="" />
+      <changelist id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="added minilab sort" />
       <created>1618335191739</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -114,6 +95,7 @@
       <workItem from="1619395641927" duration="70000" />
       <workItem from="1619414266290" duration="964000" />
       <workItem from="1619797999765" duration="5511000" />
+      <workItem from="1619816457334" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -192,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619803212337</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added minilab sort">
+      <created>1619816296422</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619816296422</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +211,8 @@
     <MESSAGE value="Seperated my html into a different page" />
     <MESSAGE value="Fixed html" />
     <MESSAGE value="added 3 sorts minilab" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 3 sorts minilab" />
+    <MESSAGE value="added minilab sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="added minilab sort" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
