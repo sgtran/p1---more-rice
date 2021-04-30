@@ -44,7 +44,7 @@ public class AlexSortController {
     }
 
     @GetMapping("/alexSorts2")
-    public String test(String bubbleint, String bubblestr, String bubbleemp, String insertint, String insertstr, String insertemp, String selectint, String selectstr, String selectemp, String btime, String itime, String stime, Model model) {
+    public String test(String bubbleint, String bubblestr, String bubbleemp, String insertint, String insertstr, String insertemp, String selectint, String selectstr, String selectemp, String btime, String itime, String stime, String results, Model model) {
         b = java.lang.System.nanoTime();
         bubbleint = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(intArr)); //this value is displayed on the page
         bubblestr = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(stringArr));
@@ -77,6 +77,9 @@ public class AlexSortController {
         model.addAttribute("selectstr", selectstr);
         model.addAttribute("selectemp", selectemp);
         model.addAttribute("stime", stime);
+
+        results = "Bubble sort: O(n^2) average and best case; Insertion sort: O(n^2) average to O(n) best case; Selection sort: O(n^2) average and best case";
+        model.addAttribute("results", results);
 
         return "alexSorts2";
     }

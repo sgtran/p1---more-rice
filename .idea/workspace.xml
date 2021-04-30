@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="Fixed html">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AlexSortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSorts2.html" afterDir="false" />
+    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="added 3 sorts minilab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AlexSortController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AlexSortController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/alexSorts2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSorts2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +108,7 @@
       <workItem from="1619395074815" duration="188000" />
       <workItem from="1619395641927" duration="70000" />
       <workItem from="1619414266290" duration="964000" />
-      <workItem from="1619797999765" duration="5116000" />
+      <workItem from="1619797999765" duration="5511000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -185,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619393883900</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added 3 sorts minilab">
+      <created>1619803212337</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619803212337</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +216,8 @@
     <MESSAGE value="Teacher Inheritance Changes" />
     <MESSAGE value="Seperated my html into a different page" />
     <MESSAGE value="Fixed html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed html" />
+    <MESSAGE value="added 3 sorts minilab" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 3 sorts minilab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
