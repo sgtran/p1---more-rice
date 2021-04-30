@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="added 3 sorts minilab">
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="fixed default output for SeanData">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SeanSortController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Athlete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/seanSort.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AlexSortController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AlexSortController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/alexSorts2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSorts2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
