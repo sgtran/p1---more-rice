@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="Seperated my html into a different page">
+    <list default="true" id="652d06f3-0acb-46d4-bdcc-199967dea2fc" name="Default Changelist" comment="Fixed html">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AlexSortController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSorts2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/DataOPsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/IceCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/IceCream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Yogurt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Yogurt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/alexSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/alexSort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -105,7 +109,11 @@
       <workItem from="1619313030993" duration="630000" />
       <workItem from="1619313782851" duration="460000" />
       <workItem from="1619314278607" duration="3785000" />
-      <workItem from="1619391462467" duration="2391000" />
+      <workItem from="1619391462467" duration="2707000" />
+      <workItem from="1619395074815" duration="188000" />
+      <workItem from="1619395641927" duration="70000" />
+      <workItem from="1619414266290" duration="964000" />
+      <workItem from="1619797999765" duration="5116000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -170,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618460545609</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed html">
+      <created>1619393883900</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619393883900</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +213,8 @@
     <MESSAGE value="Fibonacci Changes" />
     <MESSAGE value="Teacher Inheritance Changes" />
     <MESSAGE value="Seperated my html into a different page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Seperated my html into a different page" />
+    <MESSAGE value="Fixed html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
