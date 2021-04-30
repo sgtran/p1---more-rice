@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="'ArrayList: ' + ${albefore}" />
+    <p th:text="'LinkedList: ' + ${llbefore}" />
+    <br></br>
+
+    <p th:text="'ArrayList after insert: ' + ${aldispi}" />
+    <p th:text="'LinkedList after insert: ' + ${lldispi}" />
+    <p th:text="${altimei}" />
+    <p th:text="${lltimei}" />
+    <br></br>
+
+    <p th:text="'ArrayList after delete: ' + ${aldispd}" />
+    <p th:text="'LinkedList after delete: ' + ${lldispd}" />
+    <br></br>
+    <p th:text="${altimed}" />
+    <p th:text="${lltimed}" />
+    <br></br>
+
+    <p th:text="'ArrayList after sort: ' + ${aldisps}" />
+    <p th:text="'LinkedList after sort: ' + ${lldisps}" />
+    <p th:text="${altimes}" />
+    <p th:text="${lltimes}" />
+    <br></br>
+
+    <p th:text="${analysis}" />
+</body>
+</html>
