@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Andrew Inheritance Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AndrewSortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/AndrewSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/andrewRealSort.html" afterDir="false" />
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Andrew Sort Lab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/andrewRealSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/andrewRealSort.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619835499827</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Andrew Sort Lab">
+      <created>1619854993806</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1619854993806</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +245,8 @@
     <MESSAGE value="added minilab sort" />
     <MESSAGE value="edited minilab sort" />
     <MESSAGE value="added LinkList lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="added LinkList lab" />
+    <MESSAGE value="Andrew Sort Lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Andrew Sort Lab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
