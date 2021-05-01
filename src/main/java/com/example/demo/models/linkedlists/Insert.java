@@ -19,4 +19,5 @@ public class Insert {
         arr.add(new Employee(10, 100000, "Computer Scientist")); //tail insert
         return arr;
     }
+
 }
