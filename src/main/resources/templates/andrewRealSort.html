@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+  <title>Andrew Sort</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+  `<div class="container">
+
+  <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+      <h1><strong>Andrew Sort Minilab</strong></h1>
+    </div>
+
+    <!-- Form and Action -->
+    <div class="jumbotron text-center row">
+      <!-- Input -->
+      <div class="col-md-6">
+        <h3>Click the Button</h3>
+        <form id="fibForm" action="/andrewRealSort" method="GET" >
+          <button>Sort!</button>
+        </form>
+      </div>
+      <!-- Output/Result -->
+      <div class="col-md-6">
+        <h3>Algorithm comparison</h3>
+        <table class="mx-auto">
+          <tr>
+            <th scope="col">Sort Algorithm</th>
+            <th scope="col">Variable</th>
+            <th scope="col">Result</th>
+            <th scope="col">Time</th>
+          </tr>
+          <tr>
+            <td scope="col">Bubble</td>
+            <td scope="col">String</td>
+            <td th:text="${Result1}"></td>
+            <td th:text="${Time1}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Bubble</td>
+            <td scope="col">Integer</td>
+            <td th:text="${Result2}"></td>
+            <td th:text="${Time2}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Bubble</td>
+            <td scope="col">Pet Object</td>
+            <td th:text="${Result3}"></td>
+            <td th:text="${Time3}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Selection</td>
+            <td scope="col">String</td>
+            <td th:text="${Result4}"></td>
+            <td th:text="${Time4}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Selection</td>
+            <td scope="col">Integer</td>
+            <td th:text="${Result5}"></td>
+            <td th:text="${Time5}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Selection</td>
+            <td scope="col">Pet Object</td>
+            <td th:text="${Result6}"></td>
+            <td th:text="${Time6}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Insertion</td>
+            <td scope="col">String</td>
+            <td th:text="${Result7}"></td>
+            <td th:text="${Time7}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Insertion</td>
+            <td scope="col">Integer</td>
+            <td th:text="${Result8}"></td>
+            <td th:text="${Time8}"></td>
+          </tr>
+          <tr>
+            <td scope="col">Insertion</td>
+            <td scope="col">Pet Object</td>
+            <td th:text="${Result9}"></td>
+            <td th:text="${Time9}"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  <style>
+        table, td, th {
+            border: 1px solid var(--dblue);
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+</div>`
+</body>
+
+</html>
