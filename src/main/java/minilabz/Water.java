@@ -7,11 +7,19 @@ public class Water extends Generic {
     public static Water.KeyType key = KeyType.title;
     public String brand;
     public int price;
+    public int stock;
 
-    Water(String brand, int price) {
+    public Water(String brand, int price) {
         this.setType("Water");
         this.brand = brand;
         this.price = price;
+    }
+
+    public Water(int price, int stock, String brand) {
+        this.setType("Water");
+        this.brand = brand;
+        this.price = price;
+        this.stock = stock;
     }
 
     public String toString() {

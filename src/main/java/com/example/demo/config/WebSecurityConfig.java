@@ -53,6 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/seanData").permitAll()
                 .antMatchers("/Factorial").permitAll()
                 .antMatchers("/").permitAll()
+                .antMatchers("/kevinSorts2").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/fibonacci").permitAll()
                 .antMatchers("/signup").permitAll()
