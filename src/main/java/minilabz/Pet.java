@@ -33,11 +33,8 @@ public class Pet extends Generic {
     public static Generic[] pets(){
         return new Generic[]{
                 new Pet("Clifford", "Big Red Dog"),
-                new Pet("Nemo", "Clownfish"),
                 new Pet("Camel", "Camel"),
                 new Pet("Alexander", "Great"),
-                new Pet("Bozo", "Clown"),
-                new Pet("Tyler", "Creator"),
                 new Pet("Harambe", "Gorilla"),
                 new Pet("Garfield", "Dog")
         };
