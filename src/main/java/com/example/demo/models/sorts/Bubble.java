@@ -77,6 +77,25 @@ public class Bubble {
         return arr;
     }
 
+    public static Richpeople[] bubble(Richpeople[] arr) {
+        int n = arr.length;
+
+        for (int j = 0; j < n - 1; j++)
+        {
+            for (int i = j + 1; i < n; i++)
+            {
+                if (arr[j].toString().compareTo(arr[i].toString()) > 0)
+                {
+                    Richpeople temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
+
+        return arr;
+    }
+
     public static Water[] bubble(Water[] arr) {
         int n = arr.length;
 

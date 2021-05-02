@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Getter
 @Controller
-public class SeanSortController {
+public class AtharvaSortController {
     public long b, i, s; //for tracking nanoseconds
-    public int[] intArr = new int[]{15, 20, 16, 30, 17};
-    public String[] stringArr = new String[]{"a", "i", "e", "u", "o"};
-    public Athlete[] athleteArr = new Athlete[]{new Athlete(3, 10000, "Basketball"), new Athlete(65, 800000, "Football"), new Athlete(2, 5000, "Baseball"), new Athlete(190, 10000000, "Golf"), new Athlete(3, 12000, "E-Sport")};
+    public int[] intArr = new int[]{4, 1, 19, 14, 12};
+    public String[] stringArr = new String[]{"e", "s", "i", "v", "m"};
+    public Richpeople[] RichpeopleArr = new Richpeople[]{new Richpeople(52, 100000, "Apple"), new Richpeople(48, 80000, "Amazon"), new Richpeople(59, 75000, "Google"), new Richpeople(33, 110000, "Netflix"), new Richpeople(42, 50000, "Facebook")};
 
     public String arrToString (int[] arr) {
         String fin = "";
@@ -34,7 +34,7 @@ public class SeanSortController {
         return fin;
     }
 
-    public String arrToString (Employee[] arr) {
+    public String arrToString (Richpeople[] arr) {
         String fin = "";
         for (int i = 0; i < arr.length; i++) {
             fin += arr[i]; //automatically calls tostring
@@ -43,33 +43,24 @@ public class SeanSortController {
         return fin;
     }
 
-    public String arrToString (Athlete[] arr) {
-        String fin = "";
-        for (int i = 0; i < arr.length; i++) {
-            fin += arr[i]; //automatically calls tostring
-        }
-
-        return fin;
-    }
-
-    @GetMapping("/seanSort")
-    public String test(String bubbleint, String bubblestr, String bubbleemp, String insertint, String insertstr, String insertemp, String selectint, String selectstr, String selectemp, String btime, String itime, String stime, String analysis, Model model) {
+    @GetMapping("/atharvaSort")
+    public String test(String bubbleint, String bubblestr, String bubbleemp, String insertint, String insertstr, String insertemp, String selectint, String selectstr, String selectemp, String btime, String itime, String stime, String results, Model model) {
         b = java.lang.System.nanoTime();
         bubbleint = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(intArr)); //this value is displayed on the page
         bubblestr = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(stringArr));
-        bubbleemp = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(athleteArr));
+        bubbleemp = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(RichpeopleArr));
         btime = "Time: " + Long.toString((java.lang.System.nanoTime() - b) / 1000) + " microseconds"; //time it took for the sorts
 
         i = java.lang.System.nanoTime();
         insertint = "Insertion: " + arrToString(com.example.demo.models.sorts.Insertion.insertion(intArr)); //this value is displayed on the page
         insertstr = "Insertion: " + arrToString(com.example.demo.models.sorts.Insertion.insertion(stringArr));
-        insertemp = "Insertion: " + arrToString(com.example.demo.models.sorts.Insertion.insertion(athleteArr));
+        insertemp = "Insertion: " + arrToString(com.example.demo.models.sorts.Insertion.insertion(RichpeopleArr));
         itime = "Time: " + Long.toString((java.lang.System.nanoTime() - i) / 1000) + " microseconds";
 
         s = java.lang.System.nanoTime();
         selectint = "Selection: " + arrToString(com.example.demo.models.sorts.Selection.selection(intArr)); //this value is displayed on the page
         selectstr = "Selection: " + arrToString(com.example.demo.models.sorts.Selection.selection(stringArr));
-        selectemp = "Selection: " + arrToString(com.example.demo.models.sorts.Selection.selection(athleteArr));
+        selectemp = "Selection: " + arrToString(com.example.demo.models.sorts.Selection.selection(RichpeopleArr));
         stime = "Time: " + Long.toString((java.lang.System.nanoTime() - s) / 1000) + " microseconds";
 
         model.addAttribute("bubbleint", bubbleint); //returns this value to the bubbleint key in the html, causing thymeleaf to print the value associated with the bubbleint string onto the webpage
@@ -87,10 +78,10 @@ public class SeanSortController {
         model.addAttribute("selectemp", selectemp);
         model.addAttribute("stime", stime);
 
-        analysis = "Complexity Analysis: Bubble Sort: O(n^2), Insertion sort: O(n), Selection Sort: O(n^2); Best Sort was Selection Sort";
-        model.addAttribute("analysis", analysis);
+        results = "Bubble sort: O(n^2) average and best case; Insertion sort: O(n^2) average to O(n) best case; Selection sort: O(n^2) average and best case";
+        model.addAttribute("results", results);
 
-        return "seanSort";
+        return "atharvaSort";
     }
 
 }

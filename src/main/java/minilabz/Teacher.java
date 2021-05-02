@@ -48,14 +48,11 @@ public class Teacher extends Generic {
 
     public static Generic[] teachers(){
         return new Generic[]{
-            new Teacher("Mr.", "Ross", true, 32),
-            new Teacher("Mrs.", "Ross", true, 32),
             new Teacher("Ms.", "Smith", false, 30),
             new Teacher("Ya Boi", "Rogers", false, 20),
             new Teacher("Dr.", "Dre", true, 56),
             new Teacher("Mr.", "Mortensen", true, 20),
             new Teacher("Madame", "Ping", false, 99),
-            new Teacher("Mrs.", "Barkley", true, 30)
         };
     }
 

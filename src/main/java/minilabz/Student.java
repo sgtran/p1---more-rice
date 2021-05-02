@@ -45,12 +45,9 @@ public class Student extends Generic {
         return new Generic[]{
                 new Student("Pete", "Davidson", 12.3, 12),
                 new Student("David", "Peterson", 32.1, 12),
-                new Student("John", "Smith", 97.6, 12),
                 new Student("Alexander", "Hamilton", 99.9, 12),
-                new Student("Tyler", "the Creator", 42.6, 12),
                 new Student("Barack", "Obama", 10.0, 12),
                 new Student("Spongebob", "Squarepants", 94.2, 12),
-                new Student("Charles", "Barkley", 0.0, 12)
         };
     }
 
