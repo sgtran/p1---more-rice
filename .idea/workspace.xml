@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,19 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Andrew Sort Lab">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AtharvaLLController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AtharvaSortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/atharvaDelete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/atharvaInsert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/atharvaSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minilabz/Richpeople.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/atharvaLL.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/atharvaSort.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SeanSortController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SeanSortController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/seanSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/seanSort.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +66,6 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
       <module name="demo" />
@@ -106,6 +88,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
+      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -113,7 +96,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -135,6 +118,7 @@
       <workItem from="1619414266290" duration="964000" />
       <workItem from="1619797999765" duration="5511000" />
       <workItem from="1619816457334" duration="5369000" />
+      <workItem from="1619985136092" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>

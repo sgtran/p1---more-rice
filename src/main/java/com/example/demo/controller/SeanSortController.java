@@ -53,7 +53,7 @@ public class SeanSortController {
     }
 
     @GetMapping("/seanSort")
-    public String test(String bubbleint, String bubblestr, String bubbleemp, String insertint, String insertstr, String insertemp, String selectint, String selectstr, String selectemp, String btime, String itime, String stime, Model model) {
+    public String test(String bubbleint, String bubblestr, String bubbleemp, String insertint, String insertstr, String insertemp, String selectint, String selectstr, String selectemp, String btime, String itime, String stime, String analysis, Model model) {
         b = java.lang.System.nanoTime();
         bubbleint = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(intArr)); //this value is displayed on the page
         bubblestr = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(stringArr));
@@ -86,6 +86,9 @@ public class SeanSortController {
         model.addAttribute("selectstr", selectstr);
         model.addAttribute("selectemp", selectemp);
         model.addAttribute("stime", stime);
+
+        analysis = "Complexity Analysis: Bubble Sort: O(n^2), Insertion sort: O(n), Selection Sort: O(n^2); Best Sort was Selection Sort";
+        model.addAttribute("analysis", analysis);
 
         return "seanSort";
     }
