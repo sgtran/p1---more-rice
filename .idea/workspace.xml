@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="added LinkList lab">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/KevinSortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/kevinSorts2.html" afterDir="false" />
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="added Sort lab Kevin Hu">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/KevinLLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/KevinDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/KevinInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/KevinSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/kevinLL.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Insertion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minilabz/Water.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minilabz/Water.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/linkedlists/Insert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fibonacci.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fibonacci.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -68,15 +69,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,6 +116,7 @@
       <workItem from="1619414266290" duration="964000" />
       <workItem from="1619797999765" duration="5511000" />
       <workItem from="1619816457334" duration="5369000" />
+      <workItem from="1619992693295" duration="2677000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -216,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619835499827</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added Sort lab Kevin Hu">
+      <created>1619853195398</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1619853195398</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +256,8 @@
     <MESSAGE value="added minilab sort" />
     <MESSAGE value="edited minilab sort" />
     <MESSAGE value="added LinkList lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="added LinkList lab" />
+    <MESSAGE value="added Sort lab Kevin Hu" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Sort lab Kevin Hu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

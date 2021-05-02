@@ -31,6 +31,7 @@ public class PageConfig implements WebMvcConfigurer {
         registry.addViewController("/andrewSort").setViewName("andrewSort");
         registry.addViewController("/alexSort").setViewName("alexSort");
         registry.addViewController("/kevinSort").setViewName("kevinSort");
+        registry.addViewController("/kevinLL").setViewName("kevinLL");
 
 
 

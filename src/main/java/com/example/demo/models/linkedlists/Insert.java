@@ -4,6 +4,7 @@ import minilabz.*;
 import org.springframework.boot.autoconfigure.data.jpa.EntityManagerFactoryDependsOnPostProcessor;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Insert {
     public static ArrayList<Employee> insert (ArrayList<Employee> arr) {
