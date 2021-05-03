@@ -1,6 +1,114 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+    <title>Kevin Linked List Lab</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <div class="jumbotron text-center row">
+            <h3>Comparison</h3>
+            <select id="toggle-divs">
+                <option selected="selected" value="">Select item...</option>
+                <option value="1">Linked Lists</option>
+                <option value="2">Array List</option>
+            </select>
+            <div id="div1" style="display:none;">
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Data Structure</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">O(n)</th>
+                    </tr>
+                    <tr>
+                        <td scope="col">Linked List</td>
+                        <td scope="col">Insert</td>
+                        <td th:text="${lldispi}"></td>
+                        <td th:text="${lltimei}"></td>
+                        <td scope="col">n</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Linked List</td>
+                        <td scope="col">Delete</td>
+                        <td th:text="${lldispd}"></td>
+                        <td th:text="${lltimed}"></td>
+                        <td scope="col">n</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Linked List</td>
+                        <td scope="col">Sort</td>
+                        <td th:text="${lldisps}"></td>
+                        <td th:text="${lltimes}"></td>
+                        <td scope="col">n^2</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="div2" style="display:none;">
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Data Structure</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">O(n)</th>
+                    </tr>
+                    <tr>
+                        <td scope="col">ArrayList</td>
+                        <td scope="col">Insert</td>
+                        <td th:text="${aldispi}"></td>
+                        <td th:text="${altimei}"></td>
+                        <td scope="col">n</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">ArrayList</td>
+                        <td scope="col">Delete</td>
+                        <td th:text="${aldispd}"></td>
+                        <td th:text="${altimed}"></td>
+                        <td scope="col">n</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">ArrayList</td>
+                        <td scope="col">Sort</td>
+                        <td th:text="${aldisps}"></td>
+                        <td th:text="${altimes}"></td>
+                        <td scope="col">n^2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p th:text="${analysis}" />
+
+        <style>
+            table, td, th {
+                border: 1px solid var(--dblue);
+            }
+            td, th {
+                text-align:left;
+            }
+        </style>
+    </div>
+</body>
+<th:block layout:fragment="script">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#toggle-divs").change(function () {
+                if ($(this).val() == 1) {
+                    $("#div2").hide();
+                    $("#div1").show();
+                } else if ($(this).val() == 2) {
+                    $("#div1").hide();
+                    $("#div2").show();
+                }
+            });
+        });
+    </script>
+</th:block>
+
+</html>
+<!---
 <body>
     <div layout:fragment="content" th:remove="tag">
         <p th:text="'ArrayList: ' + ${albefore}" />
@@ -29,4 +137,4 @@
         <p th:text="${analysis}" />
     </div>
 </body>
-</html>
+--->

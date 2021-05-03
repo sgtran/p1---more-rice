@@ -53,8 +53,9 @@ public class KevinSortController {
     }
 
     @GetMapping("/kevinSorts2")
-    public String test(String bubblei, String bubbles, String bubblee, String inserti, String inserts, String inserte, String selecti, String selects, String selecte, String btime, String itime, String stime, Model model) {
+    public String test(String analysis, String bubblei, String bubbles, String bubblee, String inserti, String inserts, String inserte, String selecti, String selects, String selecte, String btime, String itime, String stime, Model model) {
         b = java.lang.System.nanoTime();
+
         bubblei = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(intArr));
         bubbles = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(stringArr));
         bubblee = "Bubble: " + arrToString(com.example.demo.models.sorts.Bubble.bubble(waterArr));
@@ -72,6 +73,8 @@ public class KevinSortController {
         selecte = "Selection: " + arrToString(com.example.demo.models.sorts.Selection.selection(waterArr));
         stime = "Time: " + Long.toString((java.lang.System.nanoTime() - s) / 1000) + " microseconds";
 
+
+
         model.addAttribute("bubblei", bubblei);
         model.addAttribute("bubbles", bubbles);
         model.addAttribute("bubblee", bubblee);
@@ -86,6 +89,9 @@ public class KevinSortController {
         model.addAttribute("selects", selects);
         model.addAttribute("selecte", selecte);
         model.addAttribute("stime", stime);
+
+        analysis = "Bubble Sort: O(n^2), Insertion sort: O(n), Selection Sort: O(n^2); All sorts have same time complexity so there is no best sort between these three in terms of worst case scenario. However, in best case scenario Bubble and Insertion sort would be the best with O(n) each for best case scenario.";
+        model.addAttribute("analysis", analysis);
 
         return "kevinSorts2";
     }
