@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+  <title>Andrew Linked Lists</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+  `<div class="container">
+
+  <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+      <h1><strong>Andrew Linked List Minilab</strong></h1>
+    </div>
+
+    <!-- Form and Action -->
+    <div class="jumbotron text-center row">
+      <form id="fibForm" action="/andrewLL" method="GET" >
+        <button>Rerun</button>
+      </form>
+
+      <h3>Comparison</h3>
+      <table class="mx-auto">
+        <tr>
+          <th scope="col">Data Structure</th>
+          <th scope="col">Action</th>
+          <th scope="col">Result</th>
+          <th scope="col">Time</th>
+          <th scope="col">O(n)</th>
+        </tr>
+        <tr>
+          <td scope="col">ArrayList</td>
+          <td scope="col">Insert</td>
+          <td th:text="${Result1}"></td>
+          <td th:text="${Time1}"></td>
+          <td scope="col">n</td>
+        </tr>
+        <tr>
+          <td scope="col">ArrayList</td>
+          <td scope="col">Delete</td>
+          <td th:text="${Result2}"></td>
+          <td th:text="${Time2}"></td>
+          <td scope="col">n</td>
+        </tr>
+        <tr>
+          <td scope="col">ArrayList</td>
+          <td scope="col">Sort</td>
+          <td th:text="${Result3}"></td>
+          <td th:text="${Time3}"></td>
+          <td scope="col">n^2</td>
+        </tr>
+        <tr>
+          <td scope="col">Linked List</td>
+          <td scope="col">Insert</td>
+          <td th:text="${Result4}"></td>
+          <td th:text="${Time4}"></td>
+          <td scope="col">n</td>
+        </tr>
+        <tr>
+          <td scope="col">Linked List</td>
+          <td scope="col">Delete</td>
+          <td th:text="${Result5}"></td>
+          <td th:text="${Time5}"></td>
+          <td scope="col">n</td>
+        </tr>
+        <tr>
+          <td scope="col">Linked List</td>
+          <td scope="col">Sort</td>
+          <td th:text="${Result6}"></td>
+          <td th:text="${Time6}"></td>
+          <td scope="col">n^2</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+  <style>
+        table, td, th {
+            border: 1px solid var(--dblue);
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+</div>`
+</body>
+
+</html>
