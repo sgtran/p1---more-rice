@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="added kevin linked list lab">
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Fix formatting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/KevinSortController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/KevinSortController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/kevinLL.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/kevinLL.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/kevinSorts2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/kevinSorts2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619853195398</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix formatting">
+      <created>1620009754187</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620009754187</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +265,8 @@
     <MESSAGE value="edited minilab sort" />
     <MESSAGE value="added LinkList lab" />
     <MESSAGE value="added Sort lab Kevin Hu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Sort lab Kevin Hu" />
+    <MESSAGE value="Fix formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
