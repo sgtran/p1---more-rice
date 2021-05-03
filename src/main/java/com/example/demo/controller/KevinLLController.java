@@ -43,15 +43,15 @@ public class KevinLLController {
         al.clear();
         ll.clear();
 
-        al.add(new Water(2, 80000, "Scientist"));
-        al.add(new Water(7, 75000, "Teacher"));
-        al.add(new Water(19, 110000, "Computer Scientist"));
-        al.add(new Water(0, 50000, "Restaurant Worker"));
+        al.add(new Water(2, 80000, "SmartWater"));
+        al.add(new Water(7, 75000, "Fiji"));
+        al.add(new Water(19, 110000, "Arrowhead"));
+        al.add(new Water(0, 50000, "PureWater"));
 
-        ll.add(new Water(2, 80000, "Scientist"));
-        ll.add(new Water(7, 75000, "Teacher"));
-        ll.add(new Water(19, 110000, "Computer Scientist"));
-        ll.add(new Water(0, 50000, "Restaurant Worker"));
+        ll.add(new Water(2, 80000, "SmartWater"));
+        ll.add(new Water(7, 75000, "Fiji"));
+        ll.add(new Water(19, 110000, "Arrowhead"));
+        ll.add(new Water(0, 50000, "PureWater"));
 
         albefore = alToString(al);
         llbefore = llToString(ll);

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Fix formatting">
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Fix HTML to include more labs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/KevinLLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/KevinLLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +68,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -118,6 +105,7 @@
       <workItem from="1619797999765" duration="5511000" />
       <workItem from="1619816457334" duration="5369000" />
       <workItem from="1619992693295" duration="2677000" />
+      <workItem from="1620013092692" duration="84000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -231,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620009754187</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix HTML to include more labs">
+      <created>1620010115336</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620010115336</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +261,8 @@
     <MESSAGE value="added LinkList lab" />
     <MESSAGE value="added Sort lab Kevin Hu" />
     <MESSAGE value="Fix formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix formatting" />
+    <MESSAGE value="Fix HTML to include more labs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix HTML to include more labs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
