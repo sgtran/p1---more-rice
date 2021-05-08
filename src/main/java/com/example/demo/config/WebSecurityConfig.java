@@ -67,6 +67,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/seanLL").permitAll()
                 .antMatchers("/atharvaSort").permitAll()
                 .antMatchers("/atharvaLL").permitAll()
+                .antMatchers("/binSearch").permitAll()
+                .antMatchers("/binResult").permitAll()
                 .antMatchers("/dashboard/**").hasAuthority("ADMIN").anyRequest()
                 .authenticated().and().csrf().disable().formLogin().successHandler(customizeAuthenticationSuccessHandler)
                 .loginPage("/login").failureUrl("/login?error=true")

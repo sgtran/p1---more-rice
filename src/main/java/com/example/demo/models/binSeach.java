@@ -30,8 +30,14 @@ public class binSeach {
         this.inp = inp;
     }
 
-    public void setSf(String sf) {
+    public void setSf(String sf) { //main running part of code is here as there doesn't seem to be any other way to run a function when submit is clicked
         this.sf = sf;
+
+        if (inp.length() == 0 && sf.length() == 0) { //default input
+            inp = "111111111111111111111111444444441251251223532444444444999999";
+            sf = "9";
+        }
+
         String[] input = new String[inp.length()];
 
         for (int i = 0; i < inp.length(); i++) {
