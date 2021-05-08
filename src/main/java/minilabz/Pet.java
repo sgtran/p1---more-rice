@@ -44,4 +44,8 @@ public class Pet extends Generic {
         Generic[] petList = pets();
     }
 
+    public String getNickname() {
+        return nickname;
+    }
+
 }

@@ -67,6 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/seanLL").permitAll()
                 .antMatchers("/atharvaSort").permitAll()
                 .antMatchers("/atharvaLL").permitAll()
+                .antMatchers("/binSearchAP").permitAll()
                 .antMatchers("/binSearch").permitAll()
                 .antMatchers("/binResult").permitAll()
                 .antMatchers("/Palindrome").permitAll()

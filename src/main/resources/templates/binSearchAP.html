@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+  <title>Binary Search</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+  <div class="container">
+
+    <div class="center-block" style="margin: 2% 3% 3%; font-family: gilroy,serif;">
+      <!-- Title -->
+      <div class="col-12" style="text-align: center;">
+        <h1><strong>Binary Search</strong></h1>
+      </div>
+
+      <!-- Form and Action -->
+      <div class="jumbotron text-center row">
+        <!-- Input -->
+        <div class="col-md-6">
+          <h3>Type a name</h3>
+          <form id="form" action="/binSearchAP" method="GET" >
+            <input name="name" id="name" type="text" >
+            <button>Go!</button>
+          </form>
+        </div>
+        <!-- Output/Result -->
+        <div class="col-md-6">
+          <h3>Algorithm comparison</h3>
+          <table class="mx-auto">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Value</th>
+            </tr>
+            <tr>
+              <td scope="col">Array</td>
+              <td th:text="${array}"></td>
+            </tr>
+            <tr>
+              <td scope="col">Sorted</td>
+              <td th:text="${sorted}"></td>
+            </tr>
+            <tr>
+              <td scope="col">Input</td>
+              <td th:text="${name}"></td>
+            </tr>
+            <tr>
+              <td scope="col">Index</td>
+              <td th:text="${result}"></td>
+            </tr>
+            <tr>
+              <td scope="col">Time</td>
+              <td th:text="${time}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+        table, td, th {
+            border: 1px solid var(--dblue);
+        }
+        td, th {
+            text-align:left;
+        }
+    </style>
+</div>`
+</body>
+
+</html>

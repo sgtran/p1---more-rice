@@ -48,17 +48,7 @@
                 </ul>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/binSearch">Alex-BinSearch <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
                         <a class="nav-link" href="/fibonacci">Andrew-Fibonacci <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/Palindrome">Atharva-Palindrome <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">
@@ -83,7 +73,6 @@
                             <li><a href="/alexSorts2">Alex's sorts</a></li>
                             <li><a href="/seanSort">Sean's sort</a></li>
                             <li><a href="/kevinSorts2">Kevin's sort</a></li>
-                            <li><a href="/atharvaSort">Atharva's sort</a></li>
                             <li><a href="/andrewRealSort">Andrew's sort</a></li>
                         </ul>
 
@@ -99,11 +88,22 @@
                             <li><a href="/seanLL">Sean's LinkedList</a></li>
                             <li><a href="/kevinLL">Kevin's LinkedList</a></li>
                             <li><a href="/andrewLL">Andrew's LinkedList</a></li>
-                            <li><a href="/atharvaLL">Atharva's LinkedList</a></li>
 
                         </ul>
                     </div>
                 </ul>
+
+                <ul class="navbar-nav mr-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Binary Search
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/binSearchAP">Andrew's Binary Search</a></li>
+                        </ul>
+
+                    </div>
+                </ul>
+
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" th:if="${currentUser == null}"><a class="nav-link" th:href="@{/login}">Log in</a></li>
                     <li class="nav-item" th:if="${currentUser}">
@@ -118,7 +118,6 @@
 
         <div class="container">
             <div layout:fragment="content"></div>
-            <th:block layout:fragment="script"></th:block>
         </div>
         <!-- /.container -->
 
