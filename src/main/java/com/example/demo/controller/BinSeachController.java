@@ -17,8 +17,8 @@ public class BinSeachController {
     @PostMapping("/binSearch")
     public String greetingSubmit(@ModelAttribute binSeach binseach, Model model, String bintime, String lintime) {
         model.addAttribute("binSeach", binseach);
-        bintime = "Binary search time: " + binseach.bint + " nanoseconds";
-        lintime = "Linear search time: " + binseach.lint + " nanoseconds";
+        bintime = "Binary search time: " + binseach.bint + " nanoseconds; O(log n), best-case O(1) if value found at middle index";
+        lintime = "Linear search time: " + binseach.lint + " nanoseconds; O(n), best-case O(1) if value found at index 0";
 
         model.addAttribute("bintime", bintime);
         model.addAttribute("lintime", lintime);
