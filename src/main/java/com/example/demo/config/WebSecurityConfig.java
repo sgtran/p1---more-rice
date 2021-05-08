@@ -69,6 +69,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/atharvaLL").permitAll()
                 .antMatchers("/binSearch").permitAll()
                 .antMatchers("/binResult").permitAll()
+                .antMatchers("/Palindrome").permitAll()
+                .antMatchers("/Palindromeresult").permitAll()
                 .antMatchers("/dashboard/**").hasAuthority("ADMIN").anyRequest()
                 .authenticated().and().csrf().disable().formLogin().successHandler(customizeAuthenticationSuccessHandler)
                 .loginPage("/login").failureUrl("/login?error=true")

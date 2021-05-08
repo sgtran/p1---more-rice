@@ -19,12 +19,19 @@ public class Palindrome {
         return palinverify;
     }
 
-    public String getinp() {
+    public String getInp() {
         return inp;
+    }
+
+    public void setPalinverify() {
+        this.palinverify = false;
     }
 
     public void setInp(String inp) {
         this.inp = inp;
+        if (this.inp.length() == 0) { //default input
+            this.inp = "b123457898754321b";
+        }
         this.bint = System.nanoTime();
         this.palinverify = isPal(inp);
         this.bint = System.nanoTime() - bint;

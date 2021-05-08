@@ -15,12 +15,10 @@ public class AtharvaPalindromeController {
     }
 
     @PostMapping("/Palindrome")
-    public String greetingSubmit(@ModelAttribute Palindrome palindrome, Model model, String palintime, String result) {
+    public String greetingSubmit(@ModelAttribute Palindrome palindrome, Model model, String palintime) {
         model.addAttribute("Palindrome", palindrome);
-        palintime = "Palindrome Verification time: " + palindrome.bint + " nanoseconds; O(log n), best-case O(1) if value found at middle index";
-           result = Boolean.toString(palindrome.palinverify) + " ";
-           model.addAttribute("result", result);
+        palintime = "Palindrome Verification time: " + palindrome.bint + " nanoseconds";
         model.addAttribute("palintime", palintime);
-        return "PalinResult";
+        return "Palindromeresult";
     }
 }
