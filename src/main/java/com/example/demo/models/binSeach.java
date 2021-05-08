@@ -44,7 +44,12 @@ public class binSeach {
             input[i] = Character.toString(inp.charAt(i));
         }
 
-        Bubble.bubble(input);
+        input = Bubble.bubble(input);
+
+        inp = ""; //makes sure that the output displays the sorted array and not the unsorted input
+        for (int i = 0; i < input.length; i++) {
+            inp += input[i];
+        }
 
         try {
             this.bint = System.nanoTime();

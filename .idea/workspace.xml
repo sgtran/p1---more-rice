@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="bug fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/binSearch.html" afterDir="false" />
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Grouped all recursion labs in one drop-down">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/binSeach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/binSeach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/models/sorts/Bubble.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +132,8 @@
       <workItem from="1619797999765" duration="5511000" />
       <workItem from="1619816457334" duration="5369000" />
       <workItem from="1619992693295" duration="2677000" />
+      <workItem from="1620500287090" duration="626000" />
+      <workItem from="1620502584120" duration="1027000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -238,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619853195398</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Grouped all recursion labs in one drop-down">
+      <created>1620497085836</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620497085836</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +281,8 @@
     <MESSAGE value="edited minilab sort" />
     <MESSAGE value="added LinkList lab" />
     <MESSAGE value="added Sort lab Kevin Hu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Sort lab Kevin Hu" />
+    <MESSAGE value="Grouped all recursion labs in one drop-down" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grouped all recursion labs in one drop-down" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
