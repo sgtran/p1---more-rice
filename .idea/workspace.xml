@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Updated binary search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cards.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Uno">
+  <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="minilabz.BinarySearch" />
       <module name="demo" />
@@ -93,19 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
@@ -116,13 +104,13 @@
     <list>
       <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.BinarySearch" />
-      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
       <item itemvalue="Application.Uno" />
+      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Uno" />
         <item itemvalue="Application.SpringSecurityMongodbSecurityApplication" />
+        <item itemvalue="Application.Uno" />
         <item itemvalue="Application.BinarySearch" />
       </list>
     </recent_temporary>

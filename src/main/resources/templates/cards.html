@@ -2,114 +2,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 <head>
-    <title>Cards</title>
+    <title>Uno!</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #666;
+        }
+    </style>
 </head>
 
 <div layout:fragment="content">
-    <style>
-        h1 {text-align: center;}
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    <body>
+    <div class="col-20" style="text-align: center;">
+        <h1><strong>UNO!</strong></h1>
+    </div>
+    <table>
+        <tr>
+            <th></th>
+            <th><button type="button" >Draw Card</button></th>
+            <th><button type="button" >Place Card</button></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><button type="button" >Card 1!</button></td>
+            <td><button type="button" >Card 2!</button></td>
+            <td><button type="button" >Card 3!</button></td>
+            <td><button type="button" >Card 4!</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" >Card 5!</button></td>
+            <td><button type="button" >Card 6!</button></td>
+            <td><button type="button" >Card 7!</button></td>
+            <td><button type="button" >Card 8!</button></td>
+        </tr>
 
-        article {
-            margin: 0.5rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-            gap: 0.5rem;
-        }
-        .img--container {
-            width: 20ch;
-            border: 1ch solid #1e88e5;
-            background: salmon;
-        }
-        img {
-            width: 100%;
-            display: block;
-            object-fit: none;
-        }
-        .image-1 {
-            object-position: 50% 50%;
-        }
-        .image-2 {
-            object-position: 50% 50%;
-        }
-        .image-3 {
-            object-position: 50% 50%;
-        }
-        .image-4 {
-            object-position: 50% 50%;
-        }
-        .image-5 {
-            object-position: 50% 50%;
-        }
-        .image-6 {
-            object-position: 50% 50%;
-        }
-        .image-7 {
-            object-position: 50% 50%;
-        }
-        .image-8 {
-            object-position: 50% 50%;
-        }
-
-    </style>
-    <h1 class="h3 mb-3 font-weight-normal"><span style="color: coral; "><i>UNO</i></span></h1>
-
-    <article>
-        <div class="container">
-            <h3>Card 1</h3>
-            <div class="img--container">
-                <img class="image-1" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 2</h3>
-            <div class="img--container">
-                <img class="image-2" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 3</h3>
-            <div class="img--container">
-                <img class="image-3" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 4</h3>
-            <div class="img--container">
-                <img class="image-4" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 5</h3>
-            <div class="img--container">
-                <img class="image-5" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 6</h3>
-            <div class="img--container">
-                <img class="image-6" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-
-        <div class="container">
-            <h3>Card 7</h3>
-            <div class="img--container">
-                <img class="image-7" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-
-        <div class="container">
-            <h3>Card 8</h3>
-            <div class="img--container">
-                <img class="image-8" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-    </article>
+    </table>
+    </body>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 </div>
