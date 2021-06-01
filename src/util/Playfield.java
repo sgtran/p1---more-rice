@@ -30,8 +30,10 @@ public class Playfield {
 
         actPlayer = players.get(round % playerNum); //Set first active player
        // topCard = Actions.getmTopCard(); //Set first top card
+        /*
         UnoGUI gameWindow = new UnoGUI(actPlayer, topCard, deck, players); //Start game
         gameWindow.setVisible(true); //Make UnoUI visible
+         */
 
     }
 
@@ -57,6 +59,10 @@ public class Playfield {
                 }
             }
         }
+    }
+
+    public Player getCurrentPlayer(){
+        return
     }
 
 }
