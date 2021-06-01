@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+
     <head>
         <meta charset="UTF-8">
         <title>Leaderboard</title>
     </head>
     <body>
-        <div>
+        <div layout:fragment="content">
+
             <table style="width:100%">
                 <tr>
                     <th style="width:30px">Rank</th>
@@ -63,6 +66,13 @@
                     <td>---</td>
                 </tr>
             </table>
+
+            <form id="leaderboardForm" action="/leaderboard" method="GET" >
+                <input name="name" id="name" type="text" >
+                <button>Find Score!</button>
+            </form>
+
+            <p>N/A</p>
         </div>
     </body>
 </html>
