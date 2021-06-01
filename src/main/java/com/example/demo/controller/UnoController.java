@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import util.Actions.ACTIONS;
 
 @Controller
 public class UnoController {
@@ -100,13 +101,26 @@ public class UnoController {
     }
 
     @GetMapping("/unoPlace")
-    public String unoPlace(Model model)
+    public String unoPlace(@RequestParam(name = "selectedCard") int cardIndex,
+            Model model)
     {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoPlace");
 
+        ACTIONS action = ACTIONS.PLACE;
+        try {
+            playf = playf.execute(action, cardIndex);
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+
         model.addAttribute("playfield", playf);
+
 
         return "unoPlace";
 
@@ -118,6 +132,17 @@ public class UnoController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoDraw");
+
+        ACTIONS action = ACTIONS.DRAW;
+        try {
+            playf = playf.execute(action, 0);
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
 
         model.addAttribute("playfield", playf);
 
