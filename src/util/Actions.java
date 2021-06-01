@@ -18,20 +18,20 @@ public class Actions {
     }
 
     public static void wrongPlaceSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-       File file = new File("wrongSound.wav");
+        File file = new File("wrongSound.wav");
         AudioInputStream audiStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audiStream);
         clip.start();
     }
     public static Card pop(Deck d){
-        Card result = d.cardDeck.get(0);
-        d.cardDeck.remove(0);
+        Card result = d.getCardDeck().get(0);
+        d.getCardDeck().remove(0);
         return result;
     }
 
     public static Card peek(Deck d){
-        Card result = d.cardDeck.get(0);
+        Card result = d.getCardDeck().get(0);
         return result;
     }
 

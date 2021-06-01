@@ -1,11 +1,7 @@
 package com.example.demo.controller;
-import com.example.demo.models.linkedlists.CircleQueue;
-import lombok.Getter;
 
 import com.example.demo.models.User;
 import com.example.demo.service.CustomUserDetailsService;
-import minilabz.Animal;
-import minilabz.Fibonacci;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,11 +11,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.security.core.parameters.P;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import static minilabz.Fibonacci.listRecurse;
@@ -83,13 +76,6 @@ public class LoginController {
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
-        return modelAndView;
-    }
-
-    @RequestMapping(value = {"/uno"}, method = RequestMethod.GET)
-    public ModelAndView uno() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("uno");
         return modelAndView;
     }
 

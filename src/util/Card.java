@@ -1,5 +1,7 @@
 package util;
 
+import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
+
 import java.awt.*;
 
 public class Card {
@@ -23,6 +25,10 @@ public class Card {
     public Card(Color c, int n){
         this.cardColor = c;
         this.cardNum = n;
+    }
+
+    public String toString() {
+        return Integer.toString(this.cardNum);
     }
 
     public int getCardNum() {

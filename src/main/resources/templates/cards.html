@@ -22,11 +22,17 @@
     <div class="col-20" style="text-align: center;">
         <h1><strong>UNO!</strong></h1>
     </div>
-    <table>
+    <table th:object="${playfield}">
+        <tr>
+            <th><p>Discard Pile</p></th>
+            <th></th>
+            <th></th>
+            <th><p>Deck</p></th>
+        </tr>
         <tr>
             <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Next Card"></th>
-            <th><button type="button" >Draw Card</button></th>
             <th><button type="button" >Place Card</button></th>
+            <th><button type="button" >Draw Card</button></th>
             <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Current Hand"></th>
         </tr>
         <tr>
@@ -40,6 +46,12 @@
             <td><button type="button" >Card 6!</button></td>
             <td><button type="button" >Card 7!</button></td>
             <td><button type="button" >Card 8!</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" >Card 9!</button></td>
+            <td><button type="button" >Card 10!</button></td>
+            <td><button type="button" >Card 11!</button></td>
+            <td><button type="button" >Card 12!</button></td>
         </tr>
 
     </table>
