@@ -14,11 +14,13 @@ public class Playfield {
     public Player actPlayer; //active player
     public ArrayList<Player> players = new ArrayList<Player>();
     public static boolean actionSuccess;
+    private Deck deck;
+    private Card topCard;
 
     public Playfield(int playerNum, List<String> names, int botNum) throws UnsupportedAudioFileException, IOException, LineUnavailableException { //Initialize playfield
 
-        Deck deck = Actions.newDeck();
-        Card topCard = Actions.pop(deck);
+        deck = Actions.newDeck();
+        topCard = Actions.pop(deck);
         System.out.println(topCard.getLabel());
         addPlayers(playerNum, names, botNum);
 
@@ -62,7 +64,11 @@ public class Playfield {
     }
 
     public Player getCurrentPlayer(){
-        return
+        return players.get(round);
+    }
+
+    public Card getTopCard(){
+        return topCard;
     }
 
 }
