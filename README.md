@@ -15,6 +15,7 @@
 | Kevin Hu |  [Link](https://github.com/keviin0)  |
 | Andrew Pu |  [Link](https://github.com/andrewzpu) |
 | Alex Hu | [Link](https://github.com/AlexH04) |
+| Atharva Kudrimoti | [Link](https://github.com/athkud123) |
 
  **Umbrella Guide**    
 This week's goal was to build the front end and back end code of Uno game on website.
