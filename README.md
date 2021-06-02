@@ -31,6 +31,8 @@ Individual Tickets for progress next week
 | Kevin Hu |  [Link](https://github.com/sgtran/p1---more-rice/issues/25)  |
 | Andrew Pu |  [Link](https://github.com/sgtran/p1---more-rice/issues/48) |
 | Alex Hu | [Link](https://github.com/sgtran/p1---more-rice/issues/50) |
+| Atharva Kudrimoti | [Link](https://github.com/sgtran/p1---more-rice/issues/27) |
+
 
 
 
