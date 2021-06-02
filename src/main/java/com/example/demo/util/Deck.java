@@ -1,4 +1,4 @@
-package util;
+package com.example.demo.util;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -40,11 +40,11 @@ public class Deck {
     public int returnSize() {return getCardDeck().size();}
 
 
-    public ArrayList<util.Card> getCardDeck() {
+    public ArrayList<com.example.demo.util.Card> getCardDeck() {
         return cardDeck;
     }
 
-    public void setCardDeck(ArrayList<util.Card> cardDeck) {
+    public void setCardDeck(ArrayList<com.example.demo.util.Card> cardDeck) {
         this.cardDeck = cardDeck;
     }
 }

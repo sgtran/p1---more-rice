@@ -2,7 +2,7 @@ package com.example.demo.controller;
 import com.example.demo.models.linkedlists.CircleQueue;
 import lombok.Getter;
 
-import util.Playfield;
+import com.example.demo.util.Playfield;
 import com.example.demo.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import util.Actions.ACTIONS;
+import com.example.demo.util.Actions.ACTIONS;
 
 @Controller
 public class UnoController {

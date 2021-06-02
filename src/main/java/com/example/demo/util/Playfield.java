@@ -1,4 +1,4 @@
-package util;
+package com.example.demo.util;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import util.Actions.ACTIONS;
+import com.example.demo.util.Actions.ACTIONS;
 
 
-import static util.Actions.*;
-import static util.Actions.pop;
+import static com.example.demo.util.Actions.*;
+import static com.example.demo.util.Actions.pop;
 
 public class Playfield {
     public int round = 0;
