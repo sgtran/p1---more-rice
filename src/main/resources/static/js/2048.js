@@ -1,4 +1,4 @@
-import grid from './modules/grid.js';
+import grid from './2048grid.js';
 
 grid.init();
 

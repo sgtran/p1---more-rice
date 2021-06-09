@@ -1,4 +1,4 @@
-import grid from './grid.js';
+import grid from './2048grid.js';
 
 const number = {
     numbers: [],

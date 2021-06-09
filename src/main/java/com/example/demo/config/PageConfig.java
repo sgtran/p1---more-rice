@@ -3,10 +3,12 @@ package com.example.demo.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
+@EnableWebMvc
 public class PageConfig implements WebMvcConfigurer {
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -44,6 +46,8 @@ public class PageConfig implements WebMvcConfigurer {
         registry.addViewController("/Palindrome").setViewName("Palindrome");
         registry.addViewController("/binSearchAP").setViewName("binSearchAP");
         registry.addViewController("/Palindromeresult").setViewName("Palindromeresult");
+        registry.addViewController("/2048").setViewName("2048");
+
     }
 }
 

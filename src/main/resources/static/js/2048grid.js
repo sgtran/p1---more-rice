@@ -1,4 +1,4 @@
-import number from './number.js';
+import number from './2048number.js';
 
 const grid = {
     gridElement: document.getElementsByClassName("grid")[0],
