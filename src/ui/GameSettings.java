@@ -1,3 +1,4 @@
+/* commented out because compilation errors, this file will eventually be deleted
 package ui;
 
 
@@ -172,3 +173,4 @@ public class GameSettings extends JFrame {
 
 
 }
+ */
