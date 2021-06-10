@@ -9,6 +9,34 @@
             margin: 30px auto;
             border-collapse: collapse;
         }
+        .blink {
+            animation: blinker 0.6s linear infinite;
+            color: #1c87c9;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        .blink-one {
+            animation: blinker-one 1s linear infinite;
+        }
+        @keyframes blinker-one {
+            0% {
+                opacity: 0;
+            }
+        }
+        .blink-two {
+            animation: blinker-two 1.4s linear infinite;
+        }
+        @keyframes blinker-two {
+            100% {
+                opacity: 0;
+            }
+        }
         th,
         td {
             padding: 10px;
@@ -24,15 +52,15 @@
     </div>
     <table th:object="${playfield}">
         <tr>
-            <th><p>Discard Pile</p></th>
+            <th><p style="background-color: #FF10F0;">Discard Pile</p></th>
             <th></th>
             <th></th>
-            <th><p>Deck</p></th>
+            <th><p style="background-color: #FF10F0;">Deck</p></th>
         </tr>
         <tr>
             <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Next Card"></th>
-            <th><button type="button" >Place Card</button></th>
-            <th><button type="button" >Draw Card</button></th>
+            <th><button type="button" style="background-color: #FF10F0;" >Place Card</button></th>
+            <th><button type="button" style="background-color: #FF10F0;">Draw Card</button></th>
             <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Current Hand"></th>
         </tr>
         <tr>
@@ -55,6 +83,9 @@
         </tr>
 
     </table>
+    <h1><p style="color: #FF10F0;text-align: center" class="blink blink-one">UNO!</p></h1>
+
+    <img class="mb-4" src="https://www.pinclipart.com/picdir/middle/541-5418277_cartoon-rice-bowl-png-clipart.png" alt="" style="width:50%; margin-left: auto; margin-right: auto; display: block" />
     </body>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>

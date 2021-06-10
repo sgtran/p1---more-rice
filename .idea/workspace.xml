@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Leaderboard Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,19 +58,6 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.testRunning" />
   </component>
   <component name="RunManager" selected="Application.SpringSecurityMongodbSecurityApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SpringSecurityMongodbSecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.SpringSecurityMongodbSecurityApplication" />
       <module name="demo" />
@@ -141,6 +130,7 @@
       <item itemvalue="Application.UnoPlayer" />
       <item itemvalue="Application.UnoPlayer (1)" />
       <item itemvalue="Application.test" />
+      <item itemvalue="Spring Boot.SpringSecurityMongodbSecurityApplication" />
     </list>
     <recent_temporary>
       <list>
