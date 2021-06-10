@@ -10,12 +10,12 @@
 **Link to website** [here](http://offsec.gq:8080/cards)
 
 | **Member** | **Git id** | **Pre Final Checkpoint** |
-| :---:   | :-: |
-| Sean Tran | [Link](https://github.com/sgtran) | 
-| Kevin Hu |  [Link](https://github.com/keviin0)  |
+| :---:   | :-: | :--------: |
+| Sean Tran | [Link](https://github.com/sgtran) | |
+| Kevin Hu |  [Link](https://github.com/keviin0)  | |
 | Andrew Pu |  [Link](https://github.com/andrewzpu) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/48) Continued Working on Leaderboard. Added Search Feature and included Arcade theme |
-| Alex Hu | [Link](https://github.com/AlexH04) |
-| Atharva Kudrimoti | [Link](https://github.com/athkud123) |
+| Alex Hu | [Link](https://github.com/AlexH04) | |
+| Atharva Kudrimoti | [Link](https://github.com/athkud123) | |
 
  **Umbrella Guide**    
 This week's goal was to build the front end and back end code of Uno game on website.
