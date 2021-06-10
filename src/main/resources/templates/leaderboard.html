@@ -6,73 +6,75 @@
         <meta charset="UTF-8">
         <title>Leaderboard</title>
     </head>
-    <body>
+    <body style="background-image:url('https://www.desktopbackground.org/download/1680x1050/2012/05/19/392408_retro-80s-arcade-game-awesome-wallpapers-and-cool-backgrounds_1920x1080_h.jpg')">
         <div layout:fragment="content">
+                <h1>Intentional Blank</h1>
+                <h1 style="color:#FF10F0">Leaderboard</h1>
+                <small th:if="${error}" th:text="${error}" class="form-text text-danger">Please enter a valid integer between 0 and 20.</small>
+                <form id="searchForm" action="/leaderboard" method="GET" >
+                    <input name="username" id="username" type="text">
+                    <button style="color:#FF10F0">Go!</button>
+                </form>
 
-            <table style="width:100%">
-                <tr>
-                    <th style="width:30px">Rank</th>
-                    <th style="width:200px">Name</th>
-                    <th style="width:50px">Score</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-            </table>
+                <p style="color:#FF10F0", th:text="${result}"></p>
 
-            <form id="leaderboardForm" action="/leaderboard" method="GET" >
-                <input name="name" id="name" type="text" >
-                <button>Find Score!</button>
-            </form>
-
-            <p>N/A</p>
+                <table style="width:100%">
+                    <tr>
+                        <th style="width:30px;color:#FF10F0">Rank</th>
+                        <th style="width:200px;color:#FF10F0">Name</th>
+                        <th style="width:50px;color:#FF10F0">Score</th>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">1</td>
+                        <td th:text="${name1}" style="color:#FF10F0">---</td>
+                        <td th:text="${score1}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">2</td>
+                        <td th:text="${name2}" style="color:#FF10F0">---</td>
+                        <td th:text="${score2}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">3</td>
+                        <td th:text="${name3}" style="color:#FF10F0">---</td>
+                        <td th:text="${score3}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">4</td>
+                        <td th:text="${name4}" style="color:#FF10F0">---</td>
+                        <td th:text="${score4}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">5</td>
+                        <td th:text="${name5}" style="color:#FF10F0">---</td>
+                        <td th:text="${score5}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">6</td>
+                        <td th:text="${name6}" style="color:#FF10F0">---</td>
+                        <td th:text="${score6}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr style="color:#FF10F0">
+                        <td>7</td>
+                        <td th:text="${name7}" style="color:#FF10F0">---</td>
+                        <td th:text="${score7}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">8</td>
+                        <td th:text="${name8}" style="color:#FF10F0">---</td>
+                        <td th:text="${score8}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">9</td>
+                        <td th:text="${name9}" style="color:#FF10F0">---</td>
+                        <td th:text="${score9}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">10</td>
+                        <td th:text="${name0}" style="color:#FF10F0">---</td>
+                        <td th:text="${score0}" style="color:#FF10F0">---</td>
+                    </tr>
+                </table>
         </div>
     </body>
 </html>
