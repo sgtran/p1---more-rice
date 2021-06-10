@@ -11,7 +11,7 @@
 
 | **Member** | **Git id** | **Pre Final Checkpoint** |
 | :---:   | :-: | :--------: |
-| Sean Tran | [Link](https://github.com/sgtran) | |
+| Sean Tran | [Link](https://github.com/sgtran) |[Ticket](https://github.com/sgtran/p1---more-rice/issues/52) |
 | Kevin Hu |  [Link](https://github.com/keviin0)  | |
 | Andrew Pu |  [Link](https://github.com/andrewzpu) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/48) - Continued working on Leaderboard. Added Search feature and included arcade theme |
 | Alex Hu | [Link](https://github.com/AlexH04) | |
