@@ -13,7 +13,7 @@
 | :---:   | :-: | :--------: |
 | Sean Tran | [Link](https://github.com/sgtran) | |
 | Kevin Hu |  [Link](https://github.com/keviin0)  | |
-| Andrew Pu |  [Link](https://github.com/andrewzpu) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/48) - Continued Working on Leaderboard. Added Search Feature and included Arcade theme |
+| Andrew Pu |  [Link](https://github.com/andrewzpu) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/48) - Continued working on Leaderboard. Added Search feature and included arcade theme |
 | Alex Hu | [Link](https://github.com/AlexH04) | |
 | Atharva Kudrimoti | [Link](https://github.com/athkud123) | |
 
