@@ -14,7 +14,7 @@
 | Sean Tran | [Link](https://github.com/sgtran) |[Ticket](https://github.com/sgtran/p1---more-rice/issues/52) Added theme to game |
 | Kevin Hu |  [Link](https://github.com/keviin0)  | |
 | Andrew Pu |  [Link](https://github.com/andrewzpu) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/48) - Continued working on Leaderboard. Added Search feature and included arcade theme |
-| Alex Hu | [Link](https://github.com/AlexH04) | |
+| Alex Hu | [Link](https://github.com/AlexH04) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/50) - Continued working on controller/HTML integration, polished HTML and helped with 2048 file organization and controller |
 | Atharva Kudrimoti | [Link](https://github.com/athkud123) | |
 
  **Umbrella Guide**    
