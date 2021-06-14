@@ -21,7 +21,7 @@ public class PageConfig implements WebMvcConfigurer {
         registry.addViewController("/dashboard").setViewName("dashboard");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/uno").setViewName("uno");
-        registry.addViewController("/cards").setViewName("unoGame");
+        registry.addViewController("/unoGame").setViewName("unoGame");
         registry.addViewController("/minilabTest").setViewName("minilabTest");
         registry.addViewController("/leaderboard").setViewName("leaderboard");
         registry.addViewController("/test").setViewName("test");
@@ -45,7 +45,6 @@ public class PageConfig implements WebMvcConfigurer {
         registry.addViewController("/Palindrome").setViewName("Palindrome");
         registry.addViewController("/binSearchAP").setViewName("binSearchAP");
         registry.addViewController("/Palindromeresult").setViewName("Palindromeresult");
-        registry.addViewController("/unoInit").setViewName("unoInit");
     }
 }
 

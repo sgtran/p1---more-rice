@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Added current player displays, commented out code for the old jframe uno game that was causing erros">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/unoInit.html" afterDir="false" />
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Added unoInit page, doesn't work yet for some reason">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoInit.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,7 @@
       <workItem from="1622130248653" duration="199000" />
       <workItem from="1622560242212" duration="1253000" />
       <workItem from="1622611376190" duration="568000" />
-      <workItem from="1623640860298" duration="4467000" />
+      <workItem from="1623640860298" duration="6433000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -321,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623302168361</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added unoInit page, doesn't work yet for some reason">
+      <created>1623645579995</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1623645579995</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +369,8 @@
     <MESSAGE value="Added getters in Playfield" />
     <MESSAGE value="Moved model to playfield class. Converted controller to Spring." />
     <MESSAGE value="Added current player displays, commented out code for the old jframe uno game that was causing erros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added current player displays, commented out code for the old jframe uno game that was causing erros" />
+    <MESSAGE value="Added unoInit page, doesn't work yet for some reason" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added unoInit page, doesn't work yet for some reason" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

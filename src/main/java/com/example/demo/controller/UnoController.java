@@ -30,14 +30,24 @@ public class UnoController {
 
     Playfield playf;
 
-    @GetMapping("/unoInit")
-    public String form(@RequestParam(name="numPlayers", required = false) String value,
-                       @RequestParam(name = "names", required = false) String value2,
-                       @RequestParam(name = "numBots", required = false) String value3,
-                       Model model) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    @GetMapping("/unoGame")
+    public String unoGame(Model model)
+    {
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("unoInit");
+        modelAndView.setViewName("unoGame");
+
+        model.addAttribute("playfield", playf);
+
+        return "unoGame";
+
+    }
+
+    @PostMapping("/unoGame")
+    public String submit(@RequestParam(name="numPlayers", required = false) String value,
+                         @RequestParam(name = "names", required = false) String value2,
+                         @RequestParam(name = "numBots", required = false) String value3,
+                         Model model) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         List<String> allMatches = new ArrayList<String>();
         int InputVal;
         //temp
@@ -49,7 +59,7 @@ public class UnoController {
             InputVal = (int) Long.parseLong(value);
         } catch (Exception Ex) {
             model.addAttribute("error", "Please input a valid integer.");
-            return "unoInit";
+            return "unoGame";
         }
 
         String InputVal2;
@@ -58,7 +68,7 @@ public class UnoController {
             InputVal2 = value2;
         } catch (Exception Ex) {
             model.addAttribute("error", "Please input a valid string and separate names with commas");
-            return "unoInit";
+            return "unoGame";
         }
         Matcher m = Pattern.compile("[^,]+")
                 .matcher(InputVal2);
@@ -72,7 +82,7 @@ public class UnoController {
             InputVal3 = (int) Long.parseLong(value3);
         } catch (Exception Ex) {
             model.addAttribute("error", "Please input a valid integer");
-            return "unoInit";
+            return "unoGame";
         }
 
         playf = new Playfield(InputVal, allMatches, InputVal3);
@@ -81,26 +91,7 @@ public class UnoController {
         model.addAttribute("input", InputVal);
         model.addAttribute("input2", InputVal2);
         model.addAttribute("input3", InputVal3);
-        return "unoInit";
-    }
-
-    @PostMapping("/unoInit")
-    public String submit() {
         return "unoGame";
-    }
-
-
-    @GetMapping("/unoGame")
-    public String unoGame(Model model)
-    {
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("unoGame");
-
-        model.addAttribute("playfield", playf);
-
-        return "unoGame";
-
     }
 
     @GetMapping("/unoPlace")
