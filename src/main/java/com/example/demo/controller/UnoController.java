@@ -50,10 +50,6 @@ public class UnoController {
                          Model model) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         List<String> allMatches = new ArrayList<String>();
         int InputVal;
-        //temp
-        value = "2";
-        value2 = "Player1, Player2";
-        value3 = "0";
 
         try {
             InputVal = (int) Long.parseLong(value);
