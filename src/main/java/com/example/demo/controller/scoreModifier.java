@@ -17,7 +17,11 @@ import java.io.*;
 
 public class scoreModifier {
 
-    private static final String FILENAME = "C:\\Users\\andre\\IdeaProjects\\p1---more-rice\\scores.xml";
+    private static final String FILENAME = ".\\scores.xml";
+
+    public static void main(String[] args) {
+        System.out.println(topScores()[0]);
+    }
 
     public static int[] topScores() {
         int[] scores = new int[10];
@@ -360,7 +364,7 @@ public class scoreModifier {
                 }
             }
 
-            try (FileOutputStream output = new FileOutputStream("C:\\Users\\andre\\IdeaProjects\\p1---more-rice\\scores.xml")) {
+            try (FileOutputStream output = new FileOutputStream(".\\scores.xml")) {
                 writeXml(doc, output);
             }
 
