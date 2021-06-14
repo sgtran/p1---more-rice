@@ -43,54 +43,57 @@ public class UnoController {
 
     }
 
-    @PostMapping("/unoGame")
-    public String submit(@RequestParam(name="numPlayers", required = false) String value,
-                         @RequestParam(name = "names", required = false) String value2,
-                         @RequestParam(name = "numBots", required = false) String value3,
-                         Model model) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        List<String> allMatches = new ArrayList<String>();
-        int InputVal;
+    @GetMapping("unoInit")
+    public String test(@RequestParam(name="numPlayers", required = false) String value,
+                       @RequestParam(name = "names", required = false) String value2,
+                       @RequestParam(name = "numBots", required = false) String value3,
+                       Model model) throws IOException, LineUnavailableException{
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("unoInit");
+        if (value != null) {
+            List<String> allMatches = new ArrayList<String>();
+            int InputVal;
 
-        try {
-            InputVal = (int) Long.parseLong(value);
-        } catch (Exception Ex) {
-            model.addAttribute("error", "Please input a valid integer.");
+            try {
+                InputVal = (int) Long.parseLong(value);
+            } catch (Exception Ex) {
+                model.addAttribute("error1", "Please input a valid integer.");
+                return "unoInit";
+            }
+
+            String InputVal2;
+
+            try {
+                InputVal2 = value2;
+            } catch (Exception Ex) {
+                model.addAttribute("error2", "Please input a valid string and separate names with commas");
+                return "unoInit";
+            }
+            Matcher m = Pattern.compile("[^,]+")
+                    .matcher(InputVal2);
+            while (m.find()) {
+                allMatches.add(m.group());
+            }
+
+            int InputVal3;
+
+            try {
+                InputVal3 = (int) Long.parseLong(value3);
+            } catch (Exception Ex) {
+                model.addAttribute("error3", "Please input a valid integer");
+                return "unoInit";
+            }
+
+            playf = new Playfield(InputVal, allMatches, InputVal3);
+            System.out.println("playf object created");
             return "unoGame";
         }
 
-        String InputVal2;
-
-        try {
-            InputVal2 = value2;
-        } catch (Exception Ex) {
-            model.addAttribute("error", "Please input a valid string and separate names with commas");
-            return "unoGame";
-        }
-        Matcher m = Pattern.compile("[^,]+")
-                .matcher(InputVal2);
-        while (m.find()) {
-            allMatches.add(m.group());
-        }
-
-        int InputVal3;
-
-        try {
-            InputVal3 = (int) Long.parseLong(value3);
-        } catch (Exception Ex) {
-            model.addAttribute("error", "Please input a valid integer");
-            return "unoGame";
-        }
-
-        playf = new Playfield(InputVal, allMatches, InputVal3);
-
-        model.addAttribute("result", playf);
-        model.addAttribute("input", InputVal);
-        model.addAttribute("input2", InputVal2);
-        model.addAttribute("input3", InputVal3);
-        return "unoGame";
+        return "unoInit";
     }
 
-    @GetMapping("/unoPlace")
+
+    @PostMapping("/unoPlace")
     public String unoPlace(@RequestParam(name = "selectedCard") int cardIndex,
             Model model)
     {
@@ -116,7 +119,7 @@ public class UnoController {
 
     }
 
-    @GetMapping("/unoDraw")
+    @PostMapping("/unoDraw")
     public String unoDraw(Model model)
     {
 

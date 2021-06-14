@@ -28,7 +28,7 @@ public class Playfield {
     private Card moveStatus;
     private Card tempCard = new Card(Color.BLUE, 2);
 
-    public Playfield(int playerNum, List<String> names, int botNum) throws UnsupportedAudioFileException, IOException, LineUnavailableException { //Initialize playfield
+    public Playfield(int playerNum, List<String> names, int botNum) throws IOException, LineUnavailableException { //Initialize playfield
 
         deck = newDeck();
         topCard = pop(deck);
