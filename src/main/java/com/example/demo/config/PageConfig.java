@@ -45,6 +45,7 @@ public class PageConfig implements WebMvcConfigurer {
         registry.addViewController("/Palindrome").setViewName("Palindrome");
         registry.addViewController("/binSearchAP").setViewName("binSearchAP");
         registry.addViewController("/Palindromeresult").setViewName("Palindromeresult");
+        registry.addViewController("/unoInit").setViewName("unoInit");
     }
 }
 

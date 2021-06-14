@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 <head>
-    <title>Cards</title>
+    <title>Uno Game</title>
 </head>
 
 <div layout:fragment="content" th:object="${playfield}">
@@ -56,8 +56,6 @@
         }
 
     </style>
-    <p th:text="*{actPlayer.getName()}"></p>
-    <!--currently gives cannot perform method on null object (playfield), same thing happened with playfield last week-->
     <h1 class="h3 mb-3 font-weight-normal"><span style="color: coral; "><i>UNO</i></span></h1>
 
     <article>

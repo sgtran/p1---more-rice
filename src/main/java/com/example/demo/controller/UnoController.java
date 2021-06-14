@@ -10,14 +10,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -34,14 +31,13 @@ public class UnoController {
     Playfield playf;
 
     @GetMapping("/unoInit")
-    public String unoInit(@RequestParam(name = "numPlayers", required = false, defaultValue = "1") String value,
-                      @RequestParam(name = "names",required = false) String value2,
-                      @RequestParam(name = "numBots", required = false) String value3,
-                      Model model) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    public String form(@RequestParam(name="numPlayers", required = false) String value,
+                       @RequestParam(name = "names", required = false) String value2,
+                       @RequestParam(name = "numBots", required = false) String value3,
+                       Model model) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoInit");
-
         List<String> allMatches = new ArrayList<String>();
         int InputVal;
         //temp
@@ -85,11 +81,14 @@ public class UnoController {
         model.addAttribute("input", InputVal);
         model.addAttribute("input2", InputVal2);
         model.addAttribute("input3", InputVal3);
-
-
-
         return "unoInit";
     }
+
+    @PostMapping("/unoInit")
+    public String submit() {
+        return "unoGame";
+    }
+
 
     @GetMapping("/unoGame")
     public String unoGame(Model model)

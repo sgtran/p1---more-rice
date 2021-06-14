@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Moved model to playfield class. Converted controller to Spring.">
+    <list default="true" id="9fd9b5e9-9fa0-44b7-b3f7-c3a6866b723c" name="Default Changelist" comment="Added current player displays, commented out code for the old jframe uno game that was causing erros">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/unoInit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Uno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Uno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,13 +109,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,6 +172,7 @@
       <workItem from="1622130248653" duration="199000" />
       <workItem from="1622560242212" duration="1253000" />
       <workItem from="1622611376190" duration="568000" />
+      <workItem from="1623640860298" duration="4467000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
@@ -311,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622515208103</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added current player displays, commented out code for the old jframe uno game that was causing erros">
+      <created>1623302168361</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1623302168361</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +361,8 @@
     <MESSAGE value="Added uno game controller for html ref" />
     <MESSAGE value="Added getters in Playfield" />
     <MESSAGE value="Moved model to playfield class. Converted controller to Spring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved model to playfield class. Converted controller to Spring." />
+    <MESSAGE value="Added current player displays, commented out code for the old jframe uno game that was causing erros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added current player displays, commented out code for the old jframe uno game that was causing erros" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
