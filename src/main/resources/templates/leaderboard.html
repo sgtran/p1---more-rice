@@ -12,11 +12,8 @@
                 <h1 style="color:#FF10F0">Leaderboard</h1>
                 <small th:if="${error}" th:text="${error}" class="form-text text-danger">Please enter a valid integer between 0 and 20.</small>
                 <form id="searchForm" action="/leaderboard" method="GET" >
-                    <input name="username" id="username" type="text">
-                    <button style="color:#FF10F0">Go!</button>
+                    <button style="color:#FF10F0">Refresh</button>
                 </form>
-
-                <p style="color:#FF10F0", th:text="${result}"></p>
 
                 <table style="width:100%">
                     <tr>
@@ -26,53 +23,53 @@
                     </tr>
                     <tr>
                         <td style="color:#FF10F0">1</td>
+                        <td th:text="${name0}" style="color:#FF10F0">---</td>
+                        <td th:text="${score0}" style="color:#FF10F0">---</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#FF10F0">2</td>
                         <td th:text="${name1}" style="color:#FF10F0">---</td>
                         <td th:text="${score1}" style="color:#FF10F0">---</td>
                     </tr>
                     <tr>
-                        <td style="color:#FF10F0">2</td>
+                        <td style="color:#FF10F0">3</td>
                         <td th:text="${name2}" style="color:#FF10F0">---</td>
                         <td th:text="${score2}" style="color:#FF10F0">---</td>
                     </tr>
                     <tr>
-                        <td style="color:#FF10F0">3</td>
+                        <td style="color:#FF10F0">4</td>
                         <td th:text="${name3}" style="color:#FF10F0">---</td>
                         <td th:text="${score3}" style="color:#FF10F0">---</td>
                     </tr>
                     <tr>
-                        <td style="color:#FF10F0">4</td>
+                        <td style="color:#FF10F0">5</td>
                         <td th:text="${name4}" style="color:#FF10F0">---</td>
                         <td th:text="${score4}" style="color:#FF10F0">---</td>
                     </tr>
                     <tr>
-                        <td style="color:#FF10F0">5</td>
+                        <td style="color:#FF10F0">6</td>
                         <td th:text="${name5}" style="color:#FF10F0">---</td>
                         <td th:text="${score5}" style="color:#FF10F0">---</td>
                     </tr>
-                    <tr>
-                        <td style="color:#FF10F0">6</td>
+                    <tr style="color:#FF10F0">
+                        <td>7</td>
                         <td th:text="${name6}" style="color:#FF10F0">---</td>
                         <td th:text="${score6}" style="color:#FF10F0">---</td>
                     </tr>
-                    <tr style="color:#FF10F0">
-                        <td>7</td>
+                    <tr>
+                        <td style="color:#FF10F0">8</td>
                         <td th:text="${name7}" style="color:#FF10F0">---</td>
                         <td th:text="${score7}" style="color:#FF10F0">---</td>
                     </tr>
                     <tr>
-                        <td style="color:#FF10F0">8</td>
+                        <td style="color:#FF10F0">9</td>
                         <td th:text="${name8}" style="color:#FF10F0">---</td>
                         <td th:text="${score8}" style="color:#FF10F0">---</td>
                     </tr>
                     <tr>
-                        <td style="color:#FF10F0">9</td>
+                        <td style="color:#FF10F0">10</td>
                         <td th:text="${name9}" style="color:#FF10F0">---</td>
                         <td th:text="${score9}" style="color:#FF10F0">---</td>
-                    </tr>
-                    <tr>
-                        <td style="color:#FF10F0">10</td>
-                        <td th:text="${name0}" style="color:#FF10F0">---</td>
-                        <td th:text="${score0}" style="color:#FF10F0">---</td>
                     </tr>
                 </table>
         </div>
