@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be45663f-5d0c-49ef-a330-fb4682f6f417" name="Default Changelist" comment="Add get request in html for drawCard">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/unoInit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/PageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Playfield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Playfield.java" afterDir="false" />
+    <list default="true" id="be45663f-5d0c-49ef-a330-fb4682f6f417" name="Default Changelist" comment="Fixed playf init for unoGame">
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -333,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623647376381</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fixed playf init for unoGame">
+      <created>1623687763565</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1623687763565</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +377,8 @@
     <MESSAGE value="Added current player displays, commented out code for the old jframe uno game that was causing erros" />
     <MESSAGE value="Added unoInit page, doesn't work yet for some reason" />
     <MESSAGE value="Fixed unoInit by combining form onto main game page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed unoInit by combining form onto main game page" />
+    <MESSAGE value="Fixed playf init for unoGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed playf init for unoGame" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

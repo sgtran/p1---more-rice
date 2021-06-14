@@ -2,130 +2,89 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 <head>
-    <title>Uno Game</title>
+    <title>Uno!</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        .blink {
+            animation: blinker 0.6s linear infinite;
+            color: #1c87c9;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        .blink-one {
+            animation: blinker-one 1s linear infinite;
+        }
+        @keyframes blinker-one {
+            0% {
+                opacity: 0;
+            }
+        }
+        .blink-two {
+            animation: blinker-two 1.4s linear infinite;
+        }
+        @keyframes blinker-two {
+            100% {
+                opacity: 0;
+            }
+        }
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #666;
+        }
+    </style>
 </head>
 
-<div layout:fragment="content" th:object="${playfield}">
-    <style>
-        h1 {text-align: center;}
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        article {
-            position: relative;
-            margin: 0.5rem;
-            top: 70px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-            gap: 0.5rem;
-        }
-        .img--container {
-            width: 20ch;
-            border: 1ch solid #1e88e5;
-            background: salmon;
-        }
-        img {
-            width: 100%;
-            display: block;
-            object-fit: none;
-        }
-        #form {
-            position: relative;
-            top: 60px;
-        }
-        .image-1 {
-            object-position: 50% 50%;
-        }
-        .image-2 {
-            object-position: 50% 50%;
-        }
-        .image-3 {
-            object-position: 50% 50%;
-        }
-        .image-4 {
-            object-position: 50% 50%;
-        }
-        .image-5 {
-            object-position: 50% 50%;
-        }
-        .image-6 {
-            object-position: 50% 50%;
-        }
-        .image-7 {
-            object-position: 50% 50%;
-        }
-        .image-8 {
-            object-position: 50% 50%;
-        }
-
-    </style>
-    <h1 class="h3 mb-3 font-weight-normal"><span style="color: coral; "><i>UNO</i></span></h1>
-    <div class="container">
-        <div class="row">
-            <form action="#" id="form">
-                <p>Number of players: <input type="text" name="numPlayers" /></p>
-                <p>Names: <input type="text" name="names" /></p>
-                <p>Number of bots: <input type="text" name="numBots" /></p>
-                <p><input type="submit" value="Submit" /></p>
-            </form>
-        </div>
+<div layout:fragment="content">
+    <body>
+    <div class="col-20" style="text-align: center;">
+        <h1><strong>UNO!</strong></h1>
     </div>
+    <table th:object="${playfield}">
+        <tr>
+            <th><p style="background-color: #FF10F0;">Discard Pile</p></th>
+            <th></th>
+            <th></th>
+            <th><p style="background-color: #FF10F0;">Deck</p></th>
+        </tr>
+        <tr>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Next Card"></th>
+            <th><button type="button" style="background-color: #FF10F0;" >Place Card</button></th>
+            <th><button type="button" style="background-color: #FF10F0;">Draw Card</button></th>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Current Hand"></th>
+        </tr>
+        <tr>
+            <td><button type="button" >Card 1!</button></td>
+            <td><button type="button" >Card 2!</button></td>
+            <td><button type="button" >Card 3!</button></td>
+            <td><button type="button" >Card 4!</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" >Card 5!</button></td>
+            <td><button type="button" >Card 6!</button></td>
+            <td><button type="button" >Card 7!</button></td>
+            <td><button type="button" >Card 8!</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" >Card 9!</button></td>
+            <td><button type="button" >Card 10!</button></td>
+            <td><button type="button" >Card 11!</button></td>
+            <td><button type="button" >Card 12!</button></td>
+        </tr>
 
-    <article>
-        <div class="container">
-            <h3>Card 1</h3>
-            <div class="img--container">
-                <img class="image-1" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 2</h3>
-            <div class="img--container">
-                <img class="image-2" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 3</h3>
-            <div class="img--container">
-                <img class="image-3" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 4</h3>
-            <div class="img--container">
-                <img class="image-4" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 5</h3>
-            <div class="img--container">
-                <img class="image-5" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-        <div class="container">
-            <h3>Card 6</h3>
-            <div class="img--container">
-                <img class="image-6" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-
-        <div class="container">
-            <h3>Card 7</h3>
-            <div class="img--container">
-                <img class="image-7" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-
-        <div class="container">
-            <h3>Card 8</h3>
-            <div class="img--container">
-                <img class="image-8" src="https://www.realmeye.com/forum/uploads/default/original/3X/e/0/e0f61bb5d5652082c675e84e0fe0b783708469e6.jpeg" />
-            </div>
-        </div>
-    </article>
+    </table>
+    <h1><p style="color: #FF10F0;text-align: center" class="blink blink-one">UNO!</p></h1>
+    </body>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 </div>
