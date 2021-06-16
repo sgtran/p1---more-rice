@@ -58,7 +58,7 @@
             <th><p style="background-color: #FF10F0;">Deck</p></th>
         </tr>
         <tr>
-            <th><p style="color: #FF10F0;text-align: center" th:text="${playfield.getTopCard().getCardNum()} + ' ' + ${playfield.getTopCard().getColorSanitized()}" ></p></th>
+            <th><p style="color: #FF10F0;text-align: center" th:text="${playfield.getTopCard().getCardNum()} + ' ' + ${playfield.getTopCard().getColorSanitized()} " ></p></th>
             <th>
                 <button style="background-color: #FF10F0;" onclick="placeCard();">Place Card</button>
                 <span th:if="${errorMessage}"  th:text="${errorMessage}">Error</span>
