@@ -48,7 +48,7 @@
 <div layout:fragment="content">
     <body>
     <div class="col-20" style="text-align: center;">
-        <h1><strong>UNO!</strong></h1>
+        <h1 style="color: #FF10F0"><strong>UNO!</strong></h1>
     </div>
     <table th:object="${playfield}">
         <tr>
@@ -61,7 +61,7 @@
             <th><p style="color: #FF10F0;text-align: center" th:text="${playfield.getTopCard().getCardNum()} + ' ' + ${playfield.getTopCard().getColorSanitized()} " ></p></th>
             <th>
                 <button style="background-color: #FF10F0;" onclick="placeCard();">Place Card</button>
-                <span th:if="${errorMessage}"  th:text="${errorMessage}">Error</span>
+                <span style="color: #FF10F0" th:if="${errorMessage}"  th:text="${errorMessage}">Error</span>
             </th>
             <th>
                 <form action="#" th:action="@{/unoGame}" method="get">
