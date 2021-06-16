@@ -33,6 +33,21 @@ public class Card {
         return cardColor;
     }
 
+    public String getColorSanitized() {
+        if (cardColor == Color.RED) {
+            return "Red";
+        } else if (cardColor == Color.BLUE){
+            return "Blue";
+        } else if (cardColor == Color.YELLOW) {
+            return "Yellow";
+        } else if (cardColor == Color.GREEN) {
+            return "Green";
+        } else if (cardColor == SPECIAL_COLOR) {
+            return "Wildcard";
+        }
+        return "other";
+    }
+
     public boolean isSpecialCard() {
         return (cardNum > 9);
     }

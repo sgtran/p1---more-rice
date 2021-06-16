@@ -28,12 +28,54 @@ import com.example.demo.util.Actions.ACTIONS;
 @Controller
 public class UnoController {
 
-    Playfield playf;
+    private Playfield playf;
+    private int cIndex;
 
-    @GetMapping("/unoGame")
-    public String unoGame(Model model)
+    @GetMapping("unoGame")
+    public String unoGame(@RequestParam(name="action", required = false) String action,
+                          @RequestParam(name = "cardIndex", required = false) String cardIndex,
+                          Model model)
     {
+        if (action != null){
+            if (action.equals("Place Card")){
+                ACTIONS temp = ACTIONS.PLACE;
+                cIndex = Integer.parseInt(cardIndex);
+                if (playf.getTopCard().getColor() != playf.getCurrentPlayer().getCard(cIndex).getColor() && !playf.getCurrentPlayer().getCard(cIndex).getColorSanitized().equals("Wildcard")){
+                    model.addAttribute("errorMessage","Invalid move");
+                    return "unoGame";
+                }
+                try {
+                    playf = playf.execute(temp, cIndex);
+                } catch (UnsupportedAudioFileException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (LineUnavailableException e) {
+                    e.printStackTrace();
+                }
 
+                model.addAttribute("playfield", playf);
+                System.out.println("placed");
+                return "unoGame";
+            } else if (action.equals("Draw Card")){
+                ACTIONS temp = ACTIONS.DRAW;
+                try {
+                    playf = playf.execute(temp, 0);
+                } catch (UnsupportedAudioFileException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (LineUnavailableException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("drew a card");
+
+                model.addAttribute("playfield", playf);
+
+                return "unoGame";
+            }
+
+        }
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoGame");
 
@@ -47,7 +89,7 @@ public class UnoController {
     public String test(@RequestParam(name="numPlayers", required = false) String value,
                        @RequestParam(name = "names", required = false) String value2,
                        @RequestParam(name = "numBots", required = false) String value3,
-                       Model model) throws IOException, LineUnavailableException{
+                       Model model) throws IOException, LineUnavailableException {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoInit");
         if (value != null) {
@@ -85,15 +127,15 @@ public class UnoController {
             }
 
             playf = new Playfield(InputVal, allMatches, InputVal3);
-            System.out.println("playf object created");
-            return "unoGame";
+            System.out.println("playf object created " + playf);
+            return "redirect:unoGame";
         }
 
         return "unoInit";
     }
 
 
-    @PostMapping("/unoPlace")
+    @PostMapping("unoPlace")
     public String unoPlace(@RequestParam(name = "selectedCard") int cardIndex,
             Model model)
     {
@@ -113,16 +155,17 @@ public class UnoController {
         }
 
         model.addAttribute("playfield", playf);
+        System.out.println("placed");
 
 
-        return "unoPlace";
+        return "unoGame";
 
     }
 
-    @PostMapping("/unoDraw")
+    @PostMapping("unoDraw")
     public String unoDraw(Model model)
     {
-
+        System.out.println("Testunodraw");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoDraw");
 
@@ -136,10 +179,11 @@ public class UnoController {
         } catch (LineUnavailableException e) {
             e.printStackTrace();
         }
+        System.out.println("drew a card");
 
         model.addAttribute("playfield", playf);
 
-        return "unoDraw";
+        return "unoGame";
 
     }
 

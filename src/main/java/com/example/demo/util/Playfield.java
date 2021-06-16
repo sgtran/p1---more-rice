@@ -89,15 +89,15 @@ public class Playfield {
         }
 
         resetStatus();
-        if (topCard.getColor() == Card.SPECIAL_COLOR && action == ACTIONS.PLACE) {
+        if (selectedCard.getColor() == Card.SPECIAL_COLOR && action == ACTIONS.PLACE) {
 
-            if (topCard.getCardNum() == Card.REVERSE_CARD) {
+            if (selectedCard.getCardNum() == Card.REVERSE_CARD) {
                 action = ACTIONS.REVERSE;
-            } else if (topCard.getCardNum() == Card.SKIP_CARD) {
+            } else if (selectedCard.getCardNum() == Card.SKIP_CARD) {
                 action = ACTIONS.SKIP;
-            } else if (topCard.getCardNum() == Card.DRAW_TWO_CARD) {
+            } else if (selectedCard.getCardNum() == Card.DRAW_TWO_CARD) {
                 action = ACTIONS.DRAWTWO;
-            } else if (topCard.getCardNum() == Card.WILD_CARD){
+            } else if (selectedCard.getCardNum() == Card.WILD_CARD){
                 action = ACTIONS.WILDCARD;
             }
         }
@@ -207,10 +207,6 @@ public class Playfield {
 
             moveStatus = doAction(action, actPlayer, 1 , deck, selectedCard, topCard);
 
-            if (moveStatus.getSuccess() == false) {
-                round = round - 1;
-                return this;
-            }
             System.out.println(round + "\n" + actPlayer.name + " card " + topCard.getDescription());
 
             if(actPlayer.getHand().isEmpty()) {
@@ -240,7 +236,10 @@ public class Playfield {
     }
 
     public Player getCurrentPlayer(){
-        return players.get(round);
+        System.out.println("round " + round);
+        System.out.println("size " + players.size());
+        System.out.println("index " + (round % players.size()));
+        return players.get(round % players.size());
     }
 
     public Card getTopCard(){

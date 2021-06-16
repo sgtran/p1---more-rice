@@ -36,6 +36,10 @@ public class Player {
         hand.remove(c);
     }
 
+    public Card getCard(int cardInd) {
+        return hand.get(cardInd);
+    }
+
     public int getSize() {
         return hand.size();
     }
