@@ -100,6 +100,26 @@
                     </div>
                 </ul>
 
+                <ul class="navbar-nav mr-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sean's Room
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+
+                            <li> <a href="/GCD">Sean's GCD</a></li>
+                            <li><a href="/seanData">Sean's inheritance</a></li>
+                            <li><a href="/seanLL">Sean's LinkedList</a></li>
+                            <li><a href="/seanSort">Sean's sort</a></li>
+                            <li><a href="/dashboard">Sean's journal</a></li>
+
+
+
+
+                        </ul>
+
+                    </div>
+                </ul>
+
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" th:if="${currentUser == null}"><a class="nav-link" th:href="@{/login}">Log in</a></li>
                     <li class="nav-item" th:if="${currentUser}">
