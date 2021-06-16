@@ -86,7 +86,7 @@ public class UnoController {
     }
 
 
-    @GetMapping("unoInit")
+    @PostMapping("unoInit")
     public String test(@RequestParam(name="numPlayers", required = false) String value,
                        @RequestParam(name = "names", required = false) String value2,
                        @RequestParam(name = "numBots", required = false) String value3,
@@ -118,19 +118,20 @@ public class UnoController {
                 allMatches.add(m.group());
             }
 
-            int InputVal3;
 
-            try {
-                InputVal3 = (int) Long.parseLong(value3);
-            } catch (Exception Ex) {
-                model.addAttribute("error3", "Please input a valid integer");
-                return "unoInit";
-            }
-
-            playf = new Playfield(InputVal, allMatches, InputVal3);
+            playf = new Playfield(InputVal, allMatches);
             System.out.println("playf object created " + playf);
             return "redirect:unoGame";
         }
+
+        return "unoInit";
+    }
+
+    @GetMapping("unoInit")
+    public String unoInit(Model model) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("unoInit");
 
         return "unoInit";
     }

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be45663f-5d0c-49ef-a330-fb4682f6f417" name="Default Changelist" comment="merged Sean's cards.html">
+    <list default="true" id="be45663f-5d0c-49ef-a330-fb4682f6f417" name="Default Changelist" comment="added api">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/APIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/PlayerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/PlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Playfield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Playfield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,17 +106,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -350,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623688180931</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added api">
+      <created>1623862390819</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1623862390819</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +365,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added invidual sort to drop down" />
     <MESSAGE value="remove some code" />
     <MESSAGE value="seanData fix for all users" />
     <MESSAGE value="Fibonacci" />
@@ -394,7 +389,8 @@
     <MESSAGE value="Fixed unoInit by combining form onto main game page" />
     <MESSAGE value="Fixed playf init for unoGame" />
     <MESSAGE value="merged Sean's cards.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged Sean's cards.html" />
+    <MESSAGE value="added api" />
+    <option name="LAST_COMMIT_MESSAGE" value="added api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
