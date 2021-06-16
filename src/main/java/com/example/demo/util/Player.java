@@ -1,11 +1,14 @@
 package com.example.demo.util;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.ArrayList;
 
 public class Player {
 
     private int score;
-
+    @Id
+    private String id;
     public String name; //Player's name
     public int numCards; //Number of cards player has
     private ArrayList<Card> hand = new ArrayList<Card>(); //The player's hand
@@ -15,6 +18,15 @@ public class Player {
         this.name = newName;
         score = 0;
         iofb = new Card(Card.INDEXOUTOFBOUNDS, 0);
+    }
+
+    public Player(String newName, int score){
+        this.name = newName;
+        this.score = score;
+    }
+
+    public Player(){
+
     }
 
 

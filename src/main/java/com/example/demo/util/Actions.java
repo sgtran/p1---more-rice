@@ -25,6 +25,9 @@ public class Actions {
         clip.start();
     }
     public static Card pop(Deck d){
+        if(d.getCardDeck().isEmpty()){
+            d = newDeck();
+        }
         Card result = d.getCardDeck().get(0);
         d.getCardDeck().remove(0);
         return result;

@@ -112,6 +112,16 @@
                 <td><button onclick="chooseCard('11')"  type="button" th:text="${playfield.getCurrentPlayer().getCard(11).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(11).getColorSanitized()}">Card 12!</button></td>
             </div>
         </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button">Left</button>
+            </td>
+            <td>
+                <button type="button">Right</button>
+            </td>
+            <td></td>
+        </tr>
     </table>
     <h1>
         <p style="color: #FF10F0;text-align: center" class="blink blink-one" th:text="${playfield.getCurrentPlayer().getName()}" ></p>
