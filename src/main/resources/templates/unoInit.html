@@ -5,10 +5,9 @@
 <div layout:fragment="content">
     <div class="container">
         <div class="row">
-            <form action="#" th:action="@{/unoInit}" method="get">
+            <form action="#" th:action="@{/unoInit}" method="post">
                 <p>Number of players: <input type="number" name="numPlayers"/></p>
                 <p>Names: <input type="text" name="names"/></p>
-                <p>Number of bots: <input type="number" name="numBots" /></p>
                 <p><input type="submit" value="Submit"/></p>
             </form>
         </div>

@@ -28,15 +28,15 @@ public class Playfield {
     private Card moveStatus;
     private Card tempCard = new Card(Color.BLUE, 2);
 
-    public Playfield(int playerNum, List<String> names, int botNum) throws IOException, LineUnavailableException { //Initialize playfield
+    public Playfield(int playerNum, List<String> names) throws IOException, LineUnavailableException { //Initialize playfield
 
         deck = newDeck();
         topCard = pop(deck);
         System.out.println(topCard.getLabel());
-        addPlayers(playerNum, names, botNum);
+        addPlayers(playerNum, names, 0);
 
-        for(int i = 0; i < playerNum + botNum; i++){ //Start each player with 7 cards
-            for(int j = 0; j < 7; j++){
+        for(int i = 0; i < playerNum + 0; i++){ //Start each player with 7 cards
+            for(int j = 0; j < 20; j++){
                 players.get(i).addCard(pop(deck));
             }
         }
@@ -81,14 +81,13 @@ public class Playfield {
 
     public Playfield execute(ACTIONS action, int cardIndex) throws UnsupportedAudioFileException, IOException, LineUnavailableException
     {
-        Card selectedCard = deck.getCardDeck().get(cardIndex);
+        Card selectedCard = actPlayer.getHand().get(cardIndex);
 
         if( topCard == null ) {
             // no card selected
             return this;
         }
 
-        resetStatus();
         if (selectedCard.getColor() == Card.SPECIAL_COLOR && action == ACTIONS.PLACE) {
 
             if (selectedCard.getCardNum() == Card.REVERSE_CARD) {
@@ -104,8 +103,8 @@ public class Playfield {
 
 
         // Skip card case
-        if (action == ACTIONS.SKIP){
-            doAction(action, actPlayer, 2, deck, selectedCard, topCard);
+            if (action == ACTIONS.SKIP){
+                doAction(action, actPlayer, 2, deck, selectedCard, topCard);
 
             if(actPlayer.getHand().isEmpty()) {
                 win(actPlayer);
@@ -205,7 +204,9 @@ public class Playfield {
         // place case
         if (action == ACTIONS.PLACE){
 
-            moveStatus = doAction(action, actPlayer, 1 , deck, selectedCard, topCard);
+            System.out.println("selected card "+ selectedCard.getCardNum() + selectedCard.getColorSanitized());
+            topCard = doAction(action, actPlayer, 1 , deck, selectedCard, topCard);
+            System.out.println(mTopCard);
 
             System.out.println(round + "\n" + actPlayer.name + " card " + topCard.getDescription());
 
@@ -216,7 +217,6 @@ public class Playfield {
             }
 
             round++;
-            String activePlayerTemp = actPlayer.name;
             actPlayer = players.get(round % players.size());
             nextPlayer = players.get((round + 1) % players.size());
             prevPlayer = players.get((round - 1) % players.size());
@@ -236,10 +236,7 @@ public class Playfield {
     }
 
     public Player getCurrentPlayer(){
-        System.out.println("round " + round);
-        System.out.println("size " + players.size());
-        System.out.println("index " + (round % players.size()));
-        return players.get(round % players.size());
+        return actPlayer;
     }
 
     public Card getTopCard(){

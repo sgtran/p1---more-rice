@@ -58,13 +58,15 @@
             <th><p style="background-color: #FF10F0;">Deck</p></th>
         </tr>
         <tr>
-            <th><p style="color: #FF10F0;text-align: center" th:text="${playfield.getTopCard().getCardNum()} + ' ' + ${playfield.getTopCard().getColorSanitized()} " ></p></th>
+            <th><p style="color: #FF10F0;text-align: center" th:text="${topCardNum} + ' ' + ${topCardColor} " ></p></th>
             <th>
-                <button style="background-color: #FF10F0;" onclick="placeCard();">Place Card</button>
-                <span th:if="${errorMessage}"  th:text="${errorMessage}">Error</span>
+                <form action="#" th:action="@{/unoGame}" method="post">
+                    <input type="hidden" name="cardIndex" id="cardIndex" value =  "" />
+                    <input type="submit" style="background-color: #FF10F0;" name="action" value="Place Card"/>
+                </form>
             </th>
             <th>
-                <form action="#" th:action="@{/unoGame}" method="get">
+                <form action="#" th:action="@{/unoGame}" method="post">
                     <input type="submit" style="background-color: #FF10F0;" name="action" value="Draw Card"/>
                 </form>
             </th>
@@ -72,7 +74,7 @@
         </tr>
         <tr>
             <div id="div1" style="display:none;">
-                <td><button onClick="chooseCard('0')" type="button" th:text="${playfield.getCurrentPlayer().getCard(0).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(0).getColorSanitized()}"></button></td>
+                <td><button onClick="chooseCard('0')" type="button" th:text="${playfield.getCurrentPlayer().getCard(0).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(0).getColorSanitized()}">Card 1!</button></td>
             </div>
             <div id="div2" style="display:none;">
                 <td><button onClick="chooseCard('1')" type="button" th:text="${playfield.getCurrentPlayer().getCard(1).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(1).getColorSanitized()}">Card 2!</button></td>
@@ -89,32 +91,18 @@
                 <td><button onClick="chooseCard('4')"  type="button" th:text="${playfield.getCurrentPlayer().getCard(4).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(4).getColorSanitized()}">Card 5!</button></td>
             </div>
             <div id="div6" style="display:none;">
-                <td><button onClick="chooseCard('5')"  type="button" >Card 6!</button></td>
+                <td><button onClick="chooseCard('5')"  type="button" th:text="${playfield.getCurrentPlayer().getCard(5).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(5).getColorSanitized()}">Card 6!</button></td>
             </div>
             <div id="div7" style="display:none;">
-                <td><button onClick="chooseCard('6')" type="button" >Card 7!</button></td>
+                <td><button onClick="chooseCard('6')" type="button" th:text="${playfield.getCurrentPlayer().getCard(6).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(6).getColorSanitized()}" >Card 7!</button></td>
             </div>
             <div id="div8" style="display:none;">
-                <td><button onClick="chooseCard('7')" type="button" >Card 8!</button></td>
-            </div>
-        </tr>
-        <tr>
-            <div id="div9" style="display:none;">
-                <td><button onClick="chooseCard('8')" type="button" >Card 3!</button></td>
-            </div>
-            <div id="div10" style="display:none;">
-                <td><button onClick="chooseCard('9')" type="button" >Card 3!</button></td>
-            </div>
-            <div id="div11" style="display:none;">
-                <td><button onClick="chooseCard('10')" type="button" >Card 3!</button></td>
-            </div>
-            <div id="div12" style="display:none;">
-                <td><button onClick="chooseCard('11')"  type="button" >Card 3!</button></td>
+                <td><button onClick="chooseCard('7')" type="button" th:text="${playfield.getCurrentPlayer().getCard(7).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(7).getColorSanitized()}">Card 8!</button></td>
             </div>
         </tr>
     </table>
     <h1>
-        <p style="color: #FF10F0;text-align: center" class="blink blink-one" th:text="${playfield.getCurrentPlayer().getName()}" ></p>
+        <p style="color: #FF10F0;text-align: center" th:text="${playfield.getCurrentPlayer().getName()}" ></p>
     </h1>
     </body>
 
@@ -126,15 +114,18 @@
             window.onload = function() {
             };
             function chooseCard(num){
-                cardIndex = num;
+                document.getElementById("cardIndex").value = num;
             }
             function placeCard(){
                 /*<![CDATA[*/
+                /*
                 if (cardIndex == null){
                     alert('Please pick a card');
                     return;
                 }
                 window.location = 'http://localhost:8080/unoGame?action=Place+Card&cardIndex=' + cardIndex;
+                */
+
                 /*]]>*/
             }
         </script>

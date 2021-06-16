@@ -63,6 +63,7 @@ public class Actions {
     }
 
     public static Card doAction(ACTIONS choice, Player p, int num, Deck d, Card selectedCard, Card topCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        System.out.println("testgay2");
         switch(choice){
             case DRAW:
                 for(int i = 0; i < num; i++){
@@ -73,41 +74,47 @@ public class Actions {
             case PLACE:
                 if( selectedCard == null ) {
                     // no card selected;
+                    System.out.println("testgay");
                     wrongPlaceSound();
-                    return selectedCard;
+                    return mTopCard;
                 }
 
+                /*
                 if(topCard.getColor() == Card.SPECIAL_COLOR){
                     correctPlaceSound();
                     push(p, selectedCard);
-                    return selectedCard;
+                    return mTopCard;
 
                 }
+                */
+
 
                 if(topCard.getColor() != selectedCard.getColor()){ //Check if card is unable to be played
                     if(selectedCard.getCardNum() == 10 ||selectedCard.getCardNum() == 11 || selectedCard.getCardNum() == 12 || selectedCard.getCardNum() == 13 ){
                         push(p, selectedCard);
-                        return selectedCard;}
+                        return mTopCard;}
 
                     if(topCard.getCardNum() != selectedCard.getCardNum()){
                         wrongPlaceSound();
-                        selectedCard.setSuccess(false);
-                        return selectedCard;
+                        System.out.println("testgay3");
+                        return mTopCard;
                     }
                 }
                 correctPlaceSound();
 
                 push(p, selectedCard);
                 return selectedCard;
+
+                /*
             case SKIP:
                 correctPlaceSound();
                 push(p, selectedCard);
-                return selectedCard;
+                return mTopCard;
 
             case REVERSE:
                 correctPlaceSound();
                 push(p, selectedCard);
-                return selectedCard;
+                return mTopCard;
 
             case DRAWTWO:
                 correctPlaceSound();
@@ -115,12 +122,14 @@ public class Actions {
                     Card drawnCard = pop(d);
                     p.addCard(drawnCard);
                 }
-                return selectedCard;
+                return mTopCard;
 
             case WILDCARD:
                 correctPlaceSound();
                 push(p, selectedCard);
-                return selectedCard;
+                return mTopCard;
+
+                 */
 
 
 

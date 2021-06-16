@@ -7,7 +7,7 @@ public class Card {
     public static final Color INACTIVE_COLOR = Color.LIGHT_GRAY;
 
     //creates an Array of colors of the cards in Uno
-    public static final Color[] Colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, SPECIAL_COLOR };
+    public static final Color[] Colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW      };
 
     public static int REVERSE_CARD = 10;
     public static int DRAW_TWO_CARD = 11;
