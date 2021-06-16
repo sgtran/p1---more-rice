@@ -9,10 +9,12 @@ public class Player {
     public String name; //Player's name
     public int numCards; //Number of cards player has
     private ArrayList<Card> hand = new ArrayList<Card>(); //The player's hand
+    public Card iofb;
 
     public Player(String newName){
         this.name = newName;
         score = 0;
+        iofb = new Card(Card.INDEXOUTOFBOUNDS, 0);
     }
 
 
@@ -37,7 +39,12 @@ public class Player {
     }
 
     public Card getCard(int cardInd) {
-        return hand.get(cardInd);
+        try {
+            return hand.get(cardInd);
+        } catch (IndexOutOfBoundsException e) {
+            iofb.setCardNum(cardInd);
+            return iofb;
+        }
     }
 
     public int getSize() {

@@ -122,15 +122,6 @@ public class Actions {
                 push(p, selectedCard);
                 return selectedCard;
 
-
-
-
-
-
-
-
-
-
             default:
                 throw new IllegalStateException("Unexpected value: " + choice);
         }

@@ -5,9 +5,10 @@ import java.awt.*;
 public class Card {
     public static final Color SPECIAL_COLOR = Color.BLACK;
     public static final Color INACTIVE_COLOR = Color.LIGHT_GRAY;
+    public static final Color INDEXOUTOFBOUNDS = Color.GRAY;
 
     //creates an Array of colors of the cards in Uno
-    public static final Color[] Colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, SPECIAL_COLOR };
+    public static final Color[] Colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, SPECIAL_COLOR, INDEXOUTOFBOUNDS };
 
     public static int REVERSE_CARD = 10;
     public static int DRAW_TWO_CARD = 11;
@@ -17,7 +18,7 @@ public class Card {
     public boolean success = true;
 
     private final Color cardColor;
-    private final int cardNum; //0-9, 10 for reverse, 11 for draw 2, 12 for skip, 13 for Wild
+    private int cardNum; //0-9, 10 for reverse, 11 for draw 2, 12 for skip, 13 for Wild
 
 
     public Card(Color c, int n){
@@ -29,23 +30,27 @@ public class Card {
         return cardNum;
     }
 
+    public void setCardNum(int n) {
+        this.cardNum = n;
+    }
+
     public Color getColor() {
         return cardColor;
     }
 
     public String getColorSanitized() {
-        if (cardColor == Color.RED) {
+        if (cardColor.equals(Color.RED)) {
             return "Red";
-        } else if (cardColor == Color.BLUE){
+        } else if (cardColor.equals(Color.BLUE)){
             return "Blue";
-        } else if (cardColor == Color.YELLOW) {
+        } else if (cardColor.equals(Color.YELLOW)) {
             return "Yellow";
-        } else if (cardColor == Color.GREEN) {
+        } else if (cardColor.equals(Color.GREEN)) {
             return "Green";
-        } else if (cardColor == SPECIAL_COLOR) {
+        } else if (cardColor.equals(SPECIAL_COLOR)) {
             return "Wildcard";
         }
-        return "other";
+        return "Card";
     }
 
     public boolean isSpecialCard() {

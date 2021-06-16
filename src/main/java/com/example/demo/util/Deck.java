@@ -11,9 +11,10 @@ public class Deck {
 
     public Deck(){ //initialize the deck
 
-        for(Color c: Card.Colors) {
+        for(int i = 0; i < 5; i++) { //to avoid intiliazing cards with indexoutofbounds value
+            Color c = Card.Colors[i];
             if (c == Card.SPECIAL_COLOR ) { //non-numerical cards
-                for (int i = 0; i < 2; i++) { // 2 of each
+                for (int j = 0; j < 2; j++) { // 2 of each
                     getCardDeck().add(new Card(c, Card.REVERSE_CARD));
                     getCardDeck().add(new Card(c, Card.SKIP_CARD));
                     getCardDeck().add(new Card(c, Card.WILD_CARD));
@@ -23,7 +24,7 @@ public class Deck {
                 // Numerical colors card
                 // 1 zero card, 2 of each cards for 1-9
                 getCardDeck().add(new Card(c, 0));
-                for (int i = 0; i < 2; i++){
+                for (int k = 0; k < 2; k++){
                     for (int j = 1; j < 10; j++){
                         getCardDeck().add(new Card(c, j));
                     }
