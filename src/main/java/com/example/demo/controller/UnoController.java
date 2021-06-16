@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 import com.example.demo.models.linkedlists.CircleQueue;
+import com.example.demo.util.Card;
 import lombok.Getter;
 
 import com.example.demo.util.Playfield;
@@ -31,37 +32,17 @@ public class UnoController {
     private Playfield playf;
     private int cIndex;
 
-    @PostMapping("unoGame")
+    @GetMapping("unoGame")
     public String unoGame(@RequestParam(name="action", required = false) String action,
                           @RequestParam(name = "cardIndex", required = false) String cardIndex,
                           Model model)
     {
-        if (action != null){
-            if (action.equals("Place Card")){
-                ACTIONS temp = ACTIONS.PLACE;
-                cIndex = Integer.parseInt(cardIndex);
-                System.out.println("cardIndex: "+ cIndex);
-                System.out.println("Selected Card A Color: " + playf.getCurrentPlayer().getCard(cIndex).getColorSanitized());
-                System.out.println("Selected Card A Number: " + playf.getCurrentPlayer().getCard(cIndex).getCardNum());
-                System.out.println("Top Card A Color: " + playf.getTopCard().getColorSanitized());
-                System.out.println("Top Card A Number: " + playf.getTopCard().getCardNum());
-                try {
-                    System.out.println("Current player: " + playf.actPlayer.getName());
-                    playf = playf.execute(temp, cIndex);
-                } catch (UnsupportedAudioFileException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (LineUnavailableException e) {
-                    e.printStackTrace();
-                }
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("unoGame");
+        model.addAttribute("playfield", playf);
 
-                model.addAttribute("playfield", playf);
-                model.addAttribute("topCardNum", playf.getTopCard().getCardNum());
-                model.addAttribute("topCardColor", playf.getTopCard().getColorSanitized());
-                System.out.println("placed");
-                return "unoGame";
-            } else if (action.equals("Draw Card")){
+        if (action != null){
+            if (action.equals("Draw Card")){
                 ACTIONS temp = ACTIONS.DRAW;
                 try {
                     playf = playf.execute(temp, 0);
@@ -72,43 +53,43 @@ public class UnoController {
                 } catch (LineUnavailableException e) {
                     e.printStackTrace();
                 }
-                System.out.println("drew a card");
-
                 model.addAttribute("playfield", playf);
-                model.addAttribute("topCardNum", playf.getTopCard().getCardNum());
-                model.addAttribute("topCardColor", playf.getTopCard().getColorSanitized());
-
-
+                System.out.println("drew a card");
                 return "unoGame";
+            } else if (action.equals("Place Card") && cardIndex != null) {
+                if (action.equals("Place Card")){
+                    ACTIONS temp = ACTIONS.PLACE;
+                    cIndex = Integer.parseInt(cardIndex);
+                    if (playf.getTopCard().getColor() != playf.getCurrentPlayer().getCard(cIndex).getColor() && !playf.getCurrentPlayer().getCard(cIndex).getColorSanitized().equals("Wildcard") && playf.getTopCard().getColor() != Card.SPECIAL_COLOR && playf.getTopCard().getCardNum() != playf.getCurrentPlayer().getCard(cIndex).getCardNum()){
+                        model.addAttribute("errorMessage","Invalid move");
+                        model.addAttribute("playfield", playf);
+                        return "unoGame";
+                    }
+                    try {
+                        playf = playf.execute(temp, cIndex);
+                    } catch (UnsupportedAudioFileException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (LineUnavailableException e) {
+                        e.printStackTrace();
+                    }
+                    model.addAttribute("playfield", playf);
+                    System.out.println("placed");
+                    System.out.println(cIndex);
+                    return "unoGame";
+                }
             }
 
         }
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("unoGame");
-
-        model.addAttribute("playfield", playf);
-        model.addAttribute("topCardNum", playf.getTopCard().getCardNum());
-        model.addAttribute("topCardColor", playf.getTopCard().getColorSanitized());
-
-        return "unoGame";
-
-    }
-
-    @GetMapping("unoGame")
-    public String unoGameTwo(Model model){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("unoGame");
-
-        model.addAttribute("playfield", playf);
-        model.addAttribute("topCardNum", playf.getTopCard().getCardNum());
-        model.addAttribute("topCardColor", playf.getTopCard().getColorSanitized());
-
         return "unoGame";
     }
 
-    @PostMapping("unoInit")
+
+    @GetMapping("unoInit")
     public String test(@RequestParam(name="numPlayers", required = false) String value,
                        @RequestParam(name = "names", required = false) String value2,
+                       @RequestParam(name = "numBots", required = false) String value3,
                        Model model) throws IOException, LineUnavailableException {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("unoInit");
@@ -137,18 +118,20 @@ public class UnoController {
                 allMatches.add(m.group());
             }
 
-            playf = new Playfield(InputVal, allMatches);
+            int InputVal3;
+
+            try {
+                InputVal3 = (int) Long.parseLong(value3);
+            } catch (Exception Ex) {
+                model.addAttribute("error3", "Please input a valid integer");
+                return "unoInit";
+            }
+
+            playf = new Playfield(InputVal, allMatches, InputVal3);
             System.out.println("playf object created " + playf);
             return "redirect:unoGame";
         }
 
-        return "unoInit";
-    }
-
-    @GetMapping("unoInit")
-    public String unoInit(Model model){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("unoInit");
         return "unoInit";
     }
 

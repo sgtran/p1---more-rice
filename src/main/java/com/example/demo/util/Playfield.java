@@ -12,7 +12,7 @@ import com.example.demo.util.Actions.ACTIONS;
 
 
 import static com.example.demo.util.Actions.*;
-import static com.example.demo.util.Actions.pop;
+import static com.example.demo.util.Actions.peek;
 
 public class Playfield {
     public int round = 0;
@@ -28,15 +28,15 @@ public class Playfield {
     private Card moveStatus;
     private Card tempCard = new Card(Color.BLUE, 2);
 
-    public Playfield(int playerNum, List<String> names) throws IOException, LineUnavailableException { //Initialize playfield
+    public Playfield(int playerNum, List<String> names, int botNum) throws IOException, LineUnavailableException { //Initialize playfield
 
         deck = newDeck();
         topCard = pop(deck);
         System.out.println(topCard.getLabel());
-        addPlayers(playerNum, names, 0);
+        addPlayers(playerNum, names, botNum);
 
-        for(int i = 0; i < playerNum + 0; i++){ //Start each player with 7 cards
-            for(int j = 0; j < 20; j++){
+        for(int i = 0; i < playerNum + botNum; i++){ //Start each player with 7 cards
+            for(int j = 0; j < 7; j++){
                 players.get(i).addCard(pop(deck));
             }
         }
@@ -81,13 +81,20 @@ public class Playfield {
 
     public Playfield execute(ACTIONS action, int cardIndex) throws UnsupportedAudioFileException, IOException, LineUnavailableException
     {
-        Card selectedCard = actPlayer.getHand().get(cardIndex);
+        try {
+            Card selectedCard = getCurrentPlayer().getHand().get(cardIndex);
+        } catch (IndexOutOfBoundsException e) {
+            return this;
+        }
+
+        Card selectedCard = getCurrentPlayer().getHand().get(cardIndex);
 
         if( topCard == null ) {
             // no card selected
             return this;
         }
 
+        resetStatus();
         if (selectedCard.getColor() == Card.SPECIAL_COLOR && action == ACTIONS.PLACE) {
 
             if (selectedCard.getCardNum() == Card.REVERSE_CARD) {
@@ -103,8 +110,8 @@ public class Playfield {
 
 
         // Skip card case
-            if (action == ACTIONS.SKIP){
-                doAction(action, actPlayer, 2, deck, selectedCard, topCard);
+        if (action == ACTIONS.SKIP){
+            doAction(action, actPlayer, 2, deck, selectedCard, topCard);
 
             if(actPlayer.getHand().isEmpty()) {
                 win(actPlayer);
@@ -123,7 +130,6 @@ public class Playfield {
             nextPlayer = players.get((round + 1) % players.size());
             prevPlayer = players.get((round - 1) % players.size());
 
-
             return this;
 
         }
@@ -131,7 +137,6 @@ public class Playfield {
         // Wild card case
         if (action == ACTIONS.WILDCARD){
             doAction(action, actPlayer, 2, deck, selectedCard, topCard);
-
             if(actPlayer.getHand().isEmpty()) {
                 winFlag = true;
                 win(actPlayer);
@@ -139,6 +144,9 @@ public class Playfield {
 
             }
 
+            round++;
+            this.topCard = selectedCard;
+            System.out.println("TopCard is " + this.topCard.getCardNum());
             return this;
 
         }
@@ -155,7 +163,9 @@ public class Playfield {
             actPlayer = players.get(round % players.size());
             nextPlayer = players.get((round + 1) % players.size());
             prevPlayer = players.get((round - 1) % players.size());
+            this.topCard = selectedCard;
 
+            System.out.println("TopCard is " + this.topCard.getCardNum());
             return this;
 
 
@@ -167,6 +177,7 @@ public class Playfield {
             // place down draw two card
             action = ACTIONS.PLACE;
             moveStatus = doAction(action, actPlayer, 1 , deck, selectedCard, topCard);
+            this.topCard = selectedCard;
 
 
             // switch to other player
@@ -182,7 +193,7 @@ public class Playfield {
 
             System.out.println(round + "\n" + actPlayer.name + " card " + topCard.getDescription());
 
-
+            System.out.println("TopCard is " + this.topCard.getCardNum());
             return this;
 
         }
@@ -198,15 +209,13 @@ public class Playfield {
             actPlayer = players.get(round % players.size());
             nextPlayer = players.get((round + 1) % players.size());
             prevPlayer = players.get((round - 1) % players.size());
-
+            System.out.println("TopCard is " + this.topCard.getCardNum());
             return this;
         }
         // place case
         if (action == ACTIONS.PLACE){
 
-            System.out.println("selected card "+ selectedCard.getCardNum() + selectedCard.getColorSanitized());
-            topCard = doAction(action, actPlayer, 1 , deck, selectedCard, topCard);
-            System.out.println(mTopCard);
+            moveStatus = doAction(action, actPlayer, 1 , deck, selectedCard, topCard);
 
             System.out.println(round + "\n" + actPlayer.name + " card " + topCard.getDescription());
 
@@ -217,9 +226,13 @@ public class Playfield {
             }
 
             round++;
+            String activePlayerTemp = actPlayer.name;
             actPlayer = players.get(round % players.size());
             nextPlayer = players.get((round + 1) % players.size());
             prevPlayer = players.get((round - 1) % players.size());
+            this.deck.getCardDeck().add(0, selectedCard);
+            this.topCard = selectedCard;
+            System.out.println("TopCard is " + this.topCard.getCardNum());
             return this;
         }
         if(actPlayer.getHand().isEmpty()) {
@@ -230,13 +243,17 @@ public class Playfield {
         if(deck.getCardDeck().isEmpty()){
             deck = newDeck();
         }
-
+        this.topCard = selectedCard;
+        System.out.println("TopCard is " + this.topCard.getCardNum());
 
         return this;
     }
 
     public Player getCurrentPlayer(){
-        return actPlayer;
+        /*System.out.println("round " + round);
+        System.out.println("size " + players.size());
+        System.out.println("index " + (round % players.size()));*/
+        return players.get(round % players.size());
     }
 
     public Card getTopCard(){

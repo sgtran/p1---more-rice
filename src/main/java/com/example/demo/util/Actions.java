@@ -131,15 +131,6 @@ public class Actions {
 
                  */
 
-
-
-
-
-
-
-
-
-
             default:
                 throw new IllegalStateException("Unexpected value: " + choice);
         }

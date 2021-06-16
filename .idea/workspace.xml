@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="be45663f-5d0c-49ef-a330-fb4682f6f417" name="Default Changelist" comment="merged Sean's cards.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UnoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Playfield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/util/Playfield.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/default.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoGame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/unoInit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/unoInit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,15 +110,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,6 +173,7 @@
       <workItem from="1622611376190" duration="568000" />
       <workItem from="1623640860298" duration="6485000" />
       <workItem from="1623769094770" duration="9501000" />
+      <workItem from="1623819521635" duration="8081000" />
     </task>
     <task id="LOCAL-00001" summary="KevinSort split. add dropdown to html sort">
       <created>1618336935685</created>
