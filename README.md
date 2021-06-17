@@ -1,27 +1,38 @@
 # P1-Rice
 **Standard SDK:** Adopt-OpenJ9-15
 
-**Link to Github:** [Here](https://github.com/sgtran/p1---rice)
+**Link to Github:** [Here](https://github.com/sgtran/p1---more-rice)
 
-**Link to scrum board:** [Here](https://github.com/sgtran/p1---rice/projects/1)
+**Link to scrum board:** [Here](https://github.com/sgtran/p1---more-rice/projects/3)
 
 **Link to project plan:** [Here](https://docs.google.com/document/d/1J7p0vuNPozwbu0-tjaQCutQNg-10E0QndgibnOdazJU/edit?usp=sharing)
 
-**Link to website** [here](http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080)
+**Link to website** [here](http://offsec.gq:8080/cards)
 
-| **Member** | **Git id** |
-| :---:   | :-: |
-| Sean Tran | [Link](https://github.com/sgtran) |
-| Kevin Hu |  [Link](https://github.com/keviin0)  |
-| Andrew Pu |  [Link](https://github.com/andrewzpu) |
-| Alex Hu | [Link](https://github.com/AlexH04) |
+| **Member** | **Git id** | **Pre Final Checkpoint** |
+| :---:   | :-: | :--------: |
+| Sean Tran | [Link](https://github.com/sgtran) |[Ticket](https://github.com/sgtran/p1---more-rice/issues/52) Added theme to game |
+| Kevin Hu |  [Link](https://github.com/keviin0)  | [Ticket]https://github.com/sgtran/p1---more-rice/issues/53 Controller integration |
+| Andrew Pu |  [Link](https://github.com/andrewzpu) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/48) - Continued working on Leaderboard. Added Search feature and included arcade theme |
+| Alex Hu | [Link](https://github.com/AlexH04) | [Ticket](https://github.com/sgtran/p1---more-rice/issues/50) - Continued working on controller/HTML integration, polished HTML and helped with 2048 file organization and controller |
+| Atharva Kudrimoti | [Link](https://github.com/athkud123) | |
 
-| **Technical** | **Description** |
+ **Umbrella Guide**    
+This week's goal was to build the front end and back end code of Uno game on website.
+Kevin worked on backend and Sean and Alex work on front end.
+Andrew worked on leaderboard.
+Atharva work on integrating his own game.
+
+Progress for all this week can be seen on this [ticket](https://github.com/sgtran/p1---more-rice/issues/49)
+
+Individual Tickets for progress next week
+| **Member** | **Ticket** |
 | :---:   | :-: |
-| Mongo DB -Andrew | We were able to successfully use MongoDB in our project to store user information, which allowed us to create a login system. In order to set up our database, we mostly did personal research outside of class by experimenting with the program, and we made changes to our already existing database as we learned about MongoDB through class and collaboration. For the future of our project, we can use the database to hold more information about each user, such as their total score and win rate, which would give a purpose to the user account system. Our use of MongoDB can be seen in our project [here](https://github.com/sgtran/p1---rice/blob/main/src/main/java/com/example/demo/models/Role.java) and [here](https://github.com/sgtran/p1---rice/blob/main/src/main/java/com/example/demo/repository/UserRepository.java). |
-| MVC-Alex | MVC has been implemented in the project since it was first created last trimester. However, the main difference between the two trimesters so far is that in the first tri, the [view portions](./src/ui/UnoGUI.java) were handled by a GUI form while this tri we removed the form and put it JFrame code so that our game would run on Repl.it which we used to embed the game into a website. The [Actions file](src/main/java/com/example/demo/util/Actions.java) handles the controller aspect as it takes user input and passes it to model, while the model is being handled by the  [Special Actions file](src/main/java/com/example/demo/util/SpecialActions.java) by determining how the move plays out and if it is valid or not. This organization was crucial to the project as without MVC, we would not be able to remove the GUI From effectively and place the JFrame code in a separate file. MVC was also used for organizing the Spring and HTML files, which Kevin will show below. |
-| Spring -Kevin | Using Spring we were able to use annotations (specifically Autowired and Bean) to simplify the MVC model of the web app ([Model](./src/main/java/com/example/demo/models),[View](./src/main/resources/templates), [Control](./src/main/java/com/example/demo/controller)).  Using Spring also allowed for easier MongoDB integration ([Here](./src/main/java/com/example/demo/service/CustomUserDetailsService.java)) with the web app so that the Spring app could handle juggling both permissions for a user, and their ability to login. This was made possible with Spring specific annotations such as DBRef which automatically configures the setter and getters with the DB. |
-| Audio-Sean | We were able to achieve having sound in our game. Sound works if you run our code from Intellij. In order to have the game work on our website we needed to use Repl. Repl does not support the sound that we use. Next trimester we will take a look and see if we can get sound to work on the website if possible. The audio was from personal research outside of class. We used the javax.sound.sampled and AudioStream to play music from wav files stored in our repo. Resources that we used to help us with this process are [youtube](https://www.youtube.com/watch?v=3q4f6I5zi2w) and [stack overflow](https://stackoverflow.com/questions/26305/how-can-i-play-sound-in-java). Sound is used for almost every click in our game. [Here](https://github.com/sgtran/p1---rice/blob/main/src/util/Actions.java#L12-L17) is an example of code that makes sound be played when a player palces a correct card. [Here](https://github.com/sgtran/p1---rice/blob/main/src/ui/UnoGUI.java#L209-L214) is an example of code that plays a draw card.  |
+| Sean Tran | [Link](https://github.com/sgtran/p1---more-rice/issues/52) |
+| Kevin Hu |  [Link](https://github.com/sgtran/p1---more-rice/issues/25)  |
+| Andrew Pu |  [Link](https://github.com/sgtran/p1---more-rice/issues/48) |
+| Alex Hu | [Link](https://github.com/sgtran/p1---more-rice/issues/50) |
+| Atharva Kudrimoti | [Link](https://github.com/sgtran/p1---more-rice/issues/27) |
 
 
 
@@ -44,32 +55,7 @@ Step 3: Play the game and hear the sounds and see the bot play
 ![](resources/1.16.2.PNG) 
 ![](resources/1.16.3.PNG)
 
-## **ReadMe Guide me** 
 
-This table shows the tickets and completion evidence.
-| **Ticket Review** | **Evidence** |
-| :---:   | :-: |
-|Link to scrum board [here](https://github.com/sgtran/p1---rice/projects/2)|
-| [Ticket 1](https://github.com/sgtran/p1---rice/issues/22): Fix image on log in page add more details to journal page -Sean Tran  | Fixed logo on log in page by centering it using a [class](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L12-15). Centered the title on the log in page by using a class and changing some [settings](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/login.html#L17). Added logo on log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L20). Put title in log in [page](https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L18). |
-| [Ticket 2](https://github.com/sgtran/p1---rice/issues/20): Integrate game into website -Kevin Hu | [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) for web presence error free |
-| [Ticket 3](https://github.com/sgtran/p1---rice/issues/21): Create Leaderboard -Andrew Pu | Changed scoring and added leaderboard in [player class](https://github.com/sgtran/p1---rice/blob/main/src/util/Player.java). Still working on adding leaderboard to display score data in MongoDB database |
-| [Ticket 4](https://github.com/sgtran/p1---rice/issues/19): Clean Up Journal Presentation -Alex Hu|Learned and added JavaScript for hiding the iframes and only showing them when buttons are pressed using display:none (https://github.com/sgtran/p1---rice/blob/main/src/main/resources/templates/dashboard.html#L24)|
-
-This table shows Front End Progress and Visuals.
-| **Front End Progress** | **Evidence** |
-| :---:   | :-: |
-| Link to website (from padlet) [here](http://ec2-13-57-248-92.us-west-1.compute.amazonaws.com:8080)|
-| The Spring webapp is hosted on an EC2 with the [JAR](./out/artifacts/p1___rice_jar/demo-0.0.1-SNAPSHOT.jar) being kept alive 24/7 with PM2 from NodeJS.  | ![](resources/website.png) |
-| Register an account by pressing log in and clicking sign up. You can also use the following credentials (Username: test@gmail.com password: test) | ![](resources/login.png) |
-| Once registered, log in and access the dashboard where the journals are located.| ![](resources/dashboard.png)|
-
-This table talks about Code Review and feedback.
-| **Code Review and Feedback** | **Evidence** |
-| :---:   | :-: |
-| From crossover event, we learned how to implemented embedded journals  | This can be seen in completed Ticket 4 |
-| We also are trying to figure how to embed our game into the website. That is still in progress, however we plan to use Repl to help us embed our game.|
-
-End of ReadMe Guide
 
 
 | **Week** | **Code Updates** |         
