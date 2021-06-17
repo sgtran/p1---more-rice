@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><scores>
     <elements id="1000">
-        <name0>Abraham</name0>
-        <name1>Bryant</name1>
-        <name2>Charlie</name2>
-        <name3>Deanna</name3>
-        <name4>Eric</name4>
-        <name5>Flora</name5>
-        <name6>Gaurish</name6>
-        <name7>Hannah</name7>
-        <name8>I</name8>
-        <name9>Julia</name9>
+        <name0>Kevin</name0>
+        <name1>Andrew</name1>
+        <name2>Abraham</name2>
+        <name3>Bryant</name3>
+        <name4>Charlie</name4>
+        <name5>Deanna</name5>
+        <name6>Eric</name6>
+        <name7>Flora</name7>
+        <name8>Easter Egg</name8>
+        <name9>Gaurish</name9>
+        <name10>Hannah</name10>
+        <name11>I</name11>
+        <name12>Julia</name12>
     </elements>
     <elements id="1001">
-        <score0>1000</score0>
-        <score1>900</score1>
-        <score2>800</score2>
-        <score3>700</score3>
-        <score4>600</score4>
-        <score5>500</score5>
-        <score6>400</score6>
-        <score7>300</score7>
-        <score8>200</score8>
-        <score9>100</score9>
+        <score0>3250</score0>
+        <score1>1930</score1>
+        <score2>1000</score2>
+        <score3>900</score3>
+        <score4>800</score4>
+        <score5>700</score5>
+        <score6>600</score6>
+        <score7>500</score7>
+        <score8>420</score8>
+        <score9>400</score9>
+        <score10>300</score10>
+        <score11>200</score11>
+        <score12>100</score12>
     </elements>
 </scores>
