@@ -21,6 +21,7 @@ The files that determine the gameplay are all found in the [util folder](https:/
 
 We are using a database to store player information, and it can be accessed through our REST API through these 2 endpoints: /player/get and /player/post. These endpoints are controlled by the [APIController file](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/APIController.java). For post, the parameters are name and score.
 ![](resources/get.PNG)
+
 ![](resources/post.PNG)
 
 Our individual minilabs are stored in dropdown menus, organized by person. The minilabs are stored in the [minilabz folder](https://github.com/sgtran/p1---more-rice/tree/main/src/main/java/minilabz).
