@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+<head>
+    <title>Uno!</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        .blink {
+            animation: blinker 0.6s linear infinite;
+            color: #1c87c9;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        .blink-one {
+            animation: blinker-one 1s linear infinite;
+        }
+        @keyframes blinker-one {
+            0% {
+                opacity: 0;
+            }
+        }
+        .blink-two {
+            animation: blinker-two 1.4s linear infinite;
+        }
+        @keyframes blinker-two {
+            100% {
+                opacity: 0;
+            }
+        }
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #666;
+        }
+    </style>
+</head>
+
+<div layout:fragment="content">
+    <body>
+    <div class="col-20" style="text-align: center;">
+        <h1 style="color: #FF10F0"><strong>UNO!</strong></h1>
+    </div>
+    <table th:object="${playfield}">
+        <tr>
+            <th><p style="background-color: #FF10F0;">Discard Pile</p></th>
+            <th></th>
+            <th></th>
+            <th><p style="background-color: #FF10F0;">Deck</p></th>
+        </tr>
+        <tr>
+            <th><p style="color: #FF10F0;text-align: center" th:text="${playfield.getTopCard().getCardNum()} + ' ' + ${playfield.getTopCard().getColorSanitized()} " ></p></th>
+            <th>
+                <button style="background-color: #FF10F0;" onclick="placeCard();">Place Card</button>
+                <span style="color: #FF10F0" th:if="${errorMessage}"  th:text="${errorMessage}">Error</span>
+            </th>
+            <th>
+                <form action="#" th:action="@{/unoGame}" method="get">
+                    <input type="submit" style="background-color: #FF10F0;" name="action" value="Draw Card"/>
+                </form>
+            </th>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JdyX5C3HBiAPxDP_q7zn_BI8I7NOHaf6zA&usqp=CAU" alt="Current Hand"></th>
+        </tr>
+        <tr>
+            <div id="div1" style="display:none;">
+                <td><button onclick="chooseCard('0')" type="button" th:text="${playfield.getCurrentPlayer().getCard(0).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(0).getColorSanitized()}"></button></td>
+            </div>
+            <div id="div2" style="display:none;">
+                <td><button onclick="chooseCard('1')" type="button" th:text="${playfield.getCurrentPlayer().getCard(1).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(1).getColorSanitized()}">Card 2!</button></td>
+            </div>
+            <div id="div3" style="display:none;">
+                <td><button onclick="chooseCard('2')" type="button" th:text="${playfield.getCurrentPlayer().getCard(2).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(2).getColorSanitized()}">Card 3!</button></td>
+            </div>
+            <div id="div4" style="display:none;">
+                <td><button onclick="chooseCard('3')" type="button" th:text="${playfield.getCurrentPlayer().getCard(3).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(3).getColorSanitized()}">Card 4!</button></td>
+            </div>
+        </tr>
+        <tr>
+            <div id="div5" style="display:none;">
+                <td><button onclick="chooseCard('4')"  type="button" th:text="${playfield.getCurrentPlayer().getCard(4).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(4).getColorSanitized()}">Card 5!</button></td>
+            </div>
+            <div id="div6" style="display:none;">
+                <td><button onclick="chooseCard('5')"  type="button" th:text="${playfield.getCurrentPlayer().getCard(5).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(5).getColorSanitized()}">Card 6!</button></td>
+            </div>
+            <div id="div7" style="display:none;">
+                <td><button onclick="chooseCard('6')" type="button" th:text="${playfield.getCurrentPlayer().getCard(6).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(6).getColorSanitized()}">Card 7!</button></td>
+            </div>
+            <div id="div8" style="display:none;">
+                <td><button onclick="chooseCard('7')" type="button" th:text="${playfield.getCurrentPlayer().getCard(7).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(7).getColorSanitized()}">Card 8!</button></td>
+            </div>
+        </tr>
+        <tr>
+            <div id="div9" style="display:none;">
+                <td><button onclick="chooseCard('8')" type="button" th:text="${playfield.getCurrentPlayer().getCard(8).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(8).getColorSanitized()}">Card 9!</button></td>
+            </div>
+            <div id="div10" style="display:none;">
+                <td><button onclick="chooseCard('9')" type="button" th:text="${playfield.getCurrentPlayer().getCard(9).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(9).getColorSanitized()}">Card 10!</button></td>
+            </div>
+            <div id="div11" style="display:none;">
+                <td><button onclick="chooseCard('10')" type="button" th:text="${playfield.getCurrentPlayer().getCard(10).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(10).getColorSanitized()}">Card 11!</button></td>
+            </div>
+            <div id="div12" style="display:none;">
+                <td><button onclick="chooseCard('11')"  type="button" th:text="${playfield.getCurrentPlayer().getCard(11).getCardNum()} + ' ' + ${playfield.getCurrentPlayer().getCard(11).getColorSanitized()}">Card 12!</button></td>
+            </div>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button">Left</button>
+            </td>
+            <td>
+                <button type="button">Right</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <h1>
+        <p style="color: #FF10F0;text-align: center" class="blink blink-one" th:text="${playfield.getCurrentPlayer().getName()}" ></p>
+    </h1>
+    </body>
+
+    <th:block layout:fragment="script">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            var cardIndex;
+            var temp;
+            window.onload = function() {
+            };
+            function chooseCard(num){
+                cardIndex = num;
+            }
+            function placeCard(){
+                /*<![CDATA[*/
+                if (cardIndex == null){
+                    alert('Please pick a card');
+                    return;
+                }
+                window.location = 'http://' + window.location.hostname + ':8080/unoGame?action=Place+Card&cardIndex=' + cardIndex;
+                /*]]>*/
+            }
+        </script>
+    </th:block>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</div>
+
+</html>

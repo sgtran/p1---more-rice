@@ -82,7 +82,7 @@ public class LoginController {
     @RequestMapping(value = {"/cards"}, method = RequestMethod.GET)
     public ModelAndView cards() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("cards");
+        modelAndView.setViewName("unoGame");
         return modelAndView;
     }
 
