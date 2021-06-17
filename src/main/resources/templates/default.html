@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Default</title>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body style="background-image:url('https://www.desktopbackground.org/download/1680x1050/2012/05/19/392408_retro-80s-arcade-game-awesome-wallpapers-and-cool-backgrounds_1920x1080_h.jpg')">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Uno</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: black; border-color: #FF10F0;">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/unoInit">Uno<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/leaderboard">Leaderboard <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">Journals <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/cards">Cards <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/2048">2048<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Inheritance/Sort
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="/kevinSort">Kevin's sort</a></li>
+                    <li><a href="/seanData">Sean's sort</a></li>
+                    <li><a href="/alexSort">Alex's sort</a></li>
+                    <li><a href="/andrewSort">Andrew's sort</a></li>
+                    <li><a href="/data">Atharva's sort</a></li>
+                </ul>
+            </div>
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sorts
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="/alexSorts2">Alex's sorts</a></li>
+                    <li><a href="/seanSort">Sean's sort</a></li>
+                    <li><a href="/kevinSorts2">Kevin's sort</a></li>
+                    <li><a href="/andrewRealSort">Andrew's sort</a></li>
+                </ul>
+
+            </div>
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">LinkedList
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="/alexLL">Alex's LinkedList</a></li>
+                    <li><a href="/seanLL">Sean's LinkedList</a></li>
+                    <li><a href="/kevinLL">Kevin's LinkedList</a></li>
+                    <li><a href="/andrewLL">Andrew's LinkedList</a></li>
+
+                </ul>
+            </div>
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Recursion
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="/binSearchAP">Andrew's Binary Search</a></li>
+                    <li> <a href="/binSearch">Alex's Binary Search</a></li>
+                    <li> <a href="/fibonacci">Andrew's Fibonacci</a></li>
+                    <li> <a href="/test">Kevin's Factorial</a></li>
+                    <li> <a href="/GCD">Sean's GCD</a></li>
+                    <li> <a href="/Palindrome">Atharva's Palidrome</a></li>
+
+                </ul>
+
+            </div>
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sean's Room
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+
+                    <li> <a href="/GCD">Sean's GCD</a></li>
+                    <li><a href="/seanData">Sean's inheritance</a></li>
+                    <li><a href="/seanLL">Sean's LinkedList</a></li>
+                    <li><a href="/seanSort">Sean's sort</a></li>
+                    <li><a href="/dashboard">Sean's journal</a></li>
+
+
+
+
+                </ul>
+
+            </div>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" th:if="${currentUser == null}"><a class="nav-link" th:href="@{/login}">Log in</a></li>
+            <li class="nav-item" th:if="${currentUser}">
+                <a class="nav-link" th:text="${fullName}"></a>
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sign Out"/>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div layout:fragment="content"></div>
+</div>
+<!-- /.container -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
