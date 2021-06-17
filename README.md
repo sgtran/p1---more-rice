@@ -9,6 +9,24 @@
 
 **Link to website** [here](http://offsec.gq:8080/cards)
 
+**How It's Made!**
+Our Uno game relies on several objects that create it. We have files to define the behaviors of [cards](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/util/Card.java), [players](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/util/Player.java), and the [https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/util/Playfield.java](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/util/Playfield.java).
+There's 2 main parts of the game. 1 is the initialization of the game, which occurs in the [unoinit](https://github.com/sgtran/p1---more-rice/blob/main/src/main/resources/templates/unoInit.html) file. This initialization has 2 core user interactions: it asks for the number of players and a list of the player names separated by commas.
+![](resources/unoinit.PNG)
+
+The second part is the gameplay itself. This includes 2 more key interactions: drawing cards and placing cards.
+![](resources/unogameplay.PNG)
+
+The files that determine the gameplay are all found in the [util folder](https://github.com/sgtran/p1---more-rice/tree/main/src/main/java/com/example/demo/util). The [physical game](https://github.com/sgtran/p1---more-rice/blob/main/src/main/resources/templates/unoGame.html) that the user can see is the view, and it is connected to the model ([playfield.java](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/util/Playfield.java) and [Actions.java](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/util/Actions.java)) through the [controller](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/UnoController.java).
+
+We are using a database to store player information, and it can be accessed through our REST API through these 2 endpoints: /player/get and /player/post. These endpoints are controlled by the [APIController file](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/APIController.java). For post, the parameters are name and score.
+![](resources/get.PNG)
+![](resources/post.PNG)
+
+Our individual minilabs are stored in dropdown menus, organized by person. The minilabs are stored in the [minilabz folder](https://github.com/sgtran/p1---more-rice/tree/main/src/main/java/minilabz).
+
+The view of the leaderboard is the [leaderboard.html file](https://github.com/sgtran/p1---more-rice/blob/main/src/main/resources/templates/leaderboard.html), and it is controlled by the [Leaderboard Controller](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/LeaderboardController.java), which accesses data in the [scores file](https://github.com/sgtran/p1---more-rice/blob/main/scores.xml) (the model) using methods from the [Score Modifier file](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/scoreModifier.java).
+
 | **Member** | **Git id** | **Pre Final Checkpoint** |
 | :---:   | :-: | :--------: |
 | Sean Tran | [Link](https://github.com/sgtran) |[Ticket](https://github.com/sgtran/p1---more-rice/issues/52) Added theme to game |
