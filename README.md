@@ -27,6 +27,9 @@ Our individual minilabs are stored in dropdown menus, organized by person. The m
 
 The view of the leaderboard is the [leaderboard.html file](https://github.com/sgtran/p1---more-rice/blob/main/src/main/resources/templates/leaderboard.html), and it is controlled by the [Leaderboard Controller](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/LeaderboardController.java), which accesses data in the [scores file](https://github.com/sgtran/p1---more-rice/blob/main/scores.xml) (the model) using methods from the [Score Modifier file](https://github.com/sgtran/p1---more-rice/blob/main/src/main/java/com/example/demo/controller/scoreModifier.java).
 
+_____________________________________________________________________________________
+
+
 | **Member** | **Git id** | **Pre Final Checkpoint** |
 | :---:   | :-: | :--------: |
 | Sean Tran | [Link](https://github.com/sgtran) |[Ticket](https://github.com/sgtran/p1---more-rice/issues/52) Added theme to game |
@@ -51,12 +54,6 @@ Individual Tickets for progress next week
 | Andrew Pu |  [Link](https://github.com/sgtran/p1---more-rice/issues/48) |
 | Alex Hu | [Link](https://github.com/sgtran/p1---more-rice/issues/50) |
 | Atharva Kudrimoti | [Link](https://github.com/sgtran/p1---more-rice/issues/27) |
-
-
-
-
-
-_____________________________________________________________________________________
 
  **How to run the code for the game from Intellij**    
  
