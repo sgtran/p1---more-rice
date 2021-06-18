@@ -35,8 +35,8 @@ public class Playfield {
         System.out.println(topCard.getLabel());
         addPlayers(playerNum, names, 0);
 
-        for(int i = 0; i < playerNum + 0; i++){ //Start each player with 7 cards
-            for(int j = 0; j < 7; j++){
+        for(int i = 0; i < playerNum + 0; i++){
+            for(int j = 0; j < 100; j++){
                 players.get(i).addCard(pop(deck));
             }
         }

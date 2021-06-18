@@ -66,7 +66,6 @@ public class Actions {
     }
 
     public static Card doAction(ACTIONS choice, Player p, int num, Deck d, Card selectedCard, Card topCard) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        System.out.println("testgay2");
         switch(choice){
             case DRAW:
                 for(int i = 0; i < num; i++){
@@ -77,8 +76,6 @@ public class Actions {
             case PLACE:
                 if( selectedCard == null ) {
                     // no card selected;
-                    System.out.println("testgay");
-                    wrongPlaceSound();
                     return mTopCard;
                 }
 
@@ -98,12 +95,9 @@ public class Actions {
                         return mTopCard;}
 
                     if(topCard.getCardNum() != selectedCard.getCardNum()){
-                        wrongPlaceSound();
-                        System.out.println("testgay3");
                         return mTopCard;
                     }
                 }
-                correctPlaceSound();
 
                 push(p, selectedCard);
                 return selectedCard;
